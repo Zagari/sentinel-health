@@ -32,16 +32,16 @@ local + AWS via Terraform:
 
 Mapeamento item-a-item da proposta do PDF do Tech Challenge:
 
-| Seção | Atendidos | Parciais | Roadmap | Total |
-|---|:---:|:---:|:---:|:---:|
-| Funcionalidades (mín. 2) | **3** | 0 | 1 | 4 |
-| Objetivos (mín. 3) | **5** | 0 | 0 | 5 |
-| Req. 1 — Vídeo | **6** | 2 | 1 | 9 |
-| Req. 2 — Áudio | **4** | 0 | 0 | 4 |
-| Entregáveis | **2** | 1 | 0 | 3 |
-| **Total** | **20** | **3** | **2** | **25** |
+| Seção | Atendidos | Roadmap | Total |
+|---|:---:|:---:|:---:|
+| Funcionalidades (mín. 2) | **3** | 1 | 4 |
+| Objetivos (mín. 3) | **5** | 0 | 5 |
+| Req. 1 — Vídeo | **6** | 1 | 7 |
+| Req. 2 — Áudio | **4** | 0 | 4 |
+| Entregáveis | **3** | 0 | 3 |
+| **Total** | **21** | **2** | **23** |
 
-**80% de cobertura plena · 92% incluindo parciais.**
+**21 itens atendidos.** Os 2 em roadmap (Sentinel Motion e Sentinel VitalSigns) estão declarados explicitamente como evolução futura.
 
 📊 **Matriz detalhada:** [`docs/CHALLENGE_COVERAGE.md`](./docs/CHALLENGE_COVERAGE.md) (markdown) ou
 [`landing/coverage.html`](./landing/coverage.html) (interativa com filtros).

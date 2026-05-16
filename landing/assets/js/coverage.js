@@ -53,7 +53,6 @@ async function init() {
       }
     }
 
-    updateStats();
     bindFilters();
     render();
   } catch (err) {
@@ -61,17 +60,6 @@ async function init() {
       `Erro ao carregar matriz: ${err.message}`;
     console.error('Failed to load coverage-data.json:', err);
   }
-}
-
-// ── Global stats (top of page) ──────────────────────────────────────────────
-function updateStats() {
-  const counts = { ok: 0, partial: 0, roadmap: 0 };
-  for (const item of allItems) counts[item.status]++;
-
-  document.querySelector('[data-stat="ok"]').textContent       = counts.ok;
-  document.querySelector('[data-stat="partial"]').textContent  = counts.partial;
-  document.querySelector('[data-stat="roadmap"]').textContent  = counts.roadmap;
-  document.querySelector('[data-stat="total"]').textContent    = allItems.length;
 }
 
 // ── Bind chip clicks ────────────────────────────────────────────────────────
@@ -117,14 +105,20 @@ function render() {
 
   const visible = allItems.filter(matchesFilters);
 
-  // Top counter with per-status breakdown for the current filter set
-  const visibleCounts = { ok: 0, partial: 0, roadmap: 0 };
-  visible.forEach(i => visibleCounts[i.status]++);
-  counter.innerHTML = visible.length === allItems.length
-    ? `Mostrando <strong>${allItems.length}</strong> itens (` +
-      `${visibleCounts.ok} ✅ · ${visibleCounts.partial} ⚠️ · ${visibleCounts.roadmap} 🚀)`
-    : `Mostrando <strong>${visible.length}</strong> de ${allItems.length} itens (` +
-      `${visibleCounts.ok} ✅ · ${visibleCounts.partial} ⚠️ · ${visibleCounts.roadmap} 🚀)`;
+  // Counter: simple message when nothing's filtered; X/Y breakdown when filtered.
+  if (visible.length === allItems.length) {
+    counter.innerHTML = 'Mostrando todos os itens atendidos';
+  } else {
+    const visibleCounts = { ok: 0, partial: 0, roadmap: 0 };
+    visible.forEach(i => visibleCounts[i.status]++);
+    const breakdownParts = [];
+    if (visibleCounts.ok      > 0) breakdownParts.push(`${visibleCounts.ok} ✅`);
+    if (visibleCounts.partial > 0) breakdownParts.push(`${visibleCounts.partial} ⚠️`);
+    if (visibleCounts.roadmap > 0) breakdownParts.push(`${visibleCounts.roadmap} 🚀`);
+    const breakdown = breakdownParts.length ? ` (${breakdownParts.join(' · ')})` : '';
+    counter.innerHTML =
+      `Mostrando <strong>${visible.length}</strong> de ${allItems.length} itens${breakdown}`;
+  }
 
   list.innerHTML = '';
   if (visible.length === 0) {

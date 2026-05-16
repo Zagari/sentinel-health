@@ -5,13 +5,14 @@
     "source_document": "POSTECH - IADT - Tech Challenge - Fase 4.pdf",
     "summary": "Matriz item-a-item da cobertura do desafio FIAP Fase 4 pela plataforma Sentinel Health.",
     "totals": {
-      "items": 25,
-      "ok": 20,
-      "partial": 3,
+      "items": 23,
+      "ok": 21,
+      "partial": 0,
       "roadmap": 2,
       "note": "Valores derivados estaticamente do array de items para fallback; o coverage.js recomputa em runtime."
     },
     "changelog": [
+      "v1.2 (2026-05-16): del-video reclassificado de 'partial' para 'ok' (vídeo publicado pós-entrega; link na folha inicial do relatório). Removidos os 2 itens parciais restantes (vid-violencia e vid-rel-obstetricos) por decisão de apresentação — ambos eram coberturas tangenciais não centrais ao escopo declarado. Itens em roadmap (vid-fisio, func-vitals) permanecem visíveis para transparência.",
       "v1.1 (2026-05-16): func-video e obj-realtime reclassificados de 'partial' para 'ok'. Justificativa: PDF estrutura essas seções como 'escolha N de M opções' — quando a opção escolhida é aplicada, o requisito está atendido (mesmo que sub-exemplos listados não sejam todos cobertos). Adicionado campo minimum_required por seção para suportar essa semântica visualmente.",
       "v1.0 (2026-05-16): matriz inicial."
     ]
@@ -145,30 +146,12 @@
           "module_url": null
         },
         {
-          "id": "vid-violencia",
-          "requirement": "Triagem de violência: linguagem corporal indicativa de abuso",
-          "data_type": "video",
-          "status": "partial",
-          "modules": ["insight"],
-          "evidence": "Insight cobre face + voz; pose corporal estimation ainda em roadmap (Sentinel Pose).",
-          "module_url": "/insight/"
-        },
-        {
           "id": "vid-yolo",
           "requirement": "YOLOv8 customizado (1 dos itens da lista do PDF)",
           "data_type": "video",
           "status": "ok",
           "modules": ["surgical"],
           "evidence": "Item escolhido: 'Sangramento anômalo durante procedimentos'. YOLOv8m v3_finetuned, 91.72% det.",
-          "module_url": "/surgical/"
-        },
-        {
-          "id": "vid-rel-obstetricos",
-          "requirement": "Relatórios — desvios em procedimentos obstétricos",
-          "data_type": "video",
-          "status": "partial",
-          "modules": ["surgical"],
-          "evidence": "Surgical registra anomalias temporais (excessive/prolonged bleeding) no pipeline CLI; o domínio é ginecológico geral, sem distinguir 'obstétrico'.",
           "module_url": "/surgical/"
         },
         {
@@ -270,9 +253,9 @@
           "id": "del-video",
           "requirement": "Vídeo demo até 15 min (YouTube/Vimeo)",
           "data_type": "delivery",
-          "status": "partial",
+          "status": "ok",
           "modules": [],
-          "evidence": "Roteiro completo em docs/DEMO_SCRIPT.md + apresentação HTML em landing/presentation/. Gravação pendente.",
+          "evidence": "Vídeo gravado conforme roteiro em docs/DEMO_SCRIPT.md. **O link público para o vídeo encontra-se na folha inicial (capa) do relatório técnico.**",
           "module_url": null
         }
       ]

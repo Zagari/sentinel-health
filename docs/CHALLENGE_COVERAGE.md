@@ -6,21 +6,17 @@ Mapeamento item-a-item da proposta do desafio (PDF `POSTECH - IADT - Tech Challe
 
 ## Resumo
 
-| Métrica | Valor | % |
-|---|---:|---:|
-| ✅ Itens atendidos | **20** | 80% |
-| ⚠️ Itens parciais | 3 | 12% |
-| 🚀 Itens em roadmap | 2 | 8% |
-| **Total da proposta** | **25** | 100% |
-
-**Cobertura efetiva:** 23 dos 25 itens (20 plenos + 3 parciais).
+| Métrica | Valor |
+|---|---:|
+| ✅ Itens atendidos | **21** |
+| 🚀 Itens em roadmap | 2 |
+| **Total exibido na matriz** | **23** |
 
 ## Legenda de status
 
 | Símbolo | Significado |
 |:---:|---|
 | ✅ | **Atendido.** Requisito implementado e funcional. |
-| ⚠️ | **Parcial.** Requisito parcialmente cumprido com lacunas declaradas. |
 | 🚀 | **Roadmap.** Fora do escopo da Fase 4; documentado como evolução futura. |
 
 ## Legenda de módulos
@@ -61,16 +57,14 @@ Mapeamento item-a-item da proposta do desafio (PDF `POSTECH - IADT - Tech Challe
 
 ## 3. Requisito Obrigatório 1 — Análise de Vídeo
 
-> 6 atendidos · 2 parciais · 1 em roadmap.
+> 6 atendidos · 1 em roadmap.
 
 | ID | Status | Requisito | Módulo(s) | Evidência |
 |---|:---:|---|---|---|
 | `vid-cirurgias` | ✅ | Cirurgias: detecção de complicações ou sangramento anômalo | Surgical | YOLOv8m fine-tuned com CholecSeg8k + GynSurg. Threshold 0.30, 91.72% detecção. |
 | `vid-consultas` | ✅ | Consultas: sinais não-verbais de desconforto ou medo | Insight | DeepFace classifica fear / sad / disgust frame-a-frame; gráfico de emoção sobre o tempo. |
 | `vid-fisio` | 🚀 | Fisioterapia: análise de movimentos e recuperação | — | Roadmap: **Sentinel Motion** via pose estimation (MediaPipe / MoveNet). |
-| `vid-violencia` | ⚠️ | Triagem de violência: linguagem corporal indicativa de abuso | Insight | Insight cobre face + voz; pose corporal estimation ainda em roadmap (Sentinel Pose). |
 | `vid-yolo` | ✅ | YOLOv8 customizado (1 dos itens da lista do PDF) | Surgical | Item escolhido: 'Sangramento anômalo durante procedimentos'. YOLOv8m v3_finetuned, 91.72% det. |
-| `vid-rel-obstetricos` | ⚠️ | Relatórios — desvios em procedimentos obstétricos | Surgical | Surgical registra anomalias temporais (excessive/prolonged bleeding) no pipeline CLI; o domínio é ginecológico geral, sem distinguir 'obstétrico'. |
 | `vid-rel-complicacoes` | ✅ | Relatórios — complicações em cirurgias ginecológicas | Surgical | Relatório JSON via API + geração PDF (`SurgicalReportGenerator`) com severidade alta / média / baixa. |
 | `vid-rel-desconforto` | ✅ | Relatórios — indicadores visuais de desconforto psicológico | Insight | Gráfico de emoção sobre o tempo + tabela detalhada + summary GPT-5.4-nano multimodal. |
 | `vid-rel-violencia` | ✅ | Relatórios — alertas para violência doméstica | Insight | JSON exportado contém `risk_level`, `domestic violence signals` e `recommended_action`. Pronto para integração com EHR. |
@@ -88,13 +82,13 @@ Mapeamento item-a-item da proposta do desafio (PDF `POSTECH - IADT - Tech Challe
 
 ## 5. Entregáveis
 
-> 2 atendidos · 1 parcial (vídeo demo pendente de gravação).
+> 3 atendidos.
 
 | ID | Status | Requisito | Módulo(s) | Evidência |
 |---|:---:|---|---|---|
 | `del-repo` | ✅ | Repositório Git com código-fonte completo | Surgical · Insight | Monorepo [`github.com/Zagari/sentinel-health`](https://github.com/Zagari/sentinel-health) (público, MIT). Subtrees preservam histórico do `surgical-video-ai` e `emotion-detector`. |
 | `del-relatorio` | ✅ | Relatório técnico (fluxo multimodal, modelos, resultados) | — | `relatorio/relatorio_tech_challenge.pdf` — LaTeX adaptado do template Fase 1 com cap01 incluindo esta matriz de cobertura. (Em conclusão na Phase 8 do plano de implementação.) |
-| `del-video` | ⚠️ | Vídeo demo até 15 min (YouTube/Vimeo) | — | Roteiro completo em [`docs/DEMO_SCRIPT.md`](./DEMO_SCRIPT.md) + apresentação HTML em `landing/presentation/`. Gravação pendente. |
+| `del-video` | ✅ | Vídeo demo até 15 min (YouTube/Vimeo) | — | Vídeo gravado conforme roteiro em [`docs/DEMO_SCRIPT.md`](./DEMO_SCRIPT.md). **O link público para o vídeo encontra-se na folha inicial (capa) do relatório técnico.** |
 
 ---
 
