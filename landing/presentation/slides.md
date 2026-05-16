@@ -165,7 +165,7 @@ Note:
 
 <div class="big-arrow">↓</div>
 
-### http://&lt;servidor&gt;/surgical/
+### https://sentinel-health.genesis-dataculture.com/surgical/
 
 <div class="hint">
   Tab para a UI · upload de clip GynSurg da galeria · análise YOLO em ~30s<br>
@@ -234,7 +234,7 @@ Note:
 
 <div class="big-arrow">↓</div>
 
-### http://&lt;servidor&gt;/insight/
+### https://sentinel-health.genesis-dataculture.com/insight/
 
 <div class="hint">
   Tab para a UI Streamlit · modo "Audio Only"<br>
