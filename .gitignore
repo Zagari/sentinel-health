@@ -41,6 +41,12 @@ Thumbs.db
 # ── Docker / processo ────────────────────────────────────────────────────────
 *.pid
 
+# Compose overrides server-specific (ex: docker-compose.local-samples.yml,
+# docker-compose.local-secrets.yml). Use `docker compose -f base.yml -f *.local.yml up`
+# para combinar; arquivos *.local.* nunca vão pro git.
+**/*.local.yml
+**/*.local.yaml
+
 # ── ML: datasets e modelos (grandes, fora do Git) ────────────────────────────
 modules/*/models/trained/
 modules/*/models/exported/
