@@ -171,6 +171,7 @@ sentinel-health/
 | [`docs/CHALLENGE_COVERAGE.md`](./docs/CHALLENGE_COVERAGE.md) | Matriz item-a-item da cobertura do desafio (sincronizada com [`landing/assets/coverage-data.json`](./landing/assets/coverage-data.json)) |
 | [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Topologia, fluxos de dados, decisões arquiteturais, integrações cloud |
 | [`docs/DEMO_SCRIPT.md`](./docs/DEMO_SCRIPT.md) | Roteiro completo do vídeo demo de 15 min |
+| [`landing/presentation/`](./landing/presentation/) | Apresentação reveal.js (15 slides) sincronizada com o roteiro do vídeo demo — acessível em `/presentation/` após `docker compose up -d` |
 | [`deploy/README.md`](./deploy/README.md) | Como subir local · variante atrás de reverse proxy · troubleshooting |
 | [`terraform/README.md`](./terraform/README.md) | Deploy AWS via Terraform · custos · workflow apply→demo→destroy |
 | [`modules/surgical/docs/CODEBASE_ANALYSIS.md`](./modules/surgical/docs/CODEBASE_ANALYSIS.md) | Análise técnica detalhada do código do Surgical |

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel Health · Apresentação · FIAP Tech Challenge Fase 4</title>
+
+  <!-- reveal.js v5 (CDN, zero build) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+
+  <style>
+    /* ── Sentinel Health — FIAP palette overrides ─────────────────────────── */
+    :root {
+      --r-main-color: #231f20;
+      --r-heading-color: #ed1c24;
+      --r-link-color: #2563eb;
+      --r-selection-background-color: #ed1c24;
+      --fiap-red: #ed1c24;
+      --fiap-dark: #231f20;
+      --surgical-blue: #2563eb;
+      --cream-bg: #faf8f3;
+    }
+
+    .reveal {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      color: var(--fiap-red);
+      letter-spacing: -0.02em;
+      text-transform: none;
+    }
+
+    .reveal h1 { font-size: 2.6em; }
+    .reveal h2 { font-size: 1.9em; }
+    .reveal h3 { font-size: 1.4em; }
+
+    .reveal strong { color: var(--fiap-red); }
+    .reveal .surgical strong { color: var(--surgical-blue); }
+
+    /* Cover slide */
+    .cover {
+      text-align: center !important;
+    }
+    .cover h1 {
+      color: var(--fiap-dark) !important;
+      margin-bottom: 0.4em;
+    }
+    .cover .tag {
+      display: inline-block;
+      background: var(--fiap-red);
+      color: white;
+      padding: 0.3em 0.9em;
+      border-radius: 100px;
+      font-size: 0.55em;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+    }
+    .cover .team {
+      margin-top: 2em;
+      font-size: 0.7em;
+      color: #555;
+    }
+
+    /* Tables */
+    .reveal table {
+      margin: 0 auto;
+      font-size: 0.65em;
+    }
+    .reveal table th {
+      background: var(--fiap-dark);
+      color: white;
+      padding: 0.4em 0.8em;
+    }
+    .reveal table td {
+      padding: 0.4em 0.8em;
+    }
+
+    /* Metric blocks */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin: 1em 0;
+    }
+    .metric {
+      background: #f5f5f5;
+      padding: 1em;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .metric .num {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--fiap-red);
+      line-height: 1;
+    }
+    .metric.blue .num { color: var(--surgical-blue); }
+    .metric .lbl {
+      font-size: 0.55em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #666;
+      margin-top: 0.3em;
+    }
+
+    /* Coverage list (slide 4) */
+    .coverage-rows {
+      display: grid;
+      gap: 0.4em;
+      font-size: 0.75em;
+    }
+    .coverage-rows .row {
+      display: grid;
+      grid-template-columns: 1.4fr 60px 70px 70px;
+      gap: 0.6em;
+      padding: 0.6em 0.9em;
+      background: white;
+      border-left: 4px solid #ddd;
+      align-items: center;
+    }
+    .coverage-rows .row.ok-section { border-left-color: #2e7d32; }
+    .coverage-rows .row .label { font-weight: 600; }
+    .coverage-rows .row .met { color: #2e7d32; font-weight: 700; font-size: 1.3em; text-align: center; }
+    .coverage-rows .row .min { font-size: 0.85em; color: #888; text-align: center; }
+    .coverage-rows .row .road { color: #0277bd; font-weight: 600; text-align: center; }
+
+    /* Footer bar — disclaimer on closing slide */
+    .disclaimer-box {
+      background: rgba(245, 166, 35, 0.1);
+      border-left: 4px solid #f5a623;
+      padding: 1em;
+      border-radius: 6px;
+      font-size: 0.65em;
+      margin: 1em 0;
+    }
+
+    /* Code blocks */
+    .reveal pre {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 0.55em;
+    }
+
+    /* Live demo placeholder */
+    .live-demo-slide {
+      text-align: center;
+      padding-top: 2em;
+    }
+    .live-demo-slide .big-arrow {
+      font-size: 6em;
+      color: var(--fiap-red);
+      margin: 0.5em 0;
+    }
+    .live-demo-slide h2 {
+      font-size: 2.5em !important;
+    }
+    .live-demo-slide .hint {
+      font-size: 0.5em;
+      color: #888;
+      margin-top: 1em;
+    }
+
+    /* Roadmap cards */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8em;
+      margin-top: 1em;
+    }
+    .roadmap-grid .item {
+      background: #f5f5f5;
+      padding: 0.8em 1em;
+      border-radius: 6px;
+      font-size: 0.65em;
+      border-left: 3px solid var(--fiap-red);
+    }
+    .roadmap-grid .item .emoji { font-size: 1.5em; }
+    .roadmap-grid .item .title { font-weight: 700; margin: 0.2em 0; color: var(--fiap-dark); }
+    .roadmap-grid .item .desc { color: #555; line-height: 1.3; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slides são carregados de slides.md.
+           Separadores:
+             ---  = próximo slide (horizontal)
+             --   = slide vertical (down arrow)
+             Note: = speaker note (visível em /?present ou via tecla S) -->
+      <section
+        data-markdown="slides.md"
+        data-separator="^---$"
+        data-separator-vertical="^--$"
+        data-separator-notes="^Note:">
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      controls: true,
+      progress: true,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      width: 1280,
+      height: 800,
+      margin: 0.08,
+      plugins: [RevealMarkdown, RevealNotes, RevealHighlight]
+    });
+  </script>
+
+</body>
+</html>
