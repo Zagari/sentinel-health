@@ -1,0 +1,78 @@
+# =============================================================================
+# Sentinel Health — Unified deployment
+# Brings up nginx (reverse proxy) + landing + surgical + insight on a single
+# bridge network. nginx routes /, /surgical/*, /insight/* to the right service.
+# =============================================================================
+
+services:
+
+  # ── nginx reverse proxy ────────────────────────────────────────────────
+  nginx:
+    image: nginx:alpine
+    container_name: sentinel-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/sentinel.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - landing
+      - surgical
+      - insight
+    networks:
+      - sentinel-net
+    restart: unless-stopped
+
+  # ── Landing institucional (static HTML via nginx:alpine) ───────────────
+  landing:
+    build:
+      context: ../landing
+    image: sentinel-landing:latest
+    container_name: sentinel-landing
+    networks:
+      - sentinel-net
+    restart: unless-stopped
+
+  # ── Sentinel Surgical (FastAPI + YOLOv8m) ──────────────────────────────
+  surgical:
+    build:
+      context: ../modules/surgical/web
+    image: sentinel-surgical:latest
+    container_name: sentinel-surgical
+    volumes:
+      # Mount the trained model from the host (read-only).
+      # web/models/ may only contain .gitkeep — download best.pt from S3 before
+      # using model-dependent endpoints. See modules/surgical/README.md.
+      - ../modules/surgical/web/models:/app/models:ro
+      # Persist temp uploads/results across restarts
+      - surgical-uploads:/tmp/surgical-uploads
+      - surgical-results:/tmp/surgical-results
+      # AWS credentials for S3 sample gallery (read-only)
+      - ${HOME}/.aws:/root/.aws:ro
+    environment:
+      - MODEL_PATH=/app/models/best.pt
+      - S3_BUCKET=surgical-detection-datasets-dev
+      - AWS_DEFAULT_REGION=us-east-1
+    networks:
+      - sentinel-net
+    restart: unless-stopped
+
+  # ── Sentinel Insight (Streamlit + DeepFace + Whisper + GPT) ────────────
+  insight:
+    build:
+      context: ../modules/insight
+    image: sentinel-insight:latest
+    container_name: sentinel-insight
+    volumes:
+      # OPENAI_API_KEY lives in this .env (read-only)
+      - ../modules/insight/emotion-recognizer/.env:/app/emotion-recognizer/.env:ro
+    networks:
+      - sentinel-net
+    restart: unless-stopped
+
+networks:
+  sentinel-net:
+    driver: bridge
+
+volumes:
+  surgical-uploads:
+  surgical-results:
