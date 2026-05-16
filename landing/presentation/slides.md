@@ -165,7 +165,7 @@ Note:
 
 <div class="big-arrow">↓</div>
 
-### http://localhost/surgical/
+### http://&lt;servidor&gt;/surgical/
 
 <div class="hint">
   Tab para a UI · upload de clip GynSurg da galeria · análise YOLO em ~30s<br>
@@ -234,7 +234,7 @@ Note:
 
 <div class="big-arrow">↓</div>
 
-### http://localhost/insight/
+### http://&lt;servidor&gt;/insight/
 
 <div class="hint">
   Tab para a UI Streamlit · modo "Audio Only"<br>
