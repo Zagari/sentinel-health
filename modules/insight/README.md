@@ -5,8 +5,9 @@
 >
 > **Quick run (standalone):**
 > ```bash
-> # Configure OPENAI_API_KEY first:
-> echo "OPENAI_API_KEY=sk-..." > emotion-recognizer/.env
+> # Configure OPENAI_API_KEY from the template:
+> cp emotion-recognizer/.env.example emotion-recognizer/.env
+> $EDITOR emotion-recognizer/.env   # paste your sk-... key
 > docker-compose up -d
 > # → http://localhost:8501/insight/
 > ```
