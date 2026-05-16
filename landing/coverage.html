@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobertura do Desafio — Sentinel Health</title>
+  <meta name="description" content="Matriz item-a-item da cobertura do FIAP Tech Challenge Fase 4 pela plataforma Sentinel Health. Filtros interativos por status, tipo de dado e seção da proposta.">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<!-- ─────────────────────── Header (mesmo da landing) ─────────────────────── -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/" aria-label="Sentinel Health home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 2 L28 8 L28 18 C28 24 22 28 16 30 C10 28 4 24 4 18 L4 8 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M9 16 L13 16 L15 12 L18 20 L20 16 L23 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Sentinel Health</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="/#modules">Módulos</a>
+      <a href="/coverage.html" aria-current="page">Cobertura</a>
+      <a href="/#roadmap">Roadmap</a>
+      <a href="https://github.com/Zagari/sentinel-health" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ─────────────────────── Hero ─────────────────────── -->
+<section class="coverage-hero">
+  <div class="container">
+    <span class="tag">Tech Challenge · Fase 4</span>
+    <h1>Cobertura do Desafio</h1>
+    <p>
+      Mapeamento item-a-item da proposta do PDF do desafio.
+      Use os filtros para inspecionar por <strong>status</strong>, <strong>tipo de dado</strong>
+      ou <strong>seção da proposta</strong>.
+    </p>
+    <a href="/" class="back-link">← Voltar para a landing</a>
+  </div>
+</section>
+
+<!-- ─────────────────────── Estatísticas ─────────────────────── -->
+<section class="coverage-stats">
+  <div class="container">
+    <div class="stat-cards">
+      <div class="stat-card stat-ok">
+        <div class="stat-num" data-stat="ok">—</div>
+        <div class="stat-lbl">✅ Atendidos</div>
+      </div>
+      <div class="stat-card stat-partial">
+        <div class="stat-num" data-stat="partial">—</div>
+        <div class="stat-lbl">⚠️ Parciais</div>
+      </div>
+      <div class="stat-card stat-roadmap">
+        <div class="stat-num" data-stat="roadmap">—</div>
+        <div class="stat-lbl">🚀 Roadmap</div>
+      </div>
+      <div class="stat-card stat-total">
+        <div class="stat-num" data-stat="total">—</div>
+        <div class="stat-lbl">Total</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── Filtros + Lista ─────────────────────── -->
+<section class="coverage-main">
+  <div class="container coverage-layout">
+
+    <!-- Sidebar de filtros -->
+    <aside class="filters" aria-label="Filtros">
+      <h3>Filtros</h3>
+
+      <div class="filter-group">
+        <h4>Status</h4>
+        <div class="chips" data-filter="status">
+          <button class="chip active" data-value="all" type="button">Todos</button>
+          <button class="chip" data-value="ok" type="button">✅ Atendido</button>
+          <button class="chip" data-value="partial" type="button">⚠️ Parcial</button>
+          <button class="chip" data-value="roadmap" type="button">🚀 Roadmap</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h4>Tipo de dado</h4>
+        <div class="chips" data-filter="data_type">
+          <button class="chip active" data-value="all" type="button">Todos</button>
+          <button class="chip" data-value="video" type="button">Vídeo</button>
+          <button class="chip" data-value="audio" type="button">Áudio</button>
+          <button class="chip" data-value="cloud" type="button">Cloud</button>
+          <button class="chip" data-value="realtime" type="button">Real-time</button>
+          <button class="chip" data-value="vitals" type="button">Sinais vitais</button>
+          <button class="chip" data-value="delivery" type="button">Entregável</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h4>Seção da proposta</h4>
+        <div class="chips" data-filter="section">
+          <button class="chip active" data-value="all" type="button">Todas</button>
+          <button class="chip" data-value="functionality" type="button">Funcionalidades</button>
+          <button class="chip" data-value="objective" type="button">Objetivos</button>
+          <button class="chip" data-value="video" type="button">Req. 1 (Vídeo)</button>
+          <button class="chip" data-value="audio" type="button">Req. 2 (Áudio)</button>
+          <button class="chip" data-value="deliverables" type="button">Entregáveis</button>
+        </div>
+      </div>
+
+      <button id="reset-filters" class="btn btn-secondary btn-small" type="button">
+        Limpar filtros
+      </button>
+    </aside>
+
+    <!-- Lista de itens -->
+    <main class="items-pane" aria-live="polite">
+      <div class="items-meta">
+        <span id="results-count">Carregando matriz…</span>
+      </div>
+      <div id="items-list" class="items-list"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <p>Nenhum item corresponde aos filtros selecionados.</p>
+        <button class="btn btn-secondary btn-small" onclick="document.getElementById('reset-filters').click()">
+          Limpar filtros
+        </button>
+      </div>
+    </main>
+
+  </div>
+</section>
+
+<!-- ─────────────────────── Footer (mesmo da landing) ─────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-top">
+      <div>
+        <h3>Equipe — Grupo Sala 14</h3>
+        <ul>
+          <li>Adriana Martins de Souza — RM 368050</li>
+          <li>Diego Oliveira da Silva — RM 367964</li>
+          <li>Eduardo Nicola F. Zagari — RM 368021</li>
+          <li>Renan de Assis Torres — RM 368513</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="https://github.com/Zagari/sentinel-health" target="_blank" rel="noopener">Repositório GitHub ↗</a></li>
+          <li><a href="/">Landing institucional</a></li>
+          <li><a href="/surgical/">Sentinel Surgical</a></li>
+          <li><a href="/insight/">Sentinel Insight</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Acadêmico</h3>
+        <p><strong>FIAP</strong> — Faculdade de Informática e Administração Paulista</p>
+        <p>Pós-Graduação em Inteligência Artificial para Devs</p>
+        <p>Tech Challenge — Fase 4 · 2026-05</p>
+      </div>
+    </div>
+
+    <div class="disclaimer" role="note">
+      ⚠️ <strong>Aviso acadêmico.</strong>
+      Sentinel Health é um protótipo desenvolvido para fins acadêmicos.
+      <strong>Não é um dispositivo médico.</strong> Os modelos foram treinados em datasets de pesquisa
+      com vieses conhecidos. Qualquer interpretação dos resultados requer profissionais qualificados.
+    </div>
+
+    <p class="footer-copy">
+      Sentinel Health · MIT License · © 2026 Grupo Sala 14
+    </p>
+
+  </div>
+</footer>
+
+<script src="/assets/js/coverage.js"></script>
+</body>
+</html>

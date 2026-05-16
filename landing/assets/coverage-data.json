@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-05-16",
+    "source_document": "POSTECH - IADT - Tech Challenge - Fase 4.pdf",
+    "summary": "Matriz item-a-item da cobertura do desafio FIAP Fase 4 pela plataforma Sentinel Health.",
+    "totals": {
+      "items": 25,
+      "ok": 18,
+      "partial": 5,
+      "roadmap": 2,
+      "note": "Valores derivados estaticamente do array de items para fallback; o coverage.js recomputa em runtime."
+    }
+  },
+  "categories": {
+    "functionality": {
+      "label": "Funcionalidades (PDF — mínimo 2 obrigatórias)",
+      "shortLabel": "Funcionalidades",
+      "items": [
+        {
+          "id": "func-video",
+          "requirement": "Analisar vídeos de cirurgias / consultas / partos / fisioterapia",
+          "data_type": "video",
+          "status": "partial",
+          "modules": ["surgical", "insight"],
+          "evidence": "Surgical cobre cirurgias ginecológicas; Insight cobre consultas via DeepFace. Partos e fisioterapia ficam em roadmap (Sentinel Motion).",
+          "module_url": null
+        },
+        {
+          "id": "func-audio",
+          "requirement": "Processar gravações de voz (depressão, ansiedade, violência doméstica, fadiga hormonal)",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Insight transcreve via Whisper-1 + análise emocional via GPT-5.4-nano + fallback keyword com 27 padrões ponderados.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "func-vitals",
+          "requirement": "Detectar anomalias em sinais vitais (pressão em gestantes, batimentos fetais)",
+          "data_type": "vitals",
+          "status": "roadmap",
+          "modules": [],
+          "evidence": "Fora do escopo declarado. Documentado como Sentinel VitalSigns na roadmap pública.",
+          "module_url": null
+        },
+        {
+          "id": "func-cloud",
+          "requirement": "Integrar com serviços gerenciados em nuvem",
+          "data_type": "cloud",
+          "status": "ok",
+          "modules": ["surgical", "insight"],
+          "evidence": "Multi-cloud: Surgical em AWS (S3, EC2 via Terraform, SageMaker opcional). Insight em OpenAI API.",
+          "module_url": null
+        }
+      ]
+    },
+    "objective": {
+      "label": "Objetivos (PDF — mínimo 3)",
+      "shortLabel": "Objetivos",
+      "items": [
+        {
+          "id": "obj-materno",
+          "requirement": "Detectar precocemente riscos em saúde materna e ginecológica",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["surgical"],
+          "evidence": "YOLOv8m v3_finetuned: 91.72% de detecção de sangramento em cirurgias ginecológicas, 13.44% FP @ threshold 0.30.",
+          "module_url": "/surgical/"
+        },
+        {
+          "id": "obj-violencia",
+          "requirement": "Identificar sinais de violência doméstica ou abuso",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Insight: prompt LLM dedicado retornando 'domestic violence signals' + 27 keywords (kill, threat, abuse, hurt me, hit me, ...).",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "obj-psico",
+          "requirement": "Monitorar bem-estar psicológico feminino",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Insight: sentiment (positivo/neutro/negativo), risk_level (low/moderate/high), distress score 0-10, signals (anxiety, depression, sadness, etc).",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "obj-cloud",
+          "requirement": "Utilizar serviços em nuvem para ampliar capacidade",
+          "data_type": "cloud",
+          "status": "ok",
+          "modules": ["surgical", "insight"],
+          "evidence": "AWS (S3 + EC2 + SageMaker + SSM Parameter Store) para Surgical. OpenAI API para Insight.",
+          "module_url": null
+        },
+        {
+          "id": "obj-realtime",
+          "requirement": "Aplicar técnicas de detecção de anomalias em tempo real",
+          "data_type": "realtime",
+          "status": "partial",
+          "modules": ["surgical", "insight"],
+          "evidence": "Near real-time (latência fim-a-fim ≤ 1 min). Streaming síncrono ao vivo em roadmap (Sentinel Realtime).",
+          "module_url": null
+        }
+      ]
+    },
+    "video": {
+      "label": "Requisito Obrigatório 1 — Análise de Vídeo",
+      "shortLabel": "Req. 1 (Vídeo)",
+      "items": [
+        {
+          "id": "vid-cirurgias",
+          "requirement": "Cirurgias: detecção de complicações ou sangramento anômalo",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["surgical"],
+          "evidence": "YOLOv8m fine-tuned com CholecSeg8k + GynSurg. Threshold 0.30, 91.72% detecção.",
+          "module_url": "/surgical/"
+        },
+        {
+          "id": "vid-consultas",
+          "requirement": "Consultas: sinais não-verbais de desconforto ou medo",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "DeepFace classifica fear / sad / disgust frame-a-frame; gráfico de emoção sobre o tempo.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "vid-fisio",
+          "requirement": "Fisioterapia: análise de movimentos e recuperação",
+          "data_type": "video",
+          "status": "roadmap",
+          "modules": [],
+          "evidence": "Roadmap: Sentinel Motion via pose estimation (MediaPipe / MoveNet).",
+          "module_url": null
+        },
+        {
+          "id": "vid-violencia",
+          "requirement": "Triagem de violência: linguagem corporal indicativa de abuso",
+          "data_type": "video",
+          "status": "partial",
+          "modules": ["insight"],
+          "evidence": "Insight cobre face + voz; pose corporal estimation ainda em roadmap (Sentinel Pose).",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "vid-yolo",
+          "requirement": "YOLOv8 customizado (1 dos itens da lista do PDF)",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["surgical"],
+          "evidence": "Item escolhido: 'Sangramento anômalo durante procedimentos'. YOLOv8m v3_finetuned, 91.72% det.",
+          "module_url": "/surgical/"
+        },
+        {
+          "id": "vid-rel-obstetricos",
+          "requirement": "Relatórios — desvios em procedimentos obstétricos",
+          "data_type": "video",
+          "status": "partial",
+          "modules": ["surgical"],
+          "evidence": "Surgical registra anomalias temporais (excessive/prolonged bleeding) no pipeline CLI; o domínio é ginecológico geral, sem distinguir 'obstétrico'.",
+          "module_url": "/surgical/"
+        },
+        {
+          "id": "vid-rel-complicacoes",
+          "requirement": "Relatórios — complicações em cirurgias ginecológicas",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["surgical"],
+          "evidence": "Relatório JSON via API + geração PDF (SurgicalReportGenerator) com severidade alta / média / baixa.",
+          "module_url": "/surgical/"
+        },
+        {
+          "id": "vid-rel-desconforto",
+          "requirement": "Relatórios — indicadores visuais de desconforto psicológico",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Gráfico de emoção sobre o tempo + tabela detalhada + summary GPT-5.4-nano multimodal.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "vid-rel-violencia",
+          "requirement": "Relatórios — alertas para violência doméstica",
+          "data_type": "video",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "JSON exportado contém risk_level, domestic violence signals e recommended_action. Pronto para integração com EHR.",
+          "module_url": "/insight/"
+        }
+      ]
+    },
+    "audio": {
+      "label": "Requisito Obrigatório 2 — Análise de Áudio",
+      "shortLabel": "Req. 2 (Áudio)",
+      "items": [
+        {
+          "id": "aud-ginecol",
+          "requirement": "Consultas ginecológicas: tom de voz, hesitação",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Whisper-1 transcreve com timestamps; GPT-5.4-nano extrai sentiment + summary + detected signals.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "aud-prenatal",
+          "requirement": "Acompanhamento pré-natal: sinais de ansiedade gestacional",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Keywords 'anxiety' / 'panic' / 'worry' (peso 2 cada) + LLM contextualiza no domínio gestacional via prompt.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "aud-posparto",
+          "requirement": "Consultas pós-parto: detecção precoce de depressão pós-parto",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Keyword 'depress' (peso 2) no fallback + LLM contextualiza para depressão pós-parto via prompt dedicado.",
+          "module_url": "/insight/"
+        },
+        {
+          "id": "aud-violencia",
+          "requirement": "Atendimento a vítimas de violência: padrões vocais de trauma",
+          "data_type": "audio",
+          "status": "ok",
+          "modules": ["insight"],
+          "evidence": "Prompt LLM dedicado retornando risk_level, score 0-10, domestic violence signals e recommended_action.",
+          "module_url": "/insight/"
+        }
+      ]
+    },
+    "deliverables": {
+      "label": "Entregáveis",
+      "shortLabel": "Entregáveis",
+      "items": [
+        {
+          "id": "del-repo",
+          "requirement": "Repositório Git com código-fonte completo",
+          "data_type": "delivery",
+          "status": "ok",
+          "modules": ["surgical", "insight"],
+          "evidence": "Monorepo github.com/Zagari/sentinel-health (público, MIT). Subtrees preservam histórico do surgical-video-ai e emotion-detector.",
+          "module_url": "https://github.com/Zagari/sentinel-health"
+        },
+        {
+          "id": "del-relatorio",
+          "requirement": "Relatório técnico (fluxo multimodal, modelos, resultados)",
+          "data_type": "delivery",
+          "status": "ok",
+          "modules": [],
+          "evidence": "relatorio/relatorio_tech_challenge.pdf — LaTeX adaptado do template Fase 1 com cap01 incluindo esta matriz de cobertura. (Em conclusão na Phase 8 do plano de implementação.)",
+          "module_url": null
+        },
+        {
+          "id": "del-video",
+          "requirement": "Vídeo demo até 15 min (YouTube/Vimeo)",
+          "data_type": "delivery",
+          "status": "partial",
+          "modules": [],
+          "evidence": "Roteiro completo em docs/DEMO_SCRIPT.md + apresentação HTML em landing/presentation/. Gravação pendente.",
+          "module_url": null
+        }
+      ]
+    }
+  }
+}
