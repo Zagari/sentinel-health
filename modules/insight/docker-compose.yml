@@ -10,7 +10,7 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      # Mount .env (XMerckAPIKey) read-only into the container
+      # Mount .env (OPENAI_API_KEY) read-only into the container
       - ./emotion-recognizer/.env:/app/emotion-recognizer/.env:ro
       # Persist temp uploads/cache across restarts (optional)
       - insight-tmp:/tmp

@@ -3,6 +3,16 @@
 > **Última atualização:** 2026-05-16
 > **Commit:** 1ed7e96
 > **Branch:** main
+>
+> **⚠️ Aviso de atualização (2026-05-16, pós-migração):** este documento foi escrito antes da migração apiGPTeal/Azure → OpenAI padrão. Trechos mencionando `XMerckAPIKey`, `iapi-test.merck.com`, `AzureOpenAI`, `gpt-5-2025-08-07`, `azure_openai_llm` e `apiGPTeal` refletem o estado **anterior** ao commit de migração e **não correspondem mais** ao código em runtime. Estado atual (Phase 2.5):
+> - Env var: `OPENAI_API_KEY` (não `XMerckAPIKey`)
+> - SDK: `from openai import OpenAI` (não `AzureOpenAI`)
+> - Endpoint: default da OpenAI (não `iapi-test.merck.com`)
+> - Modelo chat: `gpt-5.4-nano` (não `gpt-5-2025-08-07`)
+> - Modelo áudio: `whisper-1` (inalterado, mas via SDK em vez de `requests.post`)
+> - Source label do voice_analyzer: `openai_llm` (não `azure_openai_llm`)
+>
+> Documento será regenerado completamente via `/asp-analyze-codebase` em momento oportuno. Detalhes da migração em `thoughts/shared/plans/2026-05-16-sentinel-health-platform.md` § Phase 2.5.
 
 ## Visão Geral
 

@@ -1,4 +1,4 @@
-"""Unit test to verify the apiGPTeal API key is loaded and working."""
+"""Unit test to verify the OpenAI API key is loaded and working."""
 
 import os
 import sys
@@ -13,7 +13,7 @@ from analysis.summarizer import setup_openai_api, create_chat_completion, extrac
 
 
 class TestApiKey(unittest.TestCase):
-    """Verify the Azure OpenAI API key is configured and functional."""
+    """Verify the OpenAI API key is configured and functional."""
 
     def test_api_key_is_loaded(self):
         """setup_openai_api() should succeed and populate openai.api_key."""

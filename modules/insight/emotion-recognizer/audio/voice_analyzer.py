@@ -1,7 +1,7 @@
 """
 Voice emotion analysis module — analyzes transcribed speech for emotional content.
 
-Uses the apiGPTeal Azure OpenAI endpoint (same as summarizer.py) to analyze
+Uses the OpenAI Chat API (same configuration as summarizer.py) to analyze
 the transcription, with a local keyword-based fallback if the LLM is unavailable.
 
 Adapted from the multimodal-ai-health-monitoring project's
@@ -14,6 +14,7 @@ import re
 import unicodedata
 
 import openai
+from openai import OpenAI
 from analysis.summarizer import (
     setup_openai_api,
     estimate_tokens,
@@ -60,19 +61,13 @@ def _parse_json_response(content: str) -> dict:
 
 
 def _analyze_with_llm(transcription: str) -> dict:
-    """Send transcription to Azure OpenAI for emotional analysis."""
-    from openai import AzureOpenAI
-
-    client = AzureOpenAI(
-        azure_endpoint=openai.azure_endpoint,
-        api_key=openai.api_key,
-        api_version=openai.api_version,
-    )
+    """Send transcription to OpenAI for emotional analysis."""
+    client = OpenAI(api_key=openai.api_key)
 
     prompt = _VOICE_SYSTEM_PROMPT.replace("<<TRANSCRIPTION>>", transcription)
 
     response = client.chat.completions.create(
-        model="gpt-5-2025-08-07",
+        model="gpt-5.4-nano",
         messages=[{"role": "user", "content": prompt}],
         max_completion_tokens=compute_max_completion_tokens(
             _VOICE_SYSTEM_PROMPT, transcription
@@ -81,7 +76,7 @@ def _analyze_with_llm(transcription: str) -> dict:
 
     content = response.choices[0].message.content or ""
     result = _parse_json_response(content)
-    result.setdefault("source", "azure_openai_llm")
+    result.setdefault("source", "openai_llm")
     return result
 
 
@@ -191,7 +186,7 @@ def analyze_voice_emotions(transcription: str) -> dict:
     """
     Analyze a speech transcription for emotional content.
 
-    Tries the Azure OpenAI LLM first; falls back to local keyword analysis.
+    Tries the OpenAI LLM first; falls back to local keyword analysis.
 
     Args:
         transcription: The transcribed speech text.

@@ -126,7 +126,7 @@ def test_analyze_voice_emotions_mocked_llm(monkeypatch):
     and returns a properly structured result.
     """
     fake_llm_response = {
-        "source": "azure_openai_llm",
+        "source": "openai_llm",
         "sentiment": "negative",
         "risk_level": "moderate",
         "score": 5,
@@ -149,7 +149,7 @@ def test_analyze_voice_emotions_mocked_llm(monkeypatch):
 
     result = analyze_voice_emotions("I am frustrated and tired of everything.")
     _assert_valid_result(result)
-    assert result["source"] == "azure_openai_llm"
+    assert result["source"] == "openai_llm"
     assert result["sentiment"] == "negative"
 
 

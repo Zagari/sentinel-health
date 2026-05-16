@@ -45,7 +45,7 @@ def video_results() -> list[dict]:
 def voice_result() -> dict:
     """Minimal voice analysis result."""
     return {
-        "source": "azure_openai_llm",
+        "source": "openai_llm",
         "sentiment": "negative",
         "risk_level": "moderate",
         "score": 5,

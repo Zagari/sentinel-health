@@ -5,8 +5,8 @@
 >
 > **Quick run (standalone):**
 > ```bash
-> # Configure XMerckAPIKey first:
-> echo "XMerckAPIKey=your_key_here" > emotion-recognizer/.env
+> # Configure OPENAI_API_KEY first:
+> echo "OPENAI_API_KEY=sk-..." > emotion-recognizer/.env
 > docker-compose up -d
 > # → http://localhost:8501/insight/
 > ```
@@ -50,7 +50,7 @@ This application is intended to support the identification of signs of domestic 
 | Feature | Description |
 |---|---|
 | **Facial Emotion Detection** | OpenCV Haar cascades for face detection + DeepFace for emotion classification (happy, sad, angry, fear, surprise, neutral, disgust) |
-| **Speech Transcription** | Whisper API via apiGPTeal for speech-to-text conversion |
+| **Speech Transcription** | Whisper API (OpenAI) for speech-to-text conversion |
 | **Voice Emotion Analysis** | LLM-based sentiment, risk level, and distress signal detection from speech content |
 | **AI Summarization** | GPT-powered natural-language summaries combining video and audio emotion data |
 | **Multiple Input Sources** | Webcam recording, YouTube URL download, or direct audio file upload |
@@ -94,7 +94,7 @@ This application is intended to support the identification of signs of domestic 
 │                              │                                  │
 │                              ▼                                  │
 │   ┌──────────────────────────────────────────────┐              │
-│   │   LLM Summarizer (GPT via apiGPTeal)         │              │
+│   │   LLM Summarizer (GPT via OpenAI)            │              │
 │   │   Combines video + audio → unified summary   │              │
 │   └──────────────────────────────────────────────┘              │
 └─────────────────────────────────────────────────────────────────┘
@@ -115,7 +115,7 @@ emotion-detector/
 │   ├── analysis/                  # Video analysis & visualization
 │   │   ├── __init__.py
 │   │   ├── analyzer.py            # Haar cascade + DeepFace emotion pipeline
-│   │   ├── summarizer.py          # LLM summarization via apiGPTeal (Azure OpenAI)
+│   │   ├── summarizer.py          # LLM summarization via OpenAI (gpt-5.4-nano)
 │   │   └── visualizer.py          # Streamlit UI components (tables, charts, etc.)
 │   │
 │   ├── audio/                     # Audio processing pipeline
@@ -159,7 +159,7 @@ emotion-detector/
   - macOS: `brew install ffmpeg`
   - Linux: `sudo apt install ffmpeg`
   - Fallback: the app can use `imageio-ffmpeg` if system ffmpeg is not found
-- **apiGPTeal API key** (`XMerckAPIKey`) — required for Whisper transcription, voice analysis, and LLM summaries
+- **OpenAI API key** (`OPENAI_API_KEY`) — required for Whisper transcription, voice analysis, and LLM summaries
 
 ---
 
@@ -188,14 +188,14 @@ pip install -r requirements.txt
 Create a `.env` file inside the `emotion-recognizer/` directory:
 
 ```env
-XMerckAPIKey=your_api_key_here
+OPENAI_API_KEY=sk-your-openai-api-key
 ```
 
 This single key is used for:
 - **Whisper API** — speech-to-text transcription
-- **Azure OpenAI (GPT)** — voice emotion analysis and LLM summarization
+- **OpenAI (GPT)** — voice emotion analysis and LLM summarization
 
-Obtain your key from the [apiGPTeal Onboarding page](https://share.merck.com/spaces/EG/pages/1759994187/apiGPTeal+Onboarding).
+Obtain your key from the [OpenAI Platform](https://platform.openai.com/api-keys).
 
 ---
 
@@ -285,13 +285,13 @@ pytest emotion-recognizer/tests/test_api_key.py -v
 ### Audio Pipeline
 
 - **Audio Extraction**: ffmpeg converts video → WAV (PCM 16-bit, mono, 16 kHz). Falls back to `imageio-ffmpeg`.
-- **Speech-to-Text**: Whisper API (`whisper-1` model) via apiGPTeal endpoint. Supports MP3, WAV, M4A, MP4, WebM (max 25 MB).
+- **Speech-to-Text**: Whisper API (`whisper-1` model) via the OpenAI SDK. Supports MP3, WAV, M4A, MP4, WebM (max 25 MB).
 - **Voice Analysis**: LLM-first approach with local keyword-based fallback. Detects sentiment (positive/neutral/negative), risk level (low/moderate/high), distress score (0–10), emotional signals, and keywords.
 
 ### LLM Integration
 
-- **Endpoint**: `https://iapi-test.merck.com/gpt/libsupport` (Azure OpenAI)
-- **Model**: `gpt-5-2025-08-07`
+- **Endpoint**: default OpenAI API (no custom base URL)
+- **Model**: `gpt-5.4-nano`
 - **Token Management**: Automatic payload compaction and token estimation to stay within model limits.
 - **Multimodal Summary**: Combines video emotion timeline with voice analysis into a unified natural-language assessment.
 
@@ -304,5 +304,5 @@ pytest emotion-recognizer/tests/test_api_key.py -v
 - Emotion detection accuracy depends on video quality, lighting, and face visibility.
 - Speech analysis requires clear audio; noisy environments may reduce accuracy.
 - The LLM summary is AI-generated and may contain errors or biases.
-- Requires network access to apiGPTeal endpoints for transcription and summarization.
+- Requires network access to OpenAI API endpoints for transcription and summarization.
 - Webcam recording requires a connected camera and browser permissions.

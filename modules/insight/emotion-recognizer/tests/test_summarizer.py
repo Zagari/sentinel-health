@@ -54,7 +54,7 @@ def test_env_file_exists():
     env_path = os.path.join(_PROJECT_ROOT, ".env")
     assert os.path.isfile(env_path), (
         f".env not found at {env_path}. "
-        "Create it with: XMerckAPIKey=<your-key>"
+        "Create it with: OPENAI_API_KEY=<your-key>"
     )
 
 
@@ -66,8 +66,6 @@ def test_api_key_loads():
 
     assert _openai.api_key is not None, "openai.api_key is None after setup"
     assert len(_openai.api_key) > 0, "openai.api_key is empty after setup"
-    assert _openai.azure_endpoint, "azure_endpoint not set"
-    assert _openai.api_version, "api_version not set"
 
 
 # ── 2. Payload validation ────────────────────────────────────────────────
@@ -141,7 +139,7 @@ def test_summarize_mocked(emotion_payload, monkeypatch):
 def test_summarize_returns_warning_on_missing_key(monkeypatch):
     """If the API key is missing, summarize_emotions should return a warning string."""
     # Temporarily remove the key from env
-    monkeypatch.delenv("XMerckAPIKey", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     # Also force load_dotenv to not re-read cached value
     monkeypatch.setattr(
         "analysis.summarizer.load_dotenv",

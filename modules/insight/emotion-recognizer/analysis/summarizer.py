@@ -1,42 +1,37 @@
 """
 LLM-based emotion summarizer.
 Takes the JSON payload from analyzer.py and generates a natural-language
-summary of the emotions detected, using the apiGPTeal Azure OpenAI endpoint.
-
-Based on the original llm-response.py structure.
+summary of the emotions detected, using the OpenAI API.
 
 Requirements:
 - OpenAI Python library (v1.0.0 or higher)
 - python-dotenv library for loading .env files
-- Valid apiGPTeal test key stored in environment variable.
-  - If you do not have key, visit:
-    https://share.merck.com/spaces/EG/pages/1759994187/apiGPTeal+Onboarding
+- Valid OpenAI API key stored in the OPENAI_API_KEY environment variable.
+  Get a key from: https://platform.openai.com/api-keys
 """
 
 import json
 import os
-import sys
 import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 
 
+# Model used for chat completions (OpenAI public catalog)
+_CHAT_MODEL = "gpt-5.4-nano"
+
+
 def setup_openai_api():
-    """Configure the Azure OpenAI client (same structure as llm-response.py)."""
+    """Load the OPENAI_API_KEY from the .env file and configure the openai library."""
     # Load .env from the emotion-recognizer directory (where it actually lives)
     env_path = os.path.join(os.path.dirname(__file__), os.pardir, ".env")
     load_dotenv(dotenv_path=os.path.abspath(env_path))
 
-    # Set up API configuration
-    openai.api_type = "azure"
-    openai.azure_endpoint = "https://iapi-test.merck.com/gpt/libsupport"
-    openai.api_version = "2024-10-21"
-
-    # Get API key from environment variable
-    api_key = os.getenv("XMerckAPIKey")
+    api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError(
-            "API key not found. Please set XMerckAPIKey in your environment "
-            "variables and make sure you are using the TEST Key."
+            "API key not found. Please set OPENAI_API_KEY in your .env file. "
+            "Get a key from https://platform.openai.com/api-keys"
         )
     openai.api_key = api_key
 
@@ -100,8 +95,8 @@ def compact_payload(export_data: list[dict]) -> list[dict]:
 
 # ── Token estimation ─────────────────────────────────────────────────────
 
-_MODEL_MAX_TOKENS = 8192          # gpt-5 / gpt-4o context window on Azure
-_RESPONSE_TOKENS_RESERVE = 600   # enough for a 3-6 sentence summary
+_MODEL_MAX_TOKENS = 8192          # gpt-5.4-nano context window
+_RESPONSE_TOKENS_RESERVE = 600    # enough for a 3-6 sentence summary
 
 
 def estimate_tokens(text: str) -> int:
@@ -139,25 +134,19 @@ def compute_max_completion_tokens(system_prompt: str, user_message: str,
 
 def create_chat_completion(user_message: str):
     """
-    Create a chat completion using the GPT-5 model.
+    Create a chat completion using the configured OpenAI chat model.
 
     Args:
         user_message: The JSON payload string to summarize.
 
     Returns:
-        The API response object.
+        The API response object, or None on failure.
     """
     try:
-        from openai import AzureOpenAI
-
-        client = AzureOpenAI(
-            azure_endpoint=openai.azure_endpoint,
-            api_key=openai.api_key,
-            api_version=openai.api_version,
-        )
+        client = OpenAI(api_key=openai.api_key)
 
         response = client.chat.completions.create(
-            model="gpt-5-2025-08-07",
+            model=_CHAT_MODEL,
             messages=[
                 {"role": "system", "content": _SYSTEM_PROMPT},
                 {"role": "user", "content": user_message},
