@@ -705,6 +705,49 @@ body {
 .items-list {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Section grouping ───────────────────────────────────────────────────── */
+
+.section-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--fiap-red);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  color: var(--fiap-dark);
+}
+
+.section-metric {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--fiap-gray);
+}
+
+.section-metric .metric-ok       { color: #2e7d32; font-weight: 700; }
+.section-metric .metric-partial  { color: #ed6c02; font-weight: 700; }
+.section-metric .metric-roadmap  { color: #0277bd; font-weight: 700; }
+.section-metric .metric-min      { color: var(--fiap-gray); font-weight: 500; }
+.section-metric .metric-filtered { color: var(--fiap-gray); font-style: italic; }
+
+.section-items {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -741,17 +784,6 @@ body {
 .status-badge.status-ok      { color: #2e7d32; }
 .status-badge.status-partial { color: #ed6c02; }
 .status-badge.status-roadmap { color: #0277bd; }
-
-.section-badge {
-  font-size: 0.72rem;
-  background: var(--fiap-light);
-  color: var(--fiap-gray);
-  padding: 0.22rem 0.6rem;
-  border-radius: 100px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-}
 
 .item-id {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;

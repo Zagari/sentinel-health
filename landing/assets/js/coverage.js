@@ -1,7 +1,7 @@
 /* =============================================================================
    Sentinel Health — Coverage page logic
    Fetches coverage-data.json (canonical source) and renders the matrix
-   with multi-axis filters.
+   grouped by section, with multi-axis filters and per-section metrics.
    ============================================================================= */
 
 const STATUS_META = {
@@ -15,15 +15,11 @@ const MODULE_META = {
   insight:  { label: 'Insight',  url: '/insight/' },
 };
 
-const SECTION_META = {
-  functionality: 'Funcionalidades',
-  objective:     'Objetivos',
-  video:         'Req. 1 — Vídeo',
-  audio:         'Req. 2 — Áudio',
-  deliverables:  'Entregáveis',
-};
-
+// ── Global state ────────────────────────────────────────────────────────────
 let allItems = [];
+let sectionsData = {};   // { sectionKey: { label, shortLabel, minimum_required } }
+let sectionOrder = [];   // preserves the order from the JSON
+
 const filters = { status: 'all', data_type: 'all', section: 'all' };
 
 // ── Escape utility ──────────────────────────────────────────────────────────
@@ -41,9 +37,17 @@ async function init() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
-    // Flatten items, tagging each with its section key
+    sectionsData = {};
+    sectionOrder = [];
     allItems = [];
+
     for (const [sectionKey, sectionData] of Object.entries(data.categories)) {
+      sectionOrder.push(sectionKey);
+      sectionsData[sectionKey] = {
+        label: sectionData.label,
+        shortLabel: sectionData.shortLabel,
+        minimum_required: sectionData.minimum_required ?? null,
+      };
       for (const item of sectionData.items) {
         allItems.push({ ...item, section: sectionKey });
       }
@@ -105,7 +109,7 @@ function matchesFilters(item) {
   return true;
 }
 
-// ── Render items ────────────────────────────────────────────────────────────
+// ── Render: grouped by section, with per-section metrics ───────────────────
 function render() {
   const list = document.getElementById('items-list');
   const empty = document.getElementById('empty-state');
@@ -113,7 +117,7 @@ function render() {
 
   const visible = allItems.filter(matchesFilters);
 
-  // Counter line with per-status breakdown for the current filter set
+  // Top counter with per-status breakdown for the current filter set
   const visibleCounts = { ok: 0, partial: 0, roadmap: 0 };
   visible.forEach(i => visibleCounts[i.status]++);
   counter.innerHTML = visible.length === allItems.length
@@ -129,9 +133,72 @@ function render() {
   }
   empty.hidden = true;
 
+  // Group visible items by section, preserving section order
+  const itemsBySection = {};
   for (const item of visible) {
-    list.appendChild(renderItem(item));
+    (itemsBySection[item.section] ||= []).push(item);
   }
+
+  for (const sectionKey of sectionOrder) {
+    if (!itemsBySection[sectionKey]) continue;  // section has no visible items under current filters
+    list.appendChild(renderSection(sectionKey, itemsBySection[sectionKey]));
+  }
+}
+
+// ── Render a single section group ───────────────────────────────────────────
+function renderSection(sectionKey, visibleItems) {
+  const meta = sectionsData[sectionKey];
+
+  // Section-wide totals (from ALL items in the section, not just visible)
+  const sectionItems = allItems.filter(i => i.section === sectionKey);
+  const sOk      = sectionItems.filter(i => i.status === 'ok').length;
+  const sPartial = sectionItems.filter(i => i.status === 'partial').length;
+  const sRoadmap = sectionItems.filter(i => i.status === 'roadmap').length;
+
+  // Build metric line
+  const parts = [];
+
+  if (meta.minimum_required != null) {
+    // "X atendidas (mínimo Y exigido)"
+    const okLabel = sOk === 1 ? 'atendida' : 'atendidas';
+    parts.push(
+      `<span class="metric-ok">${sOk} ${okLabel}</span> ` +
+      `<span class="metric-min">(mínimo ${meta.minimum_required} exigido)</span>`
+    );
+  } else {
+    const okLabel = sOk === 1 ? 'atendido' : 'atendidos';
+    parts.push(`<span class="metric-ok">${sOk} ${okLabel}</span>`);
+  }
+
+  if (sPartial > 0) {
+    const lbl = sPartial === 1 ? 'parcial' : 'parciais';
+    parts.push(`<span class="metric-partial">${sPartial} ${lbl}</span>`);
+  }
+  if (sRoadmap > 0) {
+    parts.push(`<span class="metric-roadmap">${sRoadmap} em roadmap</span>`);
+  }
+
+  const metricHtml = parts.join(' · ');
+
+  // Show "(filtrado: N visíveis)" when filters reduce items in this section
+  const isFiltered = visibleItems.length !== sectionItems.length;
+  const filteredNote = isFiltered
+    ? ` <span class="metric-filtered">— ${visibleItems.length} visível${visibleItems.length === 1 ? '' : 'is'} sob filtro atual</span>`
+    : '';
+
+  const section = document.createElement('section');
+  section.className = 'section-group';
+  section.dataset.section = sectionKey;
+  section.innerHTML = `
+    <h2 class="section-heading">
+      <span class="section-title">${escapeHtml(meta.label)}</span>
+      <span class="section-metric">${metricHtml}${filteredNote}</span>
+    </h2>
+    <div class="section-items"></div>
+  `;
+  const itemsContainer = section.querySelector('.section-items');
+  for (const item of visibleItems) itemsContainer.appendChild(renderItem(item));
+  return section;
 }
 
 // ── Render a single item card ───────────────────────────────────────────────
@@ -141,7 +208,6 @@ function renderItem(item) {
   card.className = `item-card ${meta.cssClass}`;
   card.dataset.itemId = item.id;
 
-  // Module badges (clickable when there's a module_url)
   let modulesHtml = '';
   if (Array.isArray(item.modules) && item.modules.length > 0) {
     const badges = item.modules.map(m => {
@@ -159,7 +225,6 @@ function renderItem(item) {
   card.innerHTML = `
     <div class="item-head">
       <span class="status-badge ${meta.cssClass}">${meta.icon} ${escapeHtml(meta.label)}</span>
-      <span class="section-badge">${escapeHtml(SECTION_META[item.section] || item.section)}</span>
       <span class="item-id" title="Identificador do item">${escapeHtml(item.id)}</span>
     </div>
     <h3 class="item-req">${escapeHtml(item.requirement)}</h3>
