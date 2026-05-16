@@ -20,25 +20,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-==============================================================================
-ACADEMIC USE NOTICE (informational; does not modify the MIT terms above)
-==============================================================================
+---
 
-Sentinel Health is an academic prototype developed as part of the Tech
-Challenge — Phase 4 of the postgraduate program in Artificial Intelligence
-for Developers at FIAP (Faculdade de Informática e Administração Paulista),
-Brazil.
-
-It is NOT a medical device. It MUST NOT be used for clinical decisions,
-diagnosis, triage, or victim support in real-world settings. The underlying
-machine learning models were trained on research datasets with known biases
-and limitations. Any interpretation of system outputs requires qualified
-medical professionals.
-
-Authors / Team:
-- Adriana Martins de Souza  (RM 368050)
-- Diego Oliveira da Silva   (RM 367964)
-- Eduardo Nicola F. Zagari  (RM 368021)
-- Renan de Assis Torres     (RM 368513)
-
-Submitted: 2026-05 (FIAP Tech Challenge — Phase 4).
+Note: An informational academic-use disclaimer is provided separately in
+ACADEMIC_USE.md. It does not modify the MIT terms above; it is intended to
+clarify the academic, non-medical nature of this prototype.

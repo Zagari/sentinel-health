@@ -190,9 +190,10 @@ Tech Challenge — Fase 4 · 2026-05
 
 ## Licença
 
-[MIT](./LICENSE) — com [ACADEMIC USE NOTICE](./LICENSE) anexo.
+[MIT](./LICENSE) — com [**Academic Use Notice**](./ACADEMIC_USE.md) informativo.
 
 Sentinel Health é distribuído para fins de pesquisa e demonstração acadêmica. Os termos
-da MIT autorizam uso, modificação e distribuição amplos, mas o **Aviso de Uso Acadêmico**
-no arquivo de licença esclarece que **não é um dispositivo médico** e que **não deve ser
-usado em decisões clínicas reais**.
+da MIT autorizam uso, modificação e distribuição amplos. O documento separado
+[`ACADEMIC_USE.md`](./ACADEMIC_USE.md) esclarece que esta plataforma **não é um
+dispositivo médico** e **não deve ser usada em decisões clínicas reais**, e enumera
+limitações conhecidas dos modelos.
