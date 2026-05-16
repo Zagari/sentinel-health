@@ -9,7 +9,13 @@
   --fiap-dark: #231f20;
   --fiap-gray: #808285;
   --fiap-light: #f5f5f5;
+  --cream-bg: #faf8f3;
   --surface: #ffffff;
+
+  /* Surgical brand colors (matching modules/surgical/web/app/static/css/style.css) */
+  --surgical-blue: #2563eb;
+  --surgical-blue-dark: #1d4ed8;
+
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
   --radius: 8px;
@@ -29,7 +35,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   line-height: 1.6;
   color: var(--fiap-dark);
-  background: white;
+  background: var(--cream-bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -91,7 +97,7 @@ body {
 
 .hero {
   padding: 5rem 0 4rem;
-  background: linear-gradient(180deg, white 0%, var(--fiap-light) 100%);
+  background: linear-gradient(180deg, var(--cream-bg) 0%, var(--fiap-light) 100%);
   text-align: center;
 }
 
@@ -160,6 +166,18 @@ body {
 
 .btn-primary:hover {
   background: var(--fiap-red-dark);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Surgical brand button — used in the Surgical module card */
+.btn-surgical {
+  background: var(--surgical-blue);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-surgical:hover {
+  background: var(--surgical-blue-dark);
   box-shadow: var(--shadow-lg);
 }
 
@@ -295,6 +313,15 @@ body {
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--fiap-red);
+}
+
+/* Surgical card variant — uses blue brand color for icon and metrics */
+.module-card-surgical .card-icon {
+  color: var(--surgical-blue);
+}
+
+.module-card-surgical .metrics dd {
+  color: var(--surgical-blue);
 }
 
 /* ── Coverage CTA (dark section) ────────────────────────────────────────── */
@@ -527,7 +554,7 @@ body {
    ============================================================================= */
 
 .coverage-hero {
-  background: linear-gradient(180deg, white 0%, var(--fiap-light) 100%);
+  background: linear-gradient(180deg, var(--cream-bg) 0%, var(--fiap-light) 100%);
   padding: 4rem 0 3rem;
   text-align: center;
 }
