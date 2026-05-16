@@ -1,0 +1,13 @@
+deepface
+streamlit
+opencv-python
+yt-dlp
+tf-keras
+pandas
+Pillow
+openai
+python-dotenv
+numpy
+requests
+imageio-ffmpeg
+pytest
