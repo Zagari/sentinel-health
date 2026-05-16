@@ -87,18 +87,20 @@ async def process_url(
     jobs[job_id] = {"status": "downloading", "progress": 0}
 
     try:
-        # Usar yt-dlp para baixar (funciona com YouTube e outras fontes).
-        # --js-runtimes: versões recentes do yt-dlp (≥ 2024.x) exigem um JS
-        # runtime para deobfuscar o player do YouTube. O Dockerfile do
-        # surgical instala 'nodejs' (v20.x) via apt → o binário real fica
-        # em /usr/bin/node (/usr/bin/nodejs é symlink). Sem este flag, o
-        # download de URLs do YouTube falha com: "No supported JavaScript
-        # runtime could be found".
+        # Espelha o padrão do módulo Insight (modules/insight/.../video/youtube.py),
+        # que comprovadamente funciona com URLs do YouTube. A escolha de
+        # "worst[ext=mp4]" pega um stream progressivo único (geralmente 240p mp4
+        # com áudio+vídeo combinados) — não exige deobfuscação do signature do
+        # player JS nem merge via ffmpeg, evitando o caminho DASH que quebra a
+        # cada atualização do player do YouTube. Para detecção de sangramento
+        # via YOLOv8m (treinado em GynSurg laparoscopia), 240p/360p é suficiente.
         result = subprocess.run([
-            "yt-dlp", "-f", "best[height<=720]",
-            "--js-runtimes", "node:/usr/bin/node",
+            "yt-dlp",
+            "-f", "worst[ext=mp4]",
+            "--no-playlist",
+            "--no-check-certificates",
             "-o", str(file_path),
-            str(request.url)
+            str(request.url),
         ], capture_output=True, text=True, timeout=300)
 
         if result.returncode != 0:

@@ -5,7 +5,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Instalar dependências do sistema (incluindo Node.js para yt-dlp)
+# Instalar dependências do sistema
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get update --fix-missing && \
@@ -17,8 +17,6 @@ RUN apt-get clean && \
     libxext6 \
     libxrender-dev \
     curl \
-    nodejs \
-    npm \
     && rm -rf /var/lib/apt/lists/*
 
 # Instalar yt-dlp para download de vídeos
