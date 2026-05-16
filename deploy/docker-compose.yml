@@ -39,10 +39,11 @@ services:
     image: sentinel-surgical:latest
     container_name: sentinel-surgical
     volumes:
-      # Mount the trained model from the host (read-only).
-      # web/models/ may only contain .gitkeep — download best.pt from S3 before
-      # using model-dependent endpoints. See modules/surgical/README.md.
-      - ../modules/surgical/web/models:/app/models:ro
+      # Mount the trained model dir from the host (read-write).
+      # The entrypoint.sh downloads best.pt from Hugging Face Hub on first
+      # boot if the directory is empty. Mounting RW lets that download
+      # persist on the host, so subsequent restarts skip the fetch.
+      - ../modules/surgical/web/models:/app/models
       # Persist temp uploads/results across restarts
       - surgical-uploads:/tmp/surgical-uploads
       - surgical-results:/tmp/surgical-results

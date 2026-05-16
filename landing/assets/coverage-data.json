@@ -55,7 +55,7 @@
           "data_type": "cloud",
           "status": "ok",
           "modules": ["surgical", "insight"],
-          "evidence": "Multi-cloud: Surgical em AWS (S3, EC2 via Terraform, SageMaker opcional). Insight em OpenAI API.",
+          "evidence": "Multi-cloud: AWS (S3 + EC2 via Terraform + SageMaker opcional + SSM) para o Surgical; OpenAI API para o Insight; Hugging Face Hub hospeda o modelo YOLOv8m (entrypoint do container faz pull automático).",
           "module_url": null
         }
       ]
@@ -98,7 +98,7 @@
           "data_type": "cloud",
           "status": "ok",
           "modules": ["surgical", "insight"],
-          "evidence": "AWS (S3 + EC2 + SageMaker + SSM Parameter Store) para Surgical. OpenAI API para Insight.",
+          "evidence": "Multi-cloud: AWS (S3 + EC2 + SageMaker + SSM Parameter Store) para deploy do Surgical; OpenAI API para Insight (LLM + Whisper); Hugging Face Hub para distribuição pública do modelo YOLOv8m com model card profissional.",
           "module_url": null
         },
         {

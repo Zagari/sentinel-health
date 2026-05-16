@@ -24,7 +24,7 @@ Sobe a plataforma inteira (landing + Surgical + Insight) num único `docker-comp
 | Porta `80` livre no host | nginx publica nessa porta |
 | `~/.aws/credentials` | Necessário para a galeria S3 do Surgical. Se ausente, a galeria não funciona mas o resto da app fica de pé. |
 | `OPENAI_API_KEY` em `../modules/insight/emotion-recognizer/.env` | Necessário para Whisper + LLM do Insight. Se ausente, o caminho LLM falha graciosamente e o Insight usa fallback keyword-based. |
-| `best.pt` em `../modules/surgical/web/models/` | Necessário para detecção de fato. Baixe do S3 via `modules/surgical/scripts/update-web-model.sh`. **Sem o modelo, o `/surgical/health` responde 200 mas qualquer upload de vídeo falha ao chamar o detector.** |
+| `best.pt` em `../modules/surgical/web/models/` | **Não é mais pré-requisito.** O entrypoint do container Surgical baixa automaticamente do [Hugging Face Hub](https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding) no primeiro boot. Se quiser pré-popular para evitar o download, baixe manualmente (`curl -fL -o ../modules/surgical/web/models/best.pt https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding/resolve/main/best.pt`). |
 
 ## Subir
 
@@ -158,10 +158,21 @@ proxy_set_header   Connection $connection_upgrade;
 Algo já escuta na porta 80. Pare o serviço concorrente ou ajuste a porta do nginx no `docker-compose.yml` (`"8080:80"` em vez de `"80:80"`).
 
 ### Surgical retorna 500 em `/api/video/upload`
-`best.pt` não está em `modules/surgical/web/models/`. Baixe do S3:
+`best.pt` não está em `modules/surgical/web/models/`. Causa típica: o
+container subiu **sem internet** (não conseguiu baixar do HF Hub) ou o
+download falhou. Logs do container devem mostrar o aviso do entrypoint.
+
+**Solução manual:**
 ```bash
-aws s3 cp s3://surgical-detection-models-dev/trained/best.pt \
-          ../modules/surgical/web/models/best.pt
+curl -fL -o ../modules/surgical/web/models/best.pt \
+  https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding/resolve/main/best.pt
+docker compose restart surgical
+```
+
+Ou subir o container de novo, agora com rede:
+```bash
+docker compose up -d surgical
+docker compose logs surgical | grep entrypoint
 ```
 
 ### Insight retorna "⚠️ LLM unavailable" no summary

@@ -8,7 +8,8 @@ services:
     ports:
       - "8100:8000"
     volumes:
-      - ./models:/app/models:ro
+      # entrypoint.sh baixa best.pt do HF Hub se a dir estiver vazia
+      - ./models:/app/models
       - surgical-uploads:/tmp/surgical-uploads
       - surgical-results:/tmp/surgical-results
       - surgical-annotations:/tmp/annotations

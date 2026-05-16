@@ -8,8 +8,10 @@ services:
     ports:
       - "8100:8000"
     volumes:
-      # Modelo treinado (montar do host)
-      - ./models:/app/models:ro
+      # Modelo treinado — montado read-write para o entrypoint.sh baixar
+      # best.pt do Hugging Face Hub no primeiro boot caso o diretório
+      # esteja vazio. Arquivo persiste no host entre restarts.
+      - ./models:/app/models
       # Volumes para uploads e resultados
       - surgical-uploads:/tmp/surgical-uploads
       - surgical-results:/tmp/surgical-results

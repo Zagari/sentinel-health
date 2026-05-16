@@ -78,12 +78,16 @@ terraform output
 # ssm_session_command  = "aws ssm start-session --target i-0abc123... --region us-east-1"
 ```
 
-### 3. Subir `best.pt` para o S3
+### 3. `best.pt` — não precisa fazer nada
 
-```bash
-MODELS_BUCKET=$(terraform output -raw models_bucket)
-aws s3 cp /caminho/local/best.pt "s3://${MODELS_BUCKET}/best.pt"
-```
+O container Surgical baixa automaticamente do [Hugging Face Hub](https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding)
+no primeiro boot, via seu `entrypoint.sh`. O bucket `models` provisionado
+pelo Terraform fica disponível para artefatos derivados ou versões
+customizadas, mas **não é mais usado pelo fluxo padrão**.
+
+Se quiser pré-popular o bucket S3 (para air-gapped, etc.), faça o
+upload manual conforme prefira; só não é mais consumido pelo user_data
+do EC2.
 
 ### 4. Setar `OPENAI_API_KEY` no SSM Parameter Store
 

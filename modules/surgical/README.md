@@ -338,23 +338,34 @@ O modelo v3 foi criado através de fine-tuning do v2 com 475 frames anotados man
 
 ### 5. Baixar Modelo Treinado
 
-O modelo de produção é o **v3_finetuned** (91.72% detecção, 13.44% FP).
+O modelo de produção é o **v3_finetuned** (91.72% detecção, 13.44% FP),
+hospedado publicamente no **Hugging Face Hub** com model card profissional:
+
+🤗 **https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding**
+
+### Download automático (recomendado)
+
+O `entrypoint.sh` do container Surgical baixa o modelo automaticamente do
+Hugging Face Hub na primeira inicialização, caso `web/models/best.pt` esteja
+ausente. **Você não precisa fazer nada** — só rodar `docker compose up -d`.
+
+### Download manual (opcional, para pré-popular)
 
 ```bash
 cd web
 mkdir -p models
-
-# Baixar modelo v3 do S3 (recomendado)
-aws s3 cp s3://surgical-detection-models-dev/trained/best_v3_finetuned.pt models/best.pt
-
-# Ou baixar o modelo padrão de produção
-aws s3 cp s3://surgical-detection-models-dev/trained/best.pt models/best.pt
+curl -fL -o models/best.pt \
+  https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding/resolve/main/best.pt
 ```
 
-**Modelos disponíveis no S3:**
+### Versões históricas no S3 (legado)
+
+O bucket S3 `surgical-detection-models-dev` ainda hospeda todas as versões
+intermediárias para referência histórica/auditoria:
+
 | Arquivo | Versão | Descrição |
 |---------|--------|-----------|
-| `best.pt` | v3 | Modelo de produção (recomendado) |
+| `best.pt` | v3 | Modelo de produção (idêntico ao do HF Hub) |
 | `best_v3_finetuned.pt` | v3 | Fine-tuned com anotações GynSurg |
 | `best_v2_classweight.pt` | v2 | Treinado com class weights |
 | `best_v1_baseline.pt` | v1 | Baseline original |

@@ -281,12 +281,12 @@ resource "aws_instance" "runtime" {
     chown ec2-user:ec2-user "$${INSIGHT_ENV}"
     chmod 600 "$${INSIGHT_ENV}"
 
-    # ── Baixar best.pt do S3 (se existir no bucket) ──────────────────────
-    aws s3 cp "s3://${var.models_bucket_name}/best.pt" \
-              "/home/ec2-user/sentinel-health/modules/surgical/web/models/best.pt" \
-              --region "$${REGION}" 2>/dev/null && \
-      echo "best.pt baixado do S3" || \
-      echo "best.pt não encontrado em S3 — endpoints de detecção do Surgical falharão até o modelo ser carregado"
+    # ── Modelo best.pt: agora vem do Hugging Face Hub ────────────────────
+    # O entrypoint.sh do container Surgical baixa o modelo do HF Hub no
+    # primeiro boot se o diretório /app/models estiver vazio (mount RW).
+    # Não precisamos mais fazer `aws s3 cp` aqui — mantemos o bucket S3
+    # apenas para outros artefatos (modelos derivados, datasets futuros).
+    # Ver modules/surgical/web/entrypoint.sh + HF_MODEL_URL.
 
     chown -R ec2-user:ec2-user /home/ec2-user/sentinel-health
 
