@@ -1,0 +1,20 @@
+# =============================================================================
+# Sentinel Insight — Standalone Docker Compose
+# For integrated deployment with surgical + nginx, see ../../deploy/
+# =============================================================================
+
+services:
+  insight:
+    build: .
+    container_name: sentinel-insight-standalone
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount .env (XMerckAPIKey) read-only into the container
+      - ./emotion-recognizer/.env:/app/emotion-recognizer/.env:ro
+      # Persist temp uploads/cache across restarts (optional)
+      - insight-tmp:/tmp
+    restart: unless-stopped
+
+volumes:
+  insight-tmp:

@@ -1,4 +1,17 @@
-# ⚠️ Multimodal Domestic Violence Recognizer
+# ⚠️ Sentinel Insight — Multimodal Emotion Analysis
+
+> **Part of the [Sentinel Health](../../README.md) platform.**
+> Module path inside the monorepo: `modules/insight/`.
+>
+> **Quick run (standalone):**
+> ```bash
+> # Configure XMerckAPIKey first:
+> echo "XMerckAPIKey=your_key_here" > emotion-recognizer/.env
+> docker-compose up -d
+> # → http://localhost:8501/insight/
+> ```
+>
+> **Integrated run (with Surgical + nginx):** see [`../../deploy/README.md`](../../deploy/README.md).
 
 A Streamlit-based tool that combines **video facial emotion detection** and **audio speech emotion analysis** to support the identification of signs of emotional distress — with a focus on potential domestic violence indicators. Designed for integration with telemedicine systems to assist healthcare professionals in monitoring patients' psychological well-being.
 
