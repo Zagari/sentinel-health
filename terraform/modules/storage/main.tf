@@ -34,6 +34,11 @@ variable "environment" {
 resource "aws_s3_bucket" "assets" {
   bucket = "${var.project_name}-assets-${var.environment}"
 
+  # Demo environment: allow `terraform destroy` to wipe objects/versions
+  # automatically. Set this to false for staging/prod where data loss
+  # would be costly.
+  force_destroy = true
+
   tags = {
     Name        = "${var.project_name}-assets"
     Environment = var.environment
@@ -73,6 +78,11 @@ resource "aws_s3_bucket_public_access_block" "assets" {
 # -----------------------------------------------------------------------------
 resource "aws_s3_bucket" "models" {
   bucket = "${var.project_name}-models-${var.environment}"
+
+  # Demo environment: allow `terraform destroy` to wipe objects/versions
+  # automatically. Set this to false for staging/prod where data loss
+  # would be costly.
+  force_destroy = true
 
   tags = {
     Name        = "${var.project_name}-models"
