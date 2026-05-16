@@ -25,6 +25,8 @@ services:
       - MODEL_PATH=/app/models/best.pt
       - S3_BUCKET=surgical-detection-datasets-dev
       - AWS_DEFAULT_REGION=us-east-1
+      # Pass through host's AWS_PROFILE (no [default] on multi-profile setups)
+      - AWS_PROFILE=${AWS_PROFILE:-}
       - GYNSURG_PATH=/data/GynSurg_Action_3sec
       - ANNOTATIONS_PATH=/tmp/annotations
     # Para usar GPU NVIDIA (requer nvidia-docker)

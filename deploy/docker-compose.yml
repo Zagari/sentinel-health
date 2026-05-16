@@ -53,6 +53,12 @@ services:
       - MODEL_PATH=/app/models/best.pt
       - S3_BUCKET=surgical-detection-datasets-dev
       - AWS_DEFAULT_REGION=us-east-1
+      # Pass through the host's AWS_PROFILE so boto3 inside the container
+      # picks the right credentials in ~/.aws/credentials (mounted RO).
+      # Especially useful on developer Macs that have multiple profiles
+      # but no [default]. On the AWS EC2 deploy (Terraform), the instance
+      # uses its IAM role instead and AWS_PROFILE is irrelevant.
+      - AWS_PROFILE=${AWS_PROFILE:-}
     networks:
       - sentinel-net
     restart: unless-stopped
