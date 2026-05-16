@@ -1,52 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sentinel Health — em construção</title>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    margin: 0;
-    padding: 4rem 2rem;
-    background: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-  }
-  .container { max-width: 720px; margin: 0 auto; background: white;
-                padding: 3rem; border-radius: 8px;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
-  h1 { color: #ed1c24; margin-top: 0; }
-  .tag { display: inline-block; padding: 0.25rem 0.75rem; background: #ed1c24;
-         color: white; border-radius: 4px; font-size: 0.85rem; }
-  ul { padding-left: 1.5rem; }
-  a { color: #0066cc; }
-  .disclaimer { margin-top: 2rem; padding: 1rem; background: #fff3cd;
-                border-left: 4px solid #f0ad4e; border-radius: 4px;
-                font-size: 0.9rem; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel Health — Plataforma Multimodal de Monitoramento da Saúde da Mulher</title>
+  <meta name="description" content="Plataforma de IA multimodal para detecção precoce de riscos materno-ginecológicos, violência doméstica e bem-estar psicológico. FIAP Tech Challenge Fase 4.">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-<div class="container">
-  <span class="tag">Em construção</span>
-  <h1>Sentinel Health</h1>
-  <p><strong>Plataforma multimodal de monitoramento contínuo da saúde da mulher.</strong></p>
-  <p>FIAP Tech Challenge — Fase 4 | Pós-Graduação em Inteligência Artificial para Devs.</p>
 
-  <h2>Módulos ativos</h2>
-  <ul>
-    <li><a href="/surgical/"><strong>Sentinel Surgical</strong></a> —
-        detecção de sangramento anômalo em cirurgias ginecológicas (YOLOv8m).</li>
-    <li><a href="/insight/"><strong>Sentinel Insight</strong></a> —
-        análise emocional multimodal de consultas (face + voz + LLM).</li>
-  </ul>
-
-  <p><em>A landing institucional definitiva, com matriz de cobertura interativa
-  e roadmap, será publicada na Phase 4 do plano de implementação.</em></p>
-
-  <div class="disclaimer">
-    ⚠️ Protótipo acadêmico FIAP — não é dispositivo médico, não use para decisões clínicas reais.
+<!-- ─────────────────────── Header / Nav ─────────────────────── -->
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/" aria-label="Sentinel Health home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 2 L28 8 L28 18 C28 24 22 28 16 30 C10 28 4 24 4 18 L4 8 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M9 16 L13 16 L15 12 L18 20 L20 16 L23 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Sentinel Health</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#modules">Módulos</a>
+      <a href="/coverage.html">Cobertura</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="https://github.com/Zagari/sentinel-health" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
   </div>
-</div>
+</header>
+
+<!-- ─────────────────────── Hero ─────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <span class="tag">FIAP Tech Challenge · Fase 4</span>
+    <h1>Monitoramento multimodal contínuo<br>da <strong>saúde da mulher</strong></h1>
+    <p class="lead">
+      Plataforma de IA que combina análise de vídeo cirúrgico, expressões faciais, voz e texto
+      para detecção precoce de riscos materno-ginecológicos, sinais de violência doméstica
+      e monitoramento de bem-estar psicológico.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#modules">Conhecer os módulos →</a>
+      <a class="btn btn-secondary" href="/coverage.html">Ver cobertura do desafio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── Modules ─────────────────────── -->
+<section id="modules" class="section section-light">
+  <div class="container">
+    <h2>Dois módulos especialistas</h2>
+    <p class="section-sub">Mesma plataforma, focos complementares.</p>
+
+    <div class="modules-grid">
+
+      <!-- Sentinel Surgical -->
+      <article class="module-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12h3l3-7 4 14 3-7h5"/>
+          </svg>
+        </div>
+        <h3>Sentinel Surgical</h3>
+        <p class="card-meta">YOLOv8m fine-tuned · OpenCV · FastAPI · AWS S3</p>
+        <p class="card-desc">
+          Detecção de <strong>sangramento anômalo em cirurgias ginecológicas</strong>
+          em tempo quase real. Treinado em CholecSeg8k, fine-tuned com anotações
+          do GynSurg via interface dedicada de anotação.
+        </p>
+        <dl class="metrics">
+          <div><dt>Detecção</dt><dd>91.72%</dd></div>
+          <div><dt>Falso positivo</dt><dd>13.44%</dd></div>
+          <div><dt>Threshold</dt><dd>0.30</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="/surgical/">Acessar Surgical →</a>
+      </article>
+
+      <!-- Sentinel Insight -->
+      <article class="module-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M5.5 12c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/>
+            <path d="M3 12h.5M20.5 12h.5M12 3v.5M12 20.5v.5"/>
+            <path d="M9 17.5c.9.6 1.9 1 3 1s2.1-.4 3-1"/>
+          </svg>
+        </div>
+        <h3>Sentinel Insight</h3>
+        <p class="card-meta">DeepFace · Whisper · GPT-5.4-nano · Streamlit</p>
+        <p class="card-desc">
+          Análise emocional multimodal de consultas. Combina <strong>expressão facial</strong>
+          (DeepFace por frame), <strong>voz</strong> (Whisper transcreve, GPT analisa)
+          e fallback keyword para detectar sinais de violência doméstica, ansiedade
+          pré/pós-parto e bem-estar psicológico.
+        </p>
+        <dl class="metrics">
+          <div><dt>Modalidades</dt><dd>Face + Voz</dd></div>
+          <div><dt>LLM</dt><dd>gpt-5.4-nano</dd></div>
+          <div><dt>ASR</dt><dd>whisper-1</dd></div>
+        </dl>
+        <a class="btn btn-primary" href="/insight/">Acessar Insight →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── Coverage CTA ─────────────────────── -->
+<section class="coverage-cta">
+  <div class="container">
+    <h2>Cobertura do desafio</h2>
+    <p>
+      Demonstramos como Sentinel Health atende cada item da proposta do Tech Challenge Fase 4 —
+      funcionalidades, objetivos, requisitos obrigatórios e entregáveis.
+    </p>
+    <a class="btn btn-light btn-large" href="/coverage.html">Ver matriz interativa →</a>
+    <p class="coverage-stat">
+      Atendemos <strong>19 de 25 itens</strong> da proposta. 6 itens permanecem em <a href="#roadmap" class="white-link">roadmap</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ─────────────────────── Roadmap ─────────────────────── -->
+<section id="roadmap" class="section section-light">
+  <div class="container">
+    <h2>Roadmap</h2>
+    <p class="section-sub">Frentes de evolução em estudo após a Fase 4.</p>
+
+    <div class="roadmap-grid">
+      <div class="roadmap-item">
+        <span class="emoji" aria-hidden="true">🏃‍♀️</span>
+        <h4>Sentinel Motion</h4>
+        <p>Análise de movimento em <strong>fisioterapia pós-parto</strong> via pose estimation (MediaPipe / MoveNet).</p>
+      </div>
+      <div class="roadmap-item">
+        <span class="emoji" aria-hidden="true">📊</span>
+        <h4>Sentinel VitalSigns</h4>
+        <p>Detecção de anomalias em <strong>sinais vitais</strong> (pressão arterial em gestantes, batimentos fetais).</p>
+      </div>
+      <div class="roadmap-item">
+        <span class="emoji" aria-hidden="true">⚡</span>
+        <h4>Sentinel Realtime</h4>
+        <p>Streaming síncrono ao vivo (hoje: <strong>near real-time</strong> com latência ≤1 min).</p>
+      </div>
+      <div class="roadmap-item">
+        <span class="emoji" aria-hidden="true">🤲</span>
+        <h4>Sentinel Pose</h4>
+        <p><strong>Linguagem corporal</strong> indicativa de abuso, complementando análise face+voz já existente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────── Footer ─────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-top">
+      <div>
+        <h3>Equipe — Grupo Sala 14</h3>
+        <ul>
+          <li>Adriana Martins de Souza — RM 368050</li>
+          <li>Diego Oliveira da Silva — RM 367964</li>
+          <li>Eduardo Nicola F. Zagari — RM 368021</li>
+          <li>Renan de Assis Torres — RM 368513</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="https://github.com/Zagari/sentinel-health" target="_blank" rel="noopener">Repositório GitHub ↗</a></li>
+          <li><a href="/coverage.html">Matriz de cobertura</a></li>
+          <li><a href="/surgical/">Sentinel Surgical</a></li>
+          <li><a href="/insight/">Sentinel Insight</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Acadêmico</h3>
+        <p><strong>FIAP</strong> — Faculdade de Informática e Administração Paulista</p>
+        <p>Pós-Graduação em Inteligência Artificial para Devs</p>
+        <p>Tech Challenge — Fase 4 · 2026-05</p>
+      </div>
+    </div>
+
+    <div class="disclaimer" role="note">
+      ⚠️ <strong>Aviso acadêmico.</strong>
+      Sentinel Health é um protótipo desenvolvido para fins acadêmicos como parte do Tech Challenge da
+      Fase 4 do curso de Pós-Graduação em Inteligência Artificial para Devs da FIAP. <strong>Não é um
+      dispositivo médico.</strong> Não deve ser usado para decisões clínicas, diagnóstico, triagem ou
+      suporte a vítimas em situação real. Os modelos foram treinados em datasets de pesquisa com
+      vieses conhecidos. Qualquer interpretação dos resultados requer profissionais de saúde
+      qualificados.
+    </div>
+
+    <p class="footer-copy">
+      Sentinel Health · MIT License · © 2026 Grupo Sala 14
+    </p>
+
+  </div>
+</footer>
+
 </body>
 </html>
