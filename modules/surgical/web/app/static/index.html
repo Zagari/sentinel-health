@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgical Video AI - FIAP Tech Challenge</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Surgical Video AI</h1>
+            <p class="subtitle">Detecção de Sangramento e Instrumentos em Cirurgias Ginecológicas</p>
+            <p class="badge">FIAP Tech Challenge - Fase 4</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section id="upload-section" class="card">
+                <h2>Processar Vídeo</h2>
+
+                <div class="tabs">
+                    <button class="tab active" data-tab="upload">Upload</button>
+                    <button class="tab" data-tab="url">URL</button>
+                    <button class="tab" data-tab="samples">Exemplos GynSurg</button>
+                </div>
+
+                <!-- Upload Tab -->
+                <div id="upload-tab" class="tab-content active">
+                    <form id="upload-form">
+                        <div class="drop-zone" id="drop-zone">
+                            <div class="drop-zone-icon">📁</div>
+                            <p>Arraste um vídeo aqui ou clique para selecionar</p>
+                            <p class="small">Formatos: MP4, AVI, MOV, MKV</p>
+                            <input type="file" id="file-input" accept="video/*" hidden>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="upload-btn" disabled>
+                            Processar Vídeo
+                        </button>
+                    </form>
+                </div>
+
+                <!-- URL Tab -->
+                <div id="url-tab" class="tab-content">
+                    <form id="url-form">
+                        <input type="url" id="video-url" placeholder="https://youtube.com/watch?v=..." required>
+                        <p class="small">Suporta YouTube e outras plataformas via yt-dlp</p>
+                        <button type="submit" class="btn btn-primary">Processar URL</button>
+                    </form>
+                </div>
+
+                <!-- Samples Tab -->
+                <div id="samples-tab" class="tab-content">
+                    <div class="samples-filter">
+                        <label>Filtrar por categoria:</label>
+                        <select id="sample-category">
+                            <option value="">Todos</option>
+                            <option value="bleeding">Com Sangramento</option>
+                            <option value="non_bleeding">Sem Sangramento</option>
+                        </select>
+                    </div>
+                    <div id="samples-list" class="samples-grid">
+                        <p class="loading">Carregando clips de exemplo...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress-section" class="card hidden">
+                <h2>Processando...</h2>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <p id="progress-text">0%</p>
+                <p id="progress-status" class="small"></p>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="card hidden">
+                <h2>Resultados</h2>
+
+                <div id="ground-truth-banner" class="banner hidden">
+                    <span id="ground-truth-label"></span>
+                    <span id="ground-truth-match"></span>
+                </div>
+
+                <div id="results-content"></div>
+
+                <div class="actions">
+                    <a id="download-video" class="btn btn-secondary" download>
+                        Baixar Vídeo Anotado
+                    </a>
+                    <a id="download-report" class="btn btn-secondary" download>
+                        Baixar Relatório JSON
+                    </a>
+                    <button id="new-analysis" class="btn btn-outline">
+                        Nova Análise
+                    </button>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section id="info-section" class="card">
+                <h2>Sobre o Sistema</h2>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Modelo</h3>
+                        <div id="model-info">Carregando...</div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Datasets</h3>
+                        <div id="dataset-info">Carregando...</div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Estratégia</h3>
+                        <div id="strategy-info">Carregando...</div>
+                    </div>
+                </div>
+
+                <div class="classes-section">
+                    <h3>Classes Detectadas</h3>
+                    <div id="classes-list"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido para o Tech Challenge FIAP - Pós-Graduação em IA para Devs</p>
+            <p>
+                <a href="https://github.com/Zagari/surgical-video-ai" target="_blank">
+                    GitHub Repository
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

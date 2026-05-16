@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotacao - Surgical Video AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 { margin-bottom: 10px; color: #4cc9f0; }
+        .subtitle { color: #888; margin-bottom: 20px; font-size: 14px; }
+        .stats {
+            background: #16213e;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .stat { text-align: center; min-width: 80px; }
+        .stat-value { font-size: 24px; font-weight: bold; color: #4cc9f0; }
+        .stat-label { font-size: 12px; color: #888; }
+        .stat.bleeding .stat-value { color: #e63946; }
+        .stat.no-bleeding .stat-value { color: #2a9d8f; }
+        .frame-container {
+            max-width: 1200px;
+            width: 100%;
+            background: #16213e;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .frame-container img {
+            width: 100%;
+            border-radius: 10px;
+            max-height: 60vh;
+            object-fit: contain;
+            background: #000;
+        }
+        .ground-truth {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .ground-truth.bleeding {
+            background: rgba(230, 57, 70, 0.2);
+            color: #e63946;
+            border: 1px solid #e63946;
+        }
+        .ground-truth.non_bleeding {
+            background: rgba(42, 157, 143, 0.2);
+            color: #2a9d8f;
+            border: 1px solid #2a9d8f;
+        }
+        .info {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .question {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #fff;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 15px 35px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+            font-weight: 500;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        button:active { transform: scale(0.95); }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .btn-bleeding { background: #e63946; color: white; }
+        .btn-no-bleeding { background: #2a9d8f; color: white; }
+        .btn-skip { background: #6c757d; color: white; }
+        .btn-export { background: #4cc9f0; color: #1a1a2e; }
+        .keyboard-hint {
+            background: #0f3460;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .keyboard-hint kbd {
+            background: #1a1a2e;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin: 0 3px;
+            border: 1px solid #4cc9f0;
+        }
+        .loading {
+            font-size: 18px;
+            color: #4cc9f0;
+            padding: 50px;
+        }
+        .complete {
+            text-align: center;
+            padding: 50px;
+            background: #16213e;
+            border-radius: 15px;
+            max-width: 600px;
+        }
+        .complete h2 { color: #2a9d8f; margin-bottom: 20px; }
+        .complete p { margin-bottom: 15px; color: #888; }
+        .export-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        .export-section h3 { color: #4cc9f0; margin-bottom: 15px; }
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #4cc9f0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .error {
+            background: rgba(230, 57, 70, 0.2);
+            border: 1px solid #e63946;
+            color: #e63946;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Voltar</a>
+
+    <h1>Interface de Anotacao</h1>
+    <p class="subtitle">Classifique frames para fine-tuning do modelo</p>
+
+    <div class="stats" id="stats">
+        <div class="stat">
+            <div class="stat-value" id="annotated">0</div>
+            <div class="stat-label">Anotados</div>
+        </div>
+        <div class="stat bleeding">
+            <div class="stat-value" id="with-bleeding">0</div>
+            <div class="stat-label">Com Sangramento</div>
+        </div>
+        <div class="stat no-bleeding">
+            <div class="stat-value" id="without-bleeding">0</div>
+            <div class="stat-label">Sem Sangramento</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="skipped">0</div>
+            <div class="stat-label">Pulados</div>
+        </div>
+    </div>
+
+    <div id="error-container" class="error hidden"></div>
+
+    <div class="loading" id="loading">Carregando frame...</div>
+
+    <div class="frame-container hidden" id="frame-container">
+        <img id="frame-image" src="" alt="Frame para classificacao">
+        <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <span class="ground-truth" id="ground-truth"></span>
+            <span class="info" id="frame-info"></span>
+        </div>
+
+        <p class="question">Este frame contem sangramento visivel?</p>
+
+        <div class="buttons" id="buttons">
+            <button class="btn-bleeding" onclick="annotate(true)" id="btn-yes">
+                Sim, tem sangramento (S)
+            </button>
+            <button class="btn-no-bleeding" onclick="annotate(false)" id="btn-no">
+                Nao tem sangramento (N)
+            </button>
+            <button class="btn-skip" onclick="skipFrame()" id="btn-skip">
+                Pular (Espaco)
+            </button>
+        </div>
+    </div>
+
+    <div class="complete hidden" id="complete">
+        <h2>Sessao de anotacao concluida!</h2>
+        <p>Todos os frames disponiveis foram processados.</p>
+        <p id="complete-stats"></p>
+
+        <div class="export-section">
+            <h3>Exportar para Fine-tuning</h3>
+            <p>Exporte as anotacoes no formato YOLO para treinar o modelo.</p>
+            <button class="btn-export" onclick="exportData()">
+                Exportar Anotacoes
+            </button>
+            <p id="export-result" style="margin-top: 15px;"></p>
+        </div>
+    </div>
+
+    <div class="keyboard-hint" id="keyboard-hint">
+        Atalhos: <kbd>S</kbd> Sangramento | <kbd>N</kbd> Sem sangramento | <kbd>Espaco</kbd> Pular
+    </div>
+
+    <div class="export-section" id="export-section" style="margin-top: 30px;">
+        <button class="btn-export" onclick="exportData()" style="padding: 10px 20px; font-size: 14px;">
+            Exportar anotacoes atuais
+        </button>
+    </div>
+
+    <script>
+        let currentFrameId = null;
+        let isLoading = false;
+
+        async function loadStats() {
+            try {
+                const res = await fetch('/api/annotation/stats');
+                const stats = await res.json();
+                document.getElementById('annotated').textContent = stats.annotated;
+                document.getElementById('with-bleeding').textContent = stats.with_bleeding;
+                document.getElementById('without-bleeding').textContent = stats.without_bleeding;
+                document.getElementById('skipped').textContent = stats.skipped;
+            } catch (e) {
+                console.error('Erro ao carregar stats:', e);
+            }
+        }
+
+        async function loadNextFrame() {
+            if (isLoading) return;
+            isLoading = true;
+
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('frame-container').classList.add('hidden');
+            document.getElementById('complete').classList.add('hidden');
+            document.getElementById('error-container').classList.add('hidden');
+            setButtonsEnabled(false);
+
+            try {
+                const res = await fetch('/api/annotation/frame/random');
+                const data = await res.json();
+
+                document.getElementById('loading').classList.add('hidden');
+
+                if (data.complete) {
+                    document.getElementById('complete').classList.remove('hidden');
+                    document.getElementById('keyboard-hint').classList.add('hidden');
+                    document.getElementById('export-section').classList.add('hidden');
+                    document.getElementById('complete-stats').textContent =
+                        `Total de frames anotados: ${data.total_annotated}`;
+                    isLoading = false;
+                    return;
+                }
+
+                currentFrameId = data.frame_id;
+                document.getElementById('frame-image').src = data.frame_url;
+                document.getElementById('frame-info').textContent = `Clip: ${data.clip_name}`;
+
+                const gtEl = document.getElementById('ground-truth');
+                gtEl.textContent = `Ground Truth: ${data.ground_truth_label === 'bleeding' ? 'Bleeding' : 'Non-bleeding'}`;
+                gtEl.className = 'ground-truth ' + data.ground_truth_label;
+
+                document.getElementById('frame-container').classList.remove('hidden');
+                setButtonsEnabled(true);
+
+            } catch (e) {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('error-container').classList.remove('hidden');
+                document.getElementById('error-container').textContent =
+                    'Erro ao carregar frame. Verifique se GYNSURG_PATH esta configurado corretamente. Erro: ' + e.message;
+            }
+
+            isLoading = false;
+        }
+
+        function setButtonsEnabled(enabled) {
+            document.getElementById('btn-yes').disabled = !enabled;
+            document.getElementById('btn-no').disabled = !enabled;
+            document.getElementById('btn-skip').disabled = !enabled;
+        }
+
+        async function annotate(hasBleeding) {
+            if (!currentFrameId || isLoading) return;
+
+            setButtonsEnabled(false);
+
+            try {
+                await fetch('/api/annotation/annotate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        frame_id: currentFrameId,
+                        has_bleeding: hasBleeding,
+                        confidence: 'high'
+                    })
+                });
+
+                await loadStats();
+                await loadNextFrame();
+            } catch (e) {
+                console.error('Erro ao salvar anotacao:', e);
+                setButtonsEnabled(true);
+            }
+        }
+
+        async function skipFrame() {
+            if (!currentFrameId || isLoading) return;
+
+            setButtonsEnabled(false);
+
+            try {
+                await fetch(`/api/annotation/skip/${currentFrameId}`, {
+                    method: 'POST'
+                });
+
+                await loadStats();
+                await loadNextFrame();
+            } catch (e) {
+                console.error('Erro ao pular frame:', e);
+                setButtonsEnabled(true);
+            }
+        }
+
+        async function exportData() {
+            try {
+                const res = await fetch('/api/annotation/export');
+                const data = await res.json();
+
+                const resultEl = document.getElementById('export-result');
+                if (data.status === 'exported') {
+                    resultEl.innerHTML = `
+                        <strong>Exportacao concluida!</strong><br>
+                        Frames exportados: ${data.exported_frames}<br>
+                        Com sangramento: ${data.with_bleeding}<br>
+                        Sem sangramento: ${data.without_bleeding}<br>
+                        <br>
+                        Caminho: <code>${data.export_path}</code>
+                    `;
+                    resultEl.style.color = '#2a9d8f';
+                } else {
+                    resultEl.textContent = 'Erro na exportacao: ' + JSON.stringify(data);
+                    resultEl.style.color = '#e63946';
+                }
+            } catch (e) {
+                alert('Erro ao exportar: ' + e.message);
+            }
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            if (e.key === 's' || e.key === 'S') {
+                e.preventDefault();
+                annotate(true);
+            }
+            if (e.key === 'n' || e.key === 'N') {
+                e.preventDefault();
+                annotate(false);
+            }
+            if (e.key === ' ') {
+                e.preventDefault();
+                skipFrame();
+            }
+        });
+
+        // Initialize
+        loadStats();
+        loadNextFrame();
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+path: /home/nicola/surgical-video-ai/anotacoes-gynsurg/yolo_export
+train: images/train
+val: images/train
+nc: 2
+names:
+  0: grasper
+  1: blood
