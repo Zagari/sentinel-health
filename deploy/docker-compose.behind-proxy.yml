@@ -1,0 +1,34 @@
+# =============================================================================
+# Sentinel Health — Compose override: deploy behind a host reverse proxy
+# =============================================================================
+#
+# Use this override quando o host onde a stack roda **já tem outro nginx** (ou
+# qualquer serviço) ocupando a porta 80, e você quer que o host nginx faça o
+# proxy reverso para o sentinel.
+#
+# Como subir:
+#
+#   docker compose -f docker-compose.yml -f docker-compose.behind-proxy.yml up -d
+#
+# Depois, configure o host nginx usando o snippet pronto em
+#   nginx/host-snippet.conf
+# apontando para http://127.0.0.1:8100/.
+#
+# Porta interna do container continua sendo 80 (o nginx do sentinel não muda).
+# O que muda é só o binding host→container.
+# =============================================================================
+
+services:
+  nginx:
+    # `!override` é uma diretiva da Compose Spec (Docker Compose v2.24+) que
+    # **substitui** a lista de ports definida no docker-compose.yml base
+    # pelo conteúdo abaixo. Sem isso, as listas seriam mescladas e o nginx
+    # ficaria publicado em DOIS endpoints (80 e 8100) — bypass do host
+    # reverse proxy.
+    #
+    # ⚠️ Não confunda com `!reset`: `!reset` apaga o valor (sem aplicar
+    # nada novo), `!override` apaga e substitui.
+    ports: !override
+      # Loopback-only: ninguém de fora do host alcança 8100 diretamente,
+      # só o host nginx (que está no mesmo host) consegue.
+      - "127.0.0.1:8100:80"

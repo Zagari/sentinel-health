@@ -81,6 +81,77 @@ docker-compose down -v
 
 **Total:** ~9 GB. Recomendado: 16 GB RAM no host para conforto.
 
+## Variante: atrás de reverse proxy do host
+
+Cenário: o host já tem um nginx (ou outro web server) na porta 80, e você
+quer que **ele** faça o proxy reverso pro sentinel.
+
+### Como subir o sentinel em loopback:8100
+
+```bash
+cd sentinel-health/deploy
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.behind-proxy.yml \
+  up -d
+```
+
+O que muda: a única diferença é o binding do `nginx` do container — em vez de
+`80:80` (público), fica em `127.0.0.1:8100:80` (loopback-only). O nginx
+**interno** do sentinel não muda; o roteamento por path (`/`, `/surgical/`,
+`/insight/`) continua acontecendo lá dentro.
+
+### Configurar o nginx do host
+
+Copie o snippet pronto:
+
+```bash
+sudo cp nginx/host-snippet.conf /etc/nginx/conf.d/sentinel.conf
+sudo $EDITOR /etc/nginx/conf.d/sentinel.conf   # ajustar server_name
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+O snippet em [`nginx/host-snippet.conf`](./nginx/host-snippet.conf) inclui:
+- `map $http_upgrade $connection_upgrade { ... }` (necessário para o WebSocket do Streamlit)
+- `proxy_pass http://127.0.0.1:8100`
+- Headers `X-Forwarded-*` repassados
+- `proxy_http_version 1.1` + `Upgrade`/`Connection` para WebSocket
+- Timeouts longos (uploads do Surgical, sessão do Insight)
+- Bloco `ssl_*` comentado pronto pra ativar quando tiver certificado
+
+### Confirmar que funcionou
+
+```bash
+# A 8100 só responde via loopback do host:
+curl -I http://127.0.0.1:8100/                # 200, vindo do host
+curl -I http://<ip-externo-do-host>:8100/     # connection refused (desejado)
+
+# Já o host nginx atende externamente:
+curl -I http://sentinel.example.com/          # 200 (proxy → 127.0.0.1:8100 → containers)
+curl -I http://sentinel.example.com/insight/_stcore/health  # 200
+```
+
+### Gotcha mais comum
+
+Se a UI do Insight (Streamlit) **carrega mas fica preso em "Please wait"**, o
+host nginx não está repassando o upgrade de WebSocket. Confira no snippet
+do host:
+
+```nginx
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+}
+# e dentro do location:
+proxy_http_version 1.1;
+proxy_set_header   Upgrade    $http_upgrade;
+proxy_set_header   Connection $connection_upgrade;
+```
+
+> **Requisito:** Docker Compose v2.24+ para a diretiva `!override` usada no
+> override. Em versões mais antigas, copie `docker-compose.yml` inteiro para
+> `docker-compose.behind-proxy.yml` e troque a linha `"80:80"` manualmente.
+
 ## Problemas comuns
 
 ### `bind: address already in use` na porta 80
