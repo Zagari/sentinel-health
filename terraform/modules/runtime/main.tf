@@ -55,6 +55,12 @@ variable "assets_bucket_arn" {
   type        = string
 }
 
+variable "samples_bucket_name" {
+  description = "Nome do bucket S3 com clips de amostra (gynsurg_sample/) e metadata.json — usado pelo Surgical via env var S3_BUCKET. Default é o bucket do projeto surgical-video-ai original."
+  type        = string
+  default     = "surgical-detection-datasets-dev"
+}
+
 variable "openai_api_key_ssm_param" {
   description = "Nome do parâmetro SSM (SecureString) com a OPENAI_API_KEY"
   type        = string
@@ -163,7 +169,7 @@ resource "aws_iam_role_policy_attachment" "ssm" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
-# S3 read access para baixar best.pt e (futuramente) assets da landing
+# S3 read access para baixar best.pt + assets da landing + clips de amostra do Surgical
 resource "aws_iam_role_policy" "s3_read" {
   name = "${var.project_name}-runtime-s3-read-${var.environment}"
   role = aws_iam_role.runtime.id
@@ -180,7 +186,9 @@ resource "aws_iam_role_policy" "s3_read" {
         var.models_bucket_arn,
         "${var.models_bucket_arn}/*",
         var.assets_bucket_arn,
-        "${var.assets_bucket_arn}/*"
+        "${var.assets_bucket_arn}/*",
+        "arn:aws:s3:::${var.samples_bucket_name}",
+        "arn:aws:s3:::${var.samples_bucket_name}/*"
       ]
     }]
   })
