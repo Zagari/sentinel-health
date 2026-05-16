@@ -1,0 +1,41 @@
+# Surgical Video AI - Docker Compose
+# FIAP Tech Challenge - Fase 4
+
+services:
+  surgical-api:
+    build: .
+    container_name: surgical-video-ai
+    ports:
+      - "8100:8000"
+    volumes:
+      # Modelo treinado (montar do host)
+      - ./models:/app/models:ro
+      # Volumes para uploads e resultados
+      - surgical-uploads:/tmp/surgical-uploads
+      - surgical-results:/tmp/surgical-results
+      # Volume para anotacoes (interface /annotation)
+      - surgical-annotations:/tmp/annotations
+      # AWS credentials (para acesso ao S3)
+      - ~/.aws:/root/.aws:ro
+      # Dataset GynSurg (descomente e ajuste o path para usar /annotation)
+      # - /path/to/GynSurg_Action_3sec:/data/GynSurg_Action_3sec:ro
+    environment:
+      - MODEL_PATH=/app/models/best.pt
+      - S3_BUCKET=surgical-detection-datasets-dev
+      - AWS_DEFAULT_REGION=us-east-1
+      - GYNSURG_PATH=/data/GynSurg_Action_3sec
+      - ANNOTATIONS_PATH=/tmp/annotations
+    # Para usar GPU NVIDIA (requer nvidia-docker)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+
+volumes:
+  surgical-uploads:
+  surgical-results:
+  surgical-annotations:

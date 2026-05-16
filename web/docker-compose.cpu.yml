@@ -1,0 +1,29 @@
+# Surgical Video AI - Docker Compose (CPU only)
+# Use this for testing without GPU
+
+services:
+  surgical-api:
+    build: .
+    container_name: surgical-video-ai-cpu
+    ports:
+      - "8100:8000"
+    volumes:
+      - ./models:/app/models:ro
+      - surgical-uploads:/tmp/surgical-uploads
+      - surgical-results:/tmp/surgical-results
+      - surgical-annotations:/tmp/annotations
+      - ~/.aws:/root/.aws:ro
+      # Dataset GynSurg (descomente e ajuste o path para usar /annotation)
+      # - /path/to/GynSurg_Action_3sec:/data/GynSurg_Action_3sec:ro
+    environment:
+      - MODEL_PATH=/app/models/best.pt
+      - S3_BUCKET=surgical-detection-datasets-dev
+      - AWS_DEFAULT_REGION=us-east-1
+      - GYNSURG_PATH=/data/GynSurg_Action_3sec
+      - ANNOTATIONS_PATH=/tmp/annotations
+    restart: unless-stopped
+
+volumes:
+  surgical-uploads:
+  surgical-results:
+  surgical-annotations:

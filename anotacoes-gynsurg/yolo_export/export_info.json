@@ -1,0 +1,4089 @@
+{
+  "exported_at": "2026-05-10T18:02:11.511696",
+  "total_exported": 1020,
+  "with_bleeding": 475,
+  "without_bleeding": 545,
+  "export_path": "/tmp/annotations/yolo_export",
+  "files": [
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_11_51.144478-0_12_21.30797530fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_13_52.880000-0_13_57.36000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_262_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_227_Bleeding_0_04_01.466667-0_04_29.23333330fps_clip_85_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_18_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_109_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_26_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_00.650651-0_10_11.49482830fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_364_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_15_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_04_20.026693-0_04_25.01501530fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_269_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_00.817484-0_00_11.02769430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_601_Bleeding_light_0_01_08.600000-0_01_22.76000030fps_clip_534_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_605_Non_bleeding_0_04_18.760000-0_04_23.64000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_308_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_251_Bleeding_0_01_50.433333-0_02_01.03333330fps_clip_145_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Non_bleeding_bleeding_0_15_30.240000-0_15_48.48000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_656_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_02_22.308976-0_02_38.95895930fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_17_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_11_01.920000-0_11_17.04000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_02_20.600000-0_02_27.20000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_10_28.400000-0_10_35.72000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_11_12.360000-0_11_36.76000030fps_clip_2070_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Bleeding_0_16_44.320000-0_16_50.56000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_39_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_363_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_164_Non_bleeding_0_06_00.700000-0_06_12.20000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_155_Non_bleeding_0_01_23.400000-0_01_51.20000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_06_53.800000-0_07_06.63333330fps_clip_135_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_56_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_65_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_27_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_09_46.753420-0_10_04.30430430fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_473_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_13_19-0_13_25.16000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_387_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_601_Bleeding_light_0_01_08.600000-0_01_22.76000030fps_clip_531_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_24_18.240000-0_24_30.80000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_13_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_01_22.400000-0_01_49.20000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_43_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_63_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_35_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_220_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_70_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_601_Bleeding_light_0_21_16.360000-0_21_20.84000030fps_clip_540_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_104_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_37_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_28_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_255_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_17_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_458_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_43.760000-0_01_11.32000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_18_49.360000-0_18_52.68000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_155_Non_bleeding_0_00_59.766667-0_01_06.73333330fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_02_22.308976-0_02_38.95895930fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_21_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_21_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_93_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_09_46.753420-0_10_04.30430430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_09_40.166667-0_09_54.43333330fps_clip_548_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_03_44.760000-0_04_04.60000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_71_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_51_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_647_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_37_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_03_55.652319-0_04_00.29029030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_35_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_95_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_28_52.800000-0_29_27.40000030fps_clip_10_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_08_53.960000-0_08_58.52000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_08_08.288288-0_08_14.01067730fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_12_10.040000-0_12_1630fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_650_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_15_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_274_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_38_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_00.817484-0_00_11.02769430fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_12_24.520000-0_12_34.04000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_10_28.400000-0_10_35.72000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_107_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_19_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_196_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_127_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_37_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_31_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_49_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_193_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_38_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_362_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_26_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_19.029029-0_01_41.58491830fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_11_47.057057-0_13_11.17450830fps_clip_37_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_41_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_302_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_78_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_76_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_09_26.280000-0_09_50.60000030fps_clip_1060_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_02_22.794892-0_02_44.75044430fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_32_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_27_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_13_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_662_Bleeding_0_13_19.265933-0_13_32.31231230fps_clip_641_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_02_22.308976-0_02_38.95895930fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_13_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_463_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_394_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_0_00_36.366667-0_00_56.66666730fps_clip_212_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_46_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_16_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_293_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_06_00.760000-0_06_16.48000030fps_clip_432_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_28_41.160000-0_29_07.80000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_141_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_17_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_186_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_50_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_587_Bleeding_0_04_48.040000-0_04_53.04000030fps_clip_522_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_06_00.760000-0_06_16.48000030fps_clip_430_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_458_Non_bleeding_0_01_49.300000-0_01_54.93333330fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_26_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_05_17.534201-0_05_27.54421130fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_04_41.880000-0_04_51.76000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_21_18.760000-0_21_29.60000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_00.817484-0_00_11.02769430fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_226_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Non_bleeding_bleeding_0_15_30.240000-0_15_48.48000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_42_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_286_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_45_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_264_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Bleeding_0_16_33.320000-0_16_39.52000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_00_00.840000-0_00_23.72000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_15_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_17_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_22.840000-0_00_38.80000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_05_12.846180-0_06_13.07307330fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_38_26.880000-0_38_42.40000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_20_24.360000-0_20_31.96000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_02_34.360000-0_02_49.64000030fps_clip5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_350_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_00.650651-0_10_11.49482830fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Non_bleeding_bleeding_0_15_30.240000-0_15_48.48000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_20_48-0_20_54.88000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_74_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_22_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_326_Bleeding_0_00_36.366667-0_00_56.66666730fps_clip_215_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_574_Non_bleeding_0_02_51.200000-0_02_58.24000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_666_Bleeding_0_40_16.240000-0_40_31.80000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_00_00.840000-0_00_23.72000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_64_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_04_44.833333-0_04_55.96666730fps_clip_1410_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_28_41.160000-0_29_07.80000030fps_clip4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_20_24.007341-0_20_37.53753830fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_574_Non_bleeding_0_02_51.200000-0_02_58.24000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_435_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_20_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_04_17.433333-0_04_31.76666730fps_clip_494_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_07.073740-0_00_21.07107130fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_90_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_00_16.416416-0_00_21.45478830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_03_18.520000-0_03_28.64000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_16_26.600000-0_16_40.48000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_666_Bleeding_0_40_16.240000-0_40_31.80000030fps_clip5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_42_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_326_Bleeding_0_00_36.366667-0_00_56.66666730fps_clip_213_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_04_38.795462-0_04_44.63463530fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_257_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_138_Non_bleeding_0_02_18.133333-0_02_22.06666730fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_385_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_05_41.633333-0_05_54.63333330fps_clip_501_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_692_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_29_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_05.560000-0_31_16.80000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_06_44.600000-0_06_53.43333330fps_clip_244_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_189_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_150_Non_bleeding_0_00_59.133333-0_01_04.83333330fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_09_34.407741-0_09_52.67600930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_225_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_12_24.520000-0_12_34.04000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_26_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_171_Non_bleeding_0_08_45.033333-0_08_56.20000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_02_29.760000-0_26_17.28000030fps_clip_505_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_445_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_light_0_21_36.960000-0_21_42.40000030fps_clip_476_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_45.111778-0_10_48.99899930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_02_29.249249-0_02_36.53987330fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_05_03.900000-0_05_10.50000030fps_clip_2602_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_177_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_07_16.600000-0_07_2830fps_clip_416_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_10_12.495829-0_10_26.32632630fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_57_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_409_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_352_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_67_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_51_Non_bleeding_0_05_27.985025-0_05_36.50889230fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_15_01.320000-0_15_05.28000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_75_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_05_41.633333-0_05_54.63333330fps_clip_502_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_11_01.920000-0_11_17.04000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_20_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_505_Bleeding_0_01_47.866667-0_02_06.30000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_458_Non_bleeding_0_03_14.400000-0_03_19.66666730fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_190_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_361_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_13_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_688_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_10_04.600000-0_10_08.92000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_05_12.846180-0_06_13.07307330fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_17_31.080000-0_17_44.68000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_37_05.241909-0_37_54.57457530fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_23_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_12_36.589923-0_12_45.83249930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_24_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_51.768435-0_11_05.69903230fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_48_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_402_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_02_31.918585-0_02_40.96096130fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_08_19.231181-0_08_35.40981430fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_12_52.760000-0_12_59.88000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_601_Bleeding_light_0_30_15.920000-0_30_21.20000030fps_clip_544_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_673_Non_bleeding_bleeding_0_16_53.200000-0_16_57.48000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_04_23.960000-0_04_30.68000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_537_Non_bleeding_0_11_12.360000-0_11_17.72000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_19.029029-0_01_41.58491830fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_15_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_249_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_658_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_542_Non_bleeding_0_10_46.360000-0_10_53.80000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_04_58.164831-0_05_11.19452830fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_00_13.046380-0_01_06.86686730fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_07.073740-0_00_21.07107130fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_14_06.240000-0_14_21.12000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_384_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_16_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_505_Bleeding_0_01_47.866667-0_02_06.30000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_605_Non_bleeding_0_05_19.360000-0_05_31.76000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_28_52.800000-0_29_27.40000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_83_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_19_47.520000-0_20_07.40000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_05_21.166667-0_05_36.86666730fps_clip_326_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_392_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_18_36.920000-0_18_41.08000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_70_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_110_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_537_Non_bleeding_0_15_01.120000-0_15_04.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_458_Non_bleeding_0_01_49.300000-0_01_54.93333330fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_00_21.955289-0_00_29.62963030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_622_Bleeding_0_07_35.160000-0_07_4430fps_clip_546_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip19_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_08_37.333333-0_09_44.26666730fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_438_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_310_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_29_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_683_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_03_51.998665-0_04_42.84951630fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_48.341675-0_01_53.58024730fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_07_34.087421-0_07_59.19586330fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_667_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_09_40.166667-0_09_54.43333330fps_clip_545_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_43.760000-0_01_11.32000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_42.400000-0_32_53.48000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_654_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_73_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_574_Non_bleeding_0_03_59.400000-0_04_10.92000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_04_46.753420-0_04_53.96062730fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_05_51.401401-0_05_55.32198930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_587_Bleeding_0_03_58.720000-0_04_05.28000030fps_clip_519_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_73_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_05_32.400000-0_05_42.76000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_01_02.162162-0_01_13.95729130fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_155_Non_bleeding_0_01_23.400000-0_01_51.20000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_227_Bleeding_0_04_01.466667-0_04_29.23333330fps_clip_91_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_347_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_00_00.840000-0_00_23.72000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_24_34.240000-0_24_42.72000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_31_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_173_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_22_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_02_31.918585-0_02_40.96096130fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_27_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_642_Non_bleeding_0_00_52.652653-0_00_58.49182530fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_06_25.840000-0_06_56.20000030fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_61_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_05_27.277277-0_06_02.44577930fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_51_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_20_29.760000-0_20_35.20000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_05_21.166667-0_05_36.86666730fps_clip_328_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_95_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_10_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_366_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_545_Non_bleeding_0_38_39.280000-0_38_42.76000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_672_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_22.840000-0_00_38.80000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_10_54.354354-0_12_01.35468830fps_clip_19_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_15_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_270_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_165_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_20_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_22_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_03_51.998665-0_04_42.84951630fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_25_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_18_13.693694-0_19_10.98431830fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_254_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_07_25.466667-0_07_38.26666730fps_clip_508_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_642_Non_bleeding_0_30_30.530531-0_30_37.83783830fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_20.600000-0_31_37.60000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_34_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_466_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_47.160000-0_05_17.16000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_38_26.880000-0_38_42.40000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_318_Bleeding_0_04_33.300000-0_04_38.63333330fps_clip_206_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_05_17.534201-0_05_27.54421130fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_648_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_406_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_24_34.240000-0_24_42.72000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_13_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_08_37.333333-0_09_44.26666730fps_clip_19_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_06_25.840000-0_06_56.20000030fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_09_24.881548-0_09_46.75342030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_05_43.927261-0_05_51.03436830fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_20_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_458_Non_bleeding_0_03_09.366667-0_03_12.86666730fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_04_42.466667-0_05_04.60000030fps_clip_322_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_164_Non_bleeding_0_06_00.700000-0_06_12.20000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_110_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_20_24.007341-0_20_37.53753830fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_640_Bleeding_light_0_04_22.012012-0_04_47.95462130fps_clip_560_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_05_17.984651-0_05_38.92225630fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_41_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_43_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_05_17.534201-0_05_27.54421130fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_31_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_35_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_39.280000-0_01_48.48000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_287_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_14_06.240000-0_14_21.12000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_07.073740-0_00_21.07107130fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_260_Bleeding_0_07_20.366667-0_07_35.76666730fps_clip_157_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_79_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_24_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_09_26.280000-0_09_50.60000030fps_clip_1059_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_04_46.753420-0_04_53.96062730fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_155_Non_bleeding_0_01_23.400000-0_01_51.20000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_04_21.366667-0_04_49.66666730fps_clip_379_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_22_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_00_12.133333-0_00_24.96666730fps_clip_238_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_138_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_16_26.600000-0_16_40.48000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_light_0_28_28.680000-0_28_40.84000030fps_clip_488_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_23_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_40_09.392726-0_40_20.03670330fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_16_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_04_42.466667-0_05_04.60000030fps_clip_313_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_19_27.400000-0_19_43.28000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_00_00.840000-0_00_23.72000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_450_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_21.538205-0_00_29.72973030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_02_38.033333-0_02_56.73333330fps_clip_360_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_03_04.300968-0_04_33.59025730fps_clip_27_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_454_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_121_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_00_00.840000-0_00_23.72000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_01_22.400000-0_01_49.20000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_353_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_505_Bleeding_0_01_47.866667-0_02_06.30000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_505_Bleeding_0_01_47.866667-0_02_06.30000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_11_51.144478-0_12_21.30797530fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_42.400000-0_32_53.48000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_43.760000-0_01_11.32000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_642_Non_bleeding_0_30_38.438438-0_30_42.07540930fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_198_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_11_06.066066-0_11_11.33800530fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_66_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_32_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_118_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_03_54.367701-0_04_06.99699730fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_139_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_01_14.520000-0_01_19.40000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_30.984318-0_02_48.83550230fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_19.029029-0_01_41.58491830fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_660_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_412_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_04_23.960000-0_04_30.68000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_46_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_47.160000-0_05_17.16000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_401_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_06_53.800000-0_07_06.63333330fps_clip_139_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_326_Bleeding_0_00_36.366667-0_00_56.66666730fps_clip_210_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_38_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_47_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_07.073740-0_00_21.07107130fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_13_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip26_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_03_54.367701-0_04_06.99699730fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_10_28.400000-0_10_35.72000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_26_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_33_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_00.650651-0_10_11.49482830fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_02_29.249249-0_02_36.53987330fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_686_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_28_41.160000-0_29_07.80000030fps_clip2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_52_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_22.840000-0_00_38.80000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_46_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_24_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_05_21.166667-0_05_36.86666730fps_clip_325_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_662_Bleeding_0_13_19.265933-0_13_32.31231230fps_clip_639_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_02_57.344011-0_03_07.78778830fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_168_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_275_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_28_52.800000-0_29_27.40000030fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_02_12.015349-0_02_34.53787130fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_light_0_28_28.680000-0_28_40.84000030fps_clip_487_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_08_45.525526-0_09_09.54955030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_30.984318-0_02_48.83550230fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_256_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_35_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_light_0_21_36.960000-0_21_42.40000030fps_clip_477_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_67_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_03_48.066667-0_04_29.60000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_38_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_05_17.984651-0_05_38.92225630fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_47_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_06_00.760000-0_06_16.48000030fps_clip_429_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_18_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_45_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_09_26.280000-0_09_50.60000030fps_clip_1058_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_28_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_574_Non_bleeding_0_02_51.200000-0_02_58.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_11_51.144478-0_12_21.30797530fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_105_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_258_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_07_25.466667-0_07_38.26666730fps_clip_507_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_05_36.200000-0_05_42.48000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_05.560000-0_31_16.80000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_11_01.920000-0_11_17.04000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_92_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_15_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip13_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_447_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_11_51.144478-0_12_21.30797530fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_18_13.693694-0_19_10.98431830fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_605_Non_bleeding_0_05_19.360000-0_05_31.76000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_46_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_470_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_665_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Non_bleeding_bleeding_0_22_48.760000-0_22_53.72000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_52_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_04_42.466667-0_05_04.60000030fps_clip_318_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_45_Non_bleeding_0_08_58.038038-0_09_06.11277930fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_605_Non_bleeding_0_05_19.360000-0_05_31.76000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_227_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_05.560000-0_31_16.80000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_448_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_43.760000-0_01_11.32000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_02_57.344011-0_03_07.78778830fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_472_Non_bleeding_0_05_55.533333-0_06_02.50000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_43_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip27_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_04_42.466667-0_05_04.60000030fps_clip_314_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Non_bleeding_bleeding_0_22_01.160000-0_22_04.80000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_02_12.015349-0_02_34.53787130fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_29_30.640000-0_29_38.84000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_04_46.753420-0_04_53.96062730fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_10_12.495829-0_10_26.32632630fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_03_48.066667-0_04_29.60000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_155_Non_bleeding_0_01_23.400000-0_01_51.20000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_04_38.795462-0_04_44.63463530fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_20_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_31_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_22_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_640_Bleeding_light_0_04_22.012012-0_04_47.95462130fps_clip_555_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_40_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_40_45.395395-0_43_11.27460830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_12_52.760000-0_12_59.88000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_07_16.600000-0_07_2830fps_clip_418_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_10_54.354354-0_12_01.35468830fps_clip_27_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_01_36.320000-0_01_40.68000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_50_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_00_13.046380-0_01_06.86686730fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_18_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_01_21.381381-0_02_05.79245930fps_clip_20_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_51.768435-0_11_05.69903230fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_03_54.367701-0_04_06.99699730fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_11_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_11_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_06_00.760000-0_06_16.48000030fps_clip_428_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_9_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_00_21.955289-0_00_29.62963030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_18_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_64_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_12_10.480000-0_12_27.84000030fps_clip_505_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_55_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_16_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_38_26.880000-0_38_42.40000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_44_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_57_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_07_16.600000-0_07_2830fps_clip_417_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_125_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_407_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_405_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_303_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_26_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_05_21.166667-0_05_36.86666730fps_clip_329_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_07_37.407407-0_07_53.97397430fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_85_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_04_28.785452-0_06_52.06206230fps_clip_45_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_671_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_08_45.175175-0_08_55.66900230fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_04_21.366667-0_04_49.66666730fps_clip_369_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_07_25.466667-0_07_38.26666730fps_clip_511_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_20_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_251_Bleeding_0_01_50.433333-0_02_01.03333330fps_clip_147_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_280_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_07_25.466667-0_07_38.26666730fps_clip_509_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_22.840000-0_00_38.80000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_19_31.800000-0_19_35.68000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Non_bleeding_bleeding_0_22_30.240000-0_22_33.96000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_65_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_18_13.693694-0_19_10.98431830fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_50_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_13_28.360000-0_13_33.36000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_32_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_51.768435-0_11_05.69903230fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_138_Non_bleeding_0_02_14.066667-0_02_17.30000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_130_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_34_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_02_20.600000-0_02_27.20000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_399_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_03_48.066667-0_04_29.60000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_10_43.920000-0_10_48.08000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_460_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_601_Bleeding_light_0_20_51.600000-0_20_58.80000030fps_clip_536_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_19_47.954621-0_19_56.46313030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_103_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_08_19.231181-0_08_35.40981430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_111_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_164_Non_bleeding_0_06_00.700000-0_06_12.20000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_11_01.920000-0_11_17.04000030fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_01_02.162162-0_01_13.95729130fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_08_45.525526-0_09_09.54955030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_00_12.133333-0_00_24.96666730fps_clip_239_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_354_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_653_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_54_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_08_45.175175-0_08_55.66900230fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_21_02.440000-0_21_08.72000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_07_37.407407-0_07_53.97397430fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_47.160000-0_05_17.16000030fps_clip_13_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_28_30.840000-0_29_33.24000030fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_292_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_542_Non_bleeding_0_10_46.360000-0_10_53.80000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_138_Non_bleeding_0_04_12.100000-0_04_20.26666730fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_17_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_17_38.360000-0_17_46.32000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_29_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_297_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_304_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_04_42.466667-0_05_04.60000030fps_clip_316_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_07_37.407407-0_07_53.97397430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_00_37.800000-0_00_44.60000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_49.616283-0_01_08.43510230fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_04_17.433333-0_04_31.76666730fps_clip_493_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_31_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_137_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_20_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_21_18.760000-0_21_29.60000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_06_49.709710-0_08_18.93226630fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_32_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_05.672339-0_00_22.90624030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_05_32.400000-0_05_42.76000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_10_28.366667-0_10_58.30000030fps_clip_395_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_43_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_09_17.520000-0_09_26.32000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_07_01.560000-0_07_2330fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_11_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_03_04.300968-0_04_33.59025730fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_90_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_05_41.633333-0_05_54.63333330fps_clip_504_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_221_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_288_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_31_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_34.631298-0_13_52.66599930fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_05_18-0_05_22.08000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_02_53.840000-0_02_59.84000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_505_Bleeding_0_01_47.866667-0_02_06.30000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_14_10.984318-0_15_01.36803530fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_14_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_135_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_10_00-0_10_08.77544230fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_11_07.600000-0_11_11.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_457_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_227_Bleeding_0_04_01.466667-0_04_29.23333330fps_clip_86_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_00_49.040000-0_01_08.96000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_light_0_22_28-0_22_36.88000030fps_clip_480_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_20_29.760000-0_20_35.20000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_164_Non_bleeding_0_05_49.133333-0_05_52.93333330fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_194_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_98_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_649_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_40_09.392726-0_40_20.03670330fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_136_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_100_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_640_Bleeding_light_0_04_22.012012-0_04_47.95462130fps_clip_559_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_524_Bleeding_0_00_01.166667-0_00_32.43333330fps_clip_404_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_0_06_30.320000-0_06_39.80000030fps_clip_422_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_48_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_00_00.500501-0_00_07.17384130fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_78_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_03_04.300968-0_04_33.59025730fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_17_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_662_Bleeding_0_13_19.265933-0_13_32.31231230fps_clip_640_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_09_09.760000-0_09_17.08000030fps_clip_1529_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_19_44.480000-0_19_48.60000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_08_37.333333-0_09_44.26666730fps_clip_26_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_23_30.120000-0_23_46.72000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_138_Non_bleeding_0_04_12.100000-0_04_20.26666730fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_108_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_23_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_13_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_59_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_251_Bleeding_0_01_50.433333-0_02_01.03333330fps_clip_148_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_47.160000-0_05_17.16000030fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_104_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_01_22.400000-0_01_49.20000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_28_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_07.073740-0_00_21.07107130fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_01_22.415749-0_02_10.69736430fps_clip_17_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_116_Bleeding_0_26_06.900234-0_26_11.77177230fps_clip_34_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_08_19.231181-0_08_35.40981430fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_523_Bleeding_0_04_21.366667-0_04_49.66666730fps_clip_370_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_92_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_42_Non_bleeding_0_02_31.918585-0_02_40.96096130fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_38_26.880000-0_38_42.40000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_17_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_04_17.433333-0_04_31.76666730fps_clip_497_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_17_31.080000-0_17_44.68000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_08_09.938494-0_08_15.95534230fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_14_33.040000-0_14_39.36000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_09_40.166667-0_09_54.43333330fps_clip_547_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_7_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Bleeding_0_03_54.367701-0_04_06.99699730fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_307_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_12_52.760000-0_12_59.88000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_23_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_111_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_87_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_09_55.280000-0_09_59.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_00_13.046380-0_01_06.86686730fps_clip_25_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_10_54.354354-0_12_01.35468830fps_clip_21_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_19.029029-0_01_41.58491830fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_51.768435-0_11_05.69903230fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_21_18.760000-0_21_29.60000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_38_37.517518-0_39_49.03903930fps_clip_30_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_23_03.080000-0_23_07.80000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_225_Bleeding_0_05_02.500000-0_05_43.60000030fps_clip_62_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_47.160000-0_05_17.16000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_04_41.880000-0_04_51.76000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_581_Non_bleeding_0_09_26.280000-0_09_50.60000030fps_clip_1055_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_19_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_285_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_227_Bleeding_0_04_01.466667-0_04_29.23333330fps_clip_87_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_117_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_13_08.640000-0_13_12.88000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_278_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_271_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_04_28.785452-0_06_52.06206230fps_clip_44_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_39_50.056723-0_40_02.20220230fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_23_30.120000-0_23_46.72000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_645_Non_bleeding_0_43_55.560000-0_44_00.68000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_13_22.520000-0_13_26.88000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_33_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_444_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_13_29.480000-0_13_36.44000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_693_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_20_11.720000-0_20_18.24000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_19_14.840000-0_19_44.88000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_24_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_25_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_167_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_53_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_43_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_32_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_39_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_03_11.920000-0_03_15.76000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_47_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_101_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_39_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_45_Non_bleeding_0_08_50.497164-0_08_55.30196930fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_123_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_05_11.560000-0_06_37.12000030fps_clip17_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_467_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_622_Bleeding_0_07_35.160000-0_07_4430fps_clip_547_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_06_24.880000-0_06_30.32000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_640_Bleeding_light_0_04_22.012012-0_04_47.95462130fps_clip_564_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_574_Non_bleeding_0_03_59.400000-0_04_10.92000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_02_12.015349-0_02_34.53787130fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_36_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_04_44.833333-0_04_55.96666730fps_clip_1409_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_675_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_18_50.160000-0_19_09.36000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_150_Non_bleeding_0_00_46.133333-0_00_54.33333330fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_75_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_05_51.216740-0_08_09.93849430fps_clip_30_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_08_37.333333-0_09_44.26666730fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_49_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_06.600000-0_04_14.52000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_27_00.960000-0_28_10.84000030fps_clip_25_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_08_45.175175-0_08_55.66900230fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_640_Bleeding_light_0_04_22.012012-0_04_47.95462130fps_clip_556_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_675_Non_bleeding_bleeding_0_13_02.582583-0_13_21.55155230fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_0_00_36.366667-0_00_56.66666730fps_clip_211_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_19_44.840000-0_19_56.36000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_122_Non_bleeding_0_01_20.447114-0_05_10.59392730fps_clip_96_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_12_10.040000-0_12_1630fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_134_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_12_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_10_04.270938-0_10_08.10810830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_28_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_106_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_201_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_677_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_29_30.640000-0_29_38.84000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_11_29.839840-0_14_49.95662330fps_clip_26_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_06_53.800000-0_07_06.63333330fps_clip_136_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_07_28.960000-0_07_39.12000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_00.650651-0_10_11.49482830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_665_Bleeding_0_03_50.520000-0_04_20.16000030fps_clip5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_00_49.616283-0_01_08.43510230fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_27.310644-0_01_02.92959630fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_501_Non_bleeding_0_10_06.866667-0_10_16.86666730fps_clip_392_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_99_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_02_12.015349-0_02_34.53787130fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_16_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_20_07.560000-0_20_25.92000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_30_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_28_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_543_Bleeding_0_24_21.920000-0_25_04.64000030fps_clip_462_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_04_13.680000-0_04_1830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_199_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_171_Non_bleeding_0_08_45.033333-0_08_56.20000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_229_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_41.608275-0_00_47.73106430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_222_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_05_57.560000-0_06_07.08000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_00.817484-0_00_11.02769430fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_16_26.600000-0_16_40.48000030fps_clip_6_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_164_Non_bleeding_0_06_00.700000-0_06_12.20000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_30_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_07_12.600000-0_07_51.64000030fps_clip_437_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_253_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_504_Bleeding_light_0_07_09.166667-0_07_14.20000030fps_clip_340_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_01_41.651652-0_02_38.69202530fps_clip_22_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_49_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_675_Bleeding_0_14_17.390724-0_14_39.59626330fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_12_12.680000-0_12_17.88000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_99_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_57.344011-0_06_49.10910930fps_clip_66_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_131_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_3_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_103_Non_bleeding_0_10_38.988989-0_10_44.96162830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_05_17.984651-0_05_38.92225630fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_30_27.760000-0_30_56.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_41_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_07_50.960000-0_08_49.08000030fps_clip_19_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_203_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_00_37.800000-0_00_44.60000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_32_00.160000-0_32_18.92000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_40_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_195_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_434_Bleeding_0_05_21.166667-0_05_36.86666730fps_clip_330_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_25_01.080000-0_26_14.48000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_15_47.200000-0_16_42.08000030fps_clip_4_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_02_29.760000-0_26_17.28000030fps_clip_617_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_28_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_200_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_110_Bleeding_0_03_27.640974-0_04_22.56256330fps_clip_11_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_300_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_05.560000-0_31_16.80000030fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_150_Non_bleeding_0_00_46.133333-0_00_54.33333330fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_82_Non_bleeding_0_40_09.392726-0_40_20.03670330fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_00_35.852519-0_00_39.30597330fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_03_44.760000-0_04_04.60000030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_14_06.240000-0_14_21.12000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_65_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_08_11.720000-0_08_25.04000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_673_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_03_48.066667-0_04_29.60000030fps_clip_18_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_610_Non_bleeding_0_05_43.927261-0_05_51.03436830fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_60_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_538_Bleeding_light_0_06_00.760000-0_06_16.48000030fps_clip_431_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_03_47.320000-0_03_50.72000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_17_31.080000-0_17_44.68000030fps_clip_6_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_269_Bleeding_0_01_36.800000-0_02_05.13333330fps_clip_175_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_16_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_114_Non_bleeding_0_02_30.984318-0_02_48.83550230fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_00_12.133333-0_00_24.96666730fps_clip_237_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_09_34.407741-0_09_52.67600930fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_106_Non_bleeding_0_02_05.919241-0_05_50.58162930fps_clip_35_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_668_Bleeding_0_18_07.720000-0_20_08.68000030fps_clip_34_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_09_08.520000-0_09_43.72000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_04_20.120000-0_04_24.04000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_01_22.400000-0_01_49.20000030fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_669_Non_bleeding_bleeding_0_03_44.760000-0_04_04.60000030fps_clip_9_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_260_Bleeding_0_07_20.366667-0_07_35.76666730fps_clip_159_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_04_58.164831-0_05_11.19452830fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_192_Bleeding_light_0_01_16.647948-0_01_56.49284730fps_clip_38_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_00_13.046380-0_01_06.86686730fps_clip_14_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_552_Bleeding_0_04_17.433333-0_04_31.76666730fps_clip_495_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_19_47.954621-0_19_56.46313030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_676_Non_bleeding_bleeding_0_03_04.300968-0_04_33.59025730fps_clip_18_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_685_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_182_Non_bleeding_0_01_43.300000-0_03_38.20000030fps_clip_29_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_14_42.960000-0_14_46.28000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_17_30-0_17_33.36000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Non_bleeding_bleeding_0_41_21.440000-0_42_06.80000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_592_Bleeding_0_07_44.120000-0_07_48.48000030fps_clip1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_349_Bleeding_0_07_07.133333-0_08_34.13333330fps_clip_267_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_605_Non_bleeding_0_05_13.640000-0_05_18.20000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_537_Non_bleeding_0_11_04.040000-0_11_08.24000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_648_Bleeding_0_07_17.370704-0_07_42.66266330fps_clip_12_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_12_12.680000-0_12_17.88000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_326_Bleeding_light_0_08_16.100000-0_08_47.53333330fps_clip_233_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_317_Bleeding_0_01_06.500000-0_01_51.13333330fps_clip_187_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_694_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_655_Non_bleeding_0_10_31.841667-0_10_35.88333330fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_00_56.447558-0_02_22.66081230fps_clip_29_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_28_36.160000-0_28_59.92000030fps_clip_8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_18_41.080000-0_18_46.04000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_508_Bleeding_0_10_55.333333-0_11_16.86666730fps_clip_349_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_679_Non_bleeding_bleeding_0_00_00.500501-0_00_07.17384130fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Non_bleeding_bleeding_0_31_05.560000-0_31_16.80000030fps_clip_5_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_02_06.880000-0_02_33.28000030fps_clip_1_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_706_Non_bleeding_bleeding_0_00_22.840000-0_00_38.80000030fps_clip_2_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_20_24.007341-0_20_37.53753830fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_409_Bleeding_0_00_15.166667-0_00_56.03333330fps_clip_299_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_623_Bleeding_0_16_26.600000-0_16_40.48000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_117_Non_bleeding_0_00_13.046380-0_01_06.86686730fps_clip_11_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_250_Bleeding_0_03_41.766667-0_05_14.96666730fps_clip_109_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_227_Bleeding_0_04_01.466667-0_04_29.23333330fps_clip_95_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_06_25.840000-0_06_56.20000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_495_Non_bleeding_0_05_58.300000-0_08_32.50000030fps_clip_54_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_81_Bleeding_0_27_53.139806-0_29_42.48248230fps_clip_696_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_11_51.144478-0_12_21.30797530fps_clip_7_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_677_Non_bleeding_bleeding_0_02_22.308976-0_02_38.95895930fps_clip_3_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_659_Bleeding_0_28_41.160000-0_29_07.80000030fps_clip8_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_115_Non_bleeding_0_02_22.794892-0_02_44.75044430fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_24_18.240000-0_24_30.80000030fps_clip_5_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Bleeding_0_01_12.400000-0_01_32.92000030fps_clip_2_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_671_Bleeding_0_32_34.760000-0_33_37.20000030fps_clip_10_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_00_05.672339-0_00_22.90624030fps_clip_8_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_508_Bleeding_light_0_04_23.633333-0_04_28.80000030fps_clip_356_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_705_Non_bleeding_bleeding_0_19_44.840000-0_19_56.36000030fps_clip_1_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_104_Non_bleeding_0_01_16.042709-0_04_34.30764130fps_clip_13_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_674_Bleeding_0_14_06.240000-0_14_21.12000030fps_clip_4_f45",
+      "has_bleeding": false
+    },
+    {
+      "frame_id": "case_662_Bleeding_0_13_19.265933-0_13_32.31231230fps_clip_642_f45",
+      "has_bleeding": true
+    },
+    {
+      "frame_id": "case_678_Non_bleeding_bleeding_0_01_19.029029-0_01_41.58491830fps_clip_5_f45",
+      "has_bleeding": false
+    }
+  ]
+}
