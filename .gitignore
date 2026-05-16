@@ -1,0 +1,132 @@
+# =============================================================================
+# Sentinel Health — Monorepo .gitignore
+# =============================================================================
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.installed.cfg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# ── Env / secrets ────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+secrets/
+credentials/
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+
+# ── Editores ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Docker / processo ────────────────────────────────────────────────────────
+*.pid
+
+# ── ML: datasets e modelos (grandes, fora do Git) ────────────────────────────
+modules/*/models/trained/
+modules/*/models/exported/
+modules/*/web/models/*.pt
+modules/*/data/raw/
+modules/*/data/processed/
+modules/*/data/yolo_format/
+modules/*/videos/input/
+modules/*/videos/output/
+modules/*/surgical-training/
+
+# Pesos e checkpoints
+*.h5
+*.pb
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+
+# Mídia temporária
+*.avi
+*.mp4
+*.wav
+*.mp3
+*.m4a
+*.webm
+
+# Datasets compactados
+*.zip
+*.tar.gz
+*.tar
+cholecseg8k/
+gynsurg/
+
+# ── Terraform ────────────────────────────────────────────────────────────────
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfplan
+**/tfplan*
+**/.terraform.lock.hcl
+**/crash.log
+**/override.tf
+**/override.tf.json
+**/*_override.tf
+**/*_override.tf.json
+**/*.tfvars
+!**/example.tfvars
+
+# ── AWS ──────────────────────────────────────────────────────────────────────
+.aws/
+*.pem
+model.tar.gz
+
+# ── pytest / coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+
+# ── LaTeX intermediários ─────────────────────────────────────────────────────
+relatorio/*.aux
+relatorio/*.log
+relatorio/*.out
+relatorio/*.toc
+relatorio/*.lof
+relatorio/*.lot
+relatorio/*.bcf
+relatorio/*.run.xml
+relatorio/*.bbl
+relatorio/*.blg
+relatorio/*.acn
+relatorio/*.glo
+relatorio/*.ist
+relatorio/chapters/*.aux
+relatorio/lib/*.aux
+
+# ── Misc temporários ─────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+
+# ── Outputs gerados ──────────────────────────────────────────────────────────
+modules/*/output/
+modules/*/results/
+modules/*/reports/*.pdf
+modules/*/demo_output/
+modules/*/runs/
+modules/*/surgical_detection/
