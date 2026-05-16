@@ -14,11 +14,14 @@ services:
       - surgical-results:/tmp/surgical-results
       - surgical-annotations:/tmp/annotations
       - ~/.aws:/root/.aws:ro
-      # Dataset GynSurg (descomente e ajuste o path para usar /annotation)
+      # Dataset GynSurg full (descomente para usar /annotation)
       # - /path/to/GynSurg_Action_3sec:/data/GynSurg_Action_3sec:ro
+      # OPCIONAL: clips de amostra no disco (fallback p/ /api/samples/*)
+      # - /path/no/host/com/clips:/data/gynsurg_sample:ro
     environment:
       - MODEL_PATH=/app/models/best.pt
       - S3_BUCKET=surgical-detection-datasets-dev
+      - LOCAL_SAMPLES_PATH=/data/gynsurg_sample
       - AWS_DEFAULT_REGION=us-east-1
       # Pass through host's AWS_PROFILE (no [default] on multi-profile setups)
       - AWS_PROFILE=${AWS_PROFILE:-}

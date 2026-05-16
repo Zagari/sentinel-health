@@ -22,8 +22,9 @@ Sobe a plataforma inteira (landing + Surgical + Insight) num único `docker-comp
 |---|---|
 | Docker + Docker Compose v2 | Testado com Docker 29.x e Compose v2 |
 | Porta `80` livre no host | nginx publica nessa porta |
-| `~/.aws/credentials` | Necessário para a galeria S3 do Surgical. Se ausente, a galeria não funciona mas o resto da app fica de pé. |
-| `AWS_PROFILE` env var (se você tem múltiplos profiles) | O compose repassa do host. Se seu `~/.aws/credentials` **não tem `[default]`**, exporte antes de subir: `export AWS_PROFILE=castellabate`. Sem isso, `/api/samples/list` retorna 500 com a UI mostrando *"samples.map is not a function"*. |
+| `~/.aws/credentials` (opcional) | Para a galeria S3 do Surgical. Se ausente, o fallback local entra em ação automaticamente desde que `LOCAL_SAMPLES_PATH` esteja montado. |
+| `AWS_PROFILE` env var (se você tem múltiplos profiles) | O compose repassa do host. Se seu `~/.aws/credentials` **não tem `[default]`**, exporte antes de subir: `export AWS_PROFILE=castellabate`. |
+| Clips locais (opcional, fallback do S3) | Se quiser oferecer a galeria sem AWS, descomente o mount `/data/gynsurg_sample` no `docker-compose.yml` apontando pra um diretório local com `bleeding/*.mp4` e `non_bleeding/*.mp4`. Útil em servidores sem AWS CLI. |
 | `OPENAI_API_KEY` em `../modules/insight/emotion-recognizer/.env` | Necessário para Whisper + LLM do Insight. Se ausente, o caminho LLM falha graciosamente e o Insight usa fallback keyword-based. |
 | `best.pt` em `../modules/surgical/web/models/` | **Não é mais pré-requisito.** O entrypoint do container Surgical baixa automaticamente do [Hugging Face Hub](https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding) no primeiro boot. Se quiser pré-popular para evitar o download, baixe manualmente (`curl -fL -o ../modules/surgical/web/models/best.pt https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding/resolve/main/best.pt`). |
 
