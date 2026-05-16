@@ -1,23 +1,44 @@
 /* =============================================================================
-   Sentinel Health — Landing styles
-   Paleta inspirada na FIAP (vermelho, cinza-escuro, branco)
+   Sentinel Health — Landing styles (dark palette: azul + ciano + dourado)
+   Mesma paleta usada em landing/presentation/index.html.
    ============================================================================= */
 
 :root {
-  --fiap-red: #ed1c24;
-  --fiap-red-dark: #c41419;
-  --fiap-dark: #231f20;
-  --fiap-gray: #808285;
-  --fiap-light: #f5f5f5;
-  --cream-bg: #faf8f3;
-  --surface: #ffffff;
+  /* Backgrounds */
+  --bg-deep: #0b1220;
+  --bg-card: #162033;
+  --bg-card-2: #1e293b;
+  --bg-header: #0f1729;
 
-  /* Surgical brand colors (matching modules/surgical/web/app/static/css/style.css) */
-  --surgical-blue: #2563eb;
-  --surgical-blue-dark: #1d4ed8;
+  /* Text */
+  --text-main: #e6edf3;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
 
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  /* Accents */
+  --accent-blue: #60a5fa;
+  --accent-blue-dark: #3b82f6;
+  --accent-cyan: #38bdf8;
+  --accent-cyan-dark: #0ea5e9;
+  --accent-gold: #fbbf24;
+  --accent-gold-dark: #d97706;
+  --accent-mint: #34d399;
+  --accent-partial: #f59e0b;
+
+  /* Surfaces & lines */
+  --border-soft: #334155;
+  --border-strong: #475569;
+
+  /* Surgical module brand (kept distinct from primary gold) */
+  --surgical-blue: #60a5fa;
+  --surgical-blue-dark: #3b82f6;
+
+  /* Effects */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55);
+  --shadow-cyan: 0 8px 24px rgba(56, 189, 248, 0.18);
+  --shadow-gold: 0 8px 24px rgba(251, 191, 36, 0.22);
+
   --radius: 8px;
   --content-w: 1200px;
 }
@@ -28,15 +49,21 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-deep);
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   line-height: 1.6;
-  color: var(--fiap-dark);
-  background: var(--cream-bg);
+  color: var(--text-main);
+  background: var(--bg-deep);
   -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-cyan);
+  color: var(--bg-deep);
 }
 
 .container {
@@ -48,11 +75,12 @@ body {
 /* ── Header ─────────────────────────────────────────────────────────────── */
 
 .site-header {
-  background: white;
-  border-bottom: 1px solid #e6e6e6;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-soft);
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: saturate(160%) blur(8px);
 }
 
 .site-header .container {
@@ -68,12 +96,12 @@ body {
   gap: 0.6rem;
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--fiap-dark);
+  color: var(--text-main);
   text-decoration: none;
 }
 
 .logo svg {
-  color: var(--fiap-red);
+  color: var(--accent-cyan);
 }
 
 .main-nav {
@@ -82,33 +110,37 @@ body {
 }
 
 .main-nav a {
-  color: var(--fiap-dark);
+  color: var(--text-main);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.15s;
 }
 
-.main-nav a:hover {
-  color: var(--fiap-red);
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--accent-cyan);
 }
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 
 .hero {
   padding: 5rem 0 4rem;
-  background: linear-gradient(180deg, var(--cream-bg) 0%, var(--fiap-light) 100%);
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(56, 189, 248, 0.10) 0%, transparent 70%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-card) 100%);
   text-align: center;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .tag {
   display: inline-block;
   padding: 0.35rem 0.9rem;
-  background: var(--fiap-red);
-  color: white;
+  background: var(--accent-gold);
+  color: var(--bg-deep);
   border-radius: 100px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -120,16 +152,17 @@ body {
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--text-main);
 }
 
 .hero h1 strong {
-  color: var(--fiap-red);
+  color: var(--accent-cyan);
   font-weight: 700;
 }
 
 .hero .lead {
   font-size: 1.2rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   max-width: 720px;
   margin: 0 auto 2rem;
 }
@@ -150,7 +183,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: transform 0.1s, box-shadow 0.2s, background-color 0.15s;
+  transition: transform 0.1s, box-shadow 0.2s, background-color 0.15s, color 0.15s, border-color 0.15s;
   border: 2px solid transparent;
 }
 
@@ -159,46 +192,49 @@ body {
 }
 
 .btn-primary {
-  background: var(--fiap-red);
-  color: white;
+  background: var(--accent-gold);
+  color: var(--bg-deep);
   box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
-  background: var(--fiap-red-dark);
-  box-shadow: var(--shadow-lg);
+  background: var(--accent-gold-dark);
+  color: var(--bg-deep);
+  box-shadow: var(--shadow-gold);
 }
 
-/* Surgical brand button — used in the Surgical module card */
+/* Surgical brand button — azul, mantém identidade do módulo */
 .btn-surgical {
   background: var(--surgical-blue);
-  color: white;
+  color: var(--bg-deep);
   box-shadow: var(--shadow);
 }
 
 .btn-surgical:hover {
   background: var(--surgical-blue-dark);
-  box-shadow: var(--shadow-lg);
+  color: var(--bg-deep);
+  box-shadow: var(--shadow-cyan);
 }
 
 .btn-secondary {
-  background: white;
-  color: var(--fiap-dark);
-  border-color: var(--fiap-dark);
+  background: transparent;
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
 }
 
 .btn-secondary:hover {
-  background: var(--fiap-dark);
-  color: white;
+  background: var(--accent-cyan);
+  color: var(--bg-deep);
 }
 
 .btn-light {
-  background: white;
-  color: var(--fiap-red);
+  background: var(--accent-cyan);
+  color: var(--bg-deep);
 }
 
 .btn-light:hover {
-  background: var(--fiap-light);
+  background: var(--accent-cyan-dark);
+  color: var(--bg-deep);
 }
 
 .btn-large {
@@ -213,7 +249,8 @@ body {
 }
 
 .section-light {
-  background: var(--fiap-light);
+  background: var(--bg-card);
+  border-block: 1px solid var(--border-soft);
 }
 
 .section h2 {
@@ -222,11 +259,12 @@ body {
   text-align: center;
   font-weight: 700;
   letter-spacing: -0.01em;
+  color: var(--accent-blue);
 }
 
 .section-sub {
   text-align: center;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   font-size: 1.1rem;
   margin: 0 auto 3rem;
   max-width: 600px;
@@ -241,11 +279,12 @@ body {
 }
 
 .module-card {
-  background: var(--surface);
+  background: var(--bg-card-2);
   border-radius: 12px;
   padding: 2.5rem;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid var(--border-soft);
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
   display: flex;
   flex-direction: column;
 }
@@ -253,28 +292,35 @@ body {
 .module-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
+  border-color: var(--accent-gold);
+}
+
+.module-card-surgical:hover {
+  border-color: var(--surgical-blue);
 }
 
 .card-icon {
   width: 56px;
   height: 56px;
-  background: var(--fiap-light);
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.2rem;
-  color: var(--fiap-red);
+  color: var(--accent-gold);
 }
 
 .module-card h3 {
   font-size: 1.6rem;
   margin: 0 0 0.4rem;
   letter-spacing: -0.01em;
+  color: var(--text-main);
 }
 
 .card-meta {
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   font-size: 0.85rem;
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   margin: 0 0 1rem;
@@ -283,6 +329,11 @@ body {
 .card-desc {
   margin: 0 0 1.5rem;
   flex: 1;
+  color: var(--text-main);
+}
+
+.card-desc strong {
+  color: var(--accent-cyan);
 }
 
 .metrics {
@@ -291,7 +342,8 @@ body {
   gap: 0.5rem;
   margin: 0 0 2rem;
   padding: 1.2rem;
-  background: var(--fiap-light);
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
 }
 
@@ -301,7 +353,7 @@ body {
 
 .metrics dt {
   font-size: 0.72rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.3rem;
@@ -312,10 +364,10 @@ body {
   margin: 0;
   font-weight: 700;
   font-size: 1.05rem;
-  color: var(--fiap-red);
+  color: var(--accent-gold);
 }
 
-/* Surgical card variant — uses blue brand color for icon and metrics */
+/* Surgical card variant — azul ao invés de dourado nos destaques */
 .module-card-surgical .card-icon {
   color: var(--surgical-blue);
 }
@@ -324,22 +376,25 @@ body {
   color: var(--surgical-blue);
 }
 
-/* ── Coverage CTA (dark section) ────────────────────────────────────────── */
+/* ── Coverage CTA ───────────────────────────────────────────────────────── */
 
 .coverage-cta {
-  background: var(--fiap-dark);
-  color: white;
+  background:
+    radial-gradient(60% 80% at 50% 100%, rgba(56, 189, 248, 0.10) 0%, transparent 70%),
+    var(--bg-deep);
+  color: var(--text-main);
   padding: 5rem 0;
   text-align: center;
+  border-block: 1px solid var(--border-soft);
 }
 
 .coverage-cta h2 {
-  color: white;
+  color: var(--accent-cyan);
   margin-bottom: 1rem;
 }
 
 .coverage-cta p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
   font-size: 1.1rem;
   max-width: 680px;
   margin: 0 auto 2rem;
@@ -348,19 +403,20 @@ body {
 .coverage-cta .coverage-stat {
   font-size: 0.95rem;
   margin-top: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
 }
 
 .coverage-cta .coverage-stat strong {
-  color: white;
+  color: var(--accent-gold);
 }
 
 .white-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--accent-cyan);
+  text-decoration: none;
 }
 
 .white-link:hover {
-  color: white;
+  color: var(--accent-gold);
 }
 
 /* ── Roadmap grid ───────────────────────────────────────────────────────── */
@@ -372,17 +428,18 @@ body {
 }
 
 .roadmap-item {
-  background: var(--surface);
+  background: var(--bg-card-2);
   border-radius: var(--radius);
   padding: 1.8rem 1.4rem;
   text-align: center;
-  border: 1px solid #e6e6e6;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--border-soft);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .roadmap-item:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
+  border-color: var(--accent-gold);
 }
 
 .roadmap-item .emoji {
@@ -394,21 +451,27 @@ body {
 .roadmap-item h4 {
   margin: 0 0 0.6rem;
   font-size: 1.1rem;
+  color: var(--accent-blue);
 }
 
 .roadmap-item p {
   margin: 0;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.roadmap-item strong {
+  color: var(--accent-cyan);
 }
 
 /* ── Footer ─────────────────────────────────────────────────────────────── */
 
 .site-footer {
-  background: var(--fiap-dark);
-  color: rgba(255, 255, 255, 0.8);
+  background: var(--bg-header);
+  color: var(--text-main);
   padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-soft);
 }
 
 .footer-top {
@@ -419,7 +482,7 @@ body {
 }
 
 .site-footer h3 {
-  color: white;
+  color: var(--accent-cyan);
   font-size: 1rem;
   margin: 0 0 1rem;
   text-transform: uppercase;
@@ -435,43 +498,47 @@ body {
 .site-footer li {
   margin-bottom: 0.4rem;
   font-size: 0.92rem;
+  color: var(--text-main);
 }
 
 .site-footer p {
   font-size: 0.92rem;
   margin: 0 0 0.4rem;
+  color: var(--text-main);
 }
 
 .site-footer a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
   text-decoration: none;
+  transition: color 0.15s;
 }
 
 .site-footer a:hover {
-  color: white;
+  color: var(--accent-cyan);
 }
 
 .disclaimer {
-  background: rgba(255, 165, 0, 0.08);
-  border-left: 3px solid #f5a623;
+  background: rgba(251, 191, 36, 0.08);
+  border-left: 3px solid var(--accent-gold);
   padding: 1.1rem 1.3rem;
   border-radius: var(--radius);
   font-size: 0.88rem;
   line-height: 1.6;
   margin-bottom: 2rem;
+  color: var(--text-main);
 }
 
 .disclaimer strong {
-  color: white;
+  color: var(--accent-gold);
 }
 
 .footer-copy {
   text-align: center;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-dim);
   margin: 0;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-soft);
 }
 
 /* ── Responsive ─────────────────────────────────────────────────────────── */
@@ -554,9 +621,12 @@ body {
    ============================================================================= */
 
 .coverage-hero {
-  background: linear-gradient(180deg, var(--cream-bg) 0%, var(--fiap-light) 100%);
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(96, 165, 250, 0.10) 0%, transparent 70%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-card) 100%);
   padding: 4rem 0 3rem;
   text-align: center;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .coverage-hero h1 {
@@ -564,24 +634,30 @@ body {
   margin: 0.8rem 0 1rem;
   letter-spacing: -0.02em;
   font-weight: 700;
+  color: var(--text-main);
 }
 
 .coverage-hero p {
   font-size: 1.1rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   max-width: 720px;
   margin: 0 auto 1.5rem;
 }
 
+.coverage-hero p strong {
+  color: var(--accent-cyan);
+}
+
 .back-link {
   display: inline-block;
-  color: var(--fiap-red);
+  color: var(--accent-cyan);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
 }
 
 .back-link:hover {
+  color: var(--accent-gold);
   text-decoration: underline;
 }
 
@@ -589,6 +665,7 @@ body {
 
 .coverage-main {
   padding: 2.5rem 0 5rem;
+  background: var(--bg-deep);
 }
 
 .coverage-layout {
@@ -604,17 +681,17 @@ body {
   position: sticky;
   top: 88px;
   height: max-content;
-  background: white;
+  background: var(--bg-card-2);
   padding: 1.5rem;
   border-radius: var(--radius);
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--border-soft);
 }
 
 .filters > h3 {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--fiap-gray);
+  color: var(--accent-cyan);
   margin: 0 0 1rem;
   font-weight: 700;
 }
@@ -627,7 +704,7 @@ body {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   margin: 0 0 0.55rem;
   font-weight: 600;
 }
@@ -639,21 +716,21 @@ body {
 }
 
 .chip {
-  background: white;
-  border: 1px solid #d0d0d0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
   padding: 0.4rem 0.78rem;
   border-radius: 100px;
   font-size: 0.82rem;
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.05s;
-  color: var(--fiap-dark);
+  color: var(--text-main);
   font-family: inherit;
   line-height: 1.2;
 }
 
 .chip:hover {
-  border-color: var(--fiap-red);
-  color: var(--fiap-red);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
 }
 
 .chip:active {
@@ -661,9 +738,9 @@ body {
 }
 
 .chip.active {
-  background: var(--fiap-red);
-  color: white;
-  border-color: var(--fiap-red);
+  background: var(--accent-cyan);
+  color: var(--bg-deep);
+  border-color: var(--accent-cyan);
 }
 
 .btn-small {
@@ -680,11 +757,11 @@ body {
 .items-meta {
   margin-bottom: 1rem;
   font-size: 0.92rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
 }
 
 .items-meta strong {
-  color: var(--fiap-dark);
+  color: var(--text-main);
 }
 
 .items-list {
@@ -708,27 +785,27 @@ body {
   gap: 0.6rem 1rem;
   margin: 0 0 1rem;
   padding-bottom: 0.7rem;
-  border-bottom: 2px solid var(--fiap-red);
+  border-bottom: 2px solid var(--accent-cyan);
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .section-title {
-  color: var(--fiap-dark);
+  color: var(--accent-blue);
 }
 
 .section-metric {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
 }
 
-.section-metric .metric-ok       { color: #2e7d32; font-weight: 700; }
-.section-metric .metric-partial  { color: #ed6c02; font-weight: 700; }
-.section-metric .metric-roadmap  { color: #0277bd; font-weight: 700; }
-.section-metric .metric-min      { color: var(--fiap-gray); font-weight: 500; }
-.section-metric .metric-filtered { color: var(--fiap-gray); font-style: italic; }
+.section-metric .metric-ok       { color: var(--accent-mint); font-weight: 700; }
+.section-metric .metric-partial  { color: var(--accent-partial); font-weight: 700; }
+.section-metric .metric-roadmap  { color: var(--accent-cyan); font-weight: 700; }
+.section-metric .metric-min      { color: var(--text-muted); font-weight: 500; }
+.section-metric .metric-filtered { color: var(--text-muted); font-style: italic; }
 
 .section-items {
   display: flex;
@@ -737,21 +814,22 @@ body {
 }
 
 .item-card {
-  background: white;
+  background: var(--bg-card-2);
   border-radius: var(--radius);
   padding: 1.3rem 1.5rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--border-soft);
   border-left-width: 4px;
-  transition: box-shadow 0.15s, transform 0.1s;
+  transition: box-shadow 0.15s, transform 0.1s, border-color 0.15s;
 }
 
 .item-card:hover {
   box-shadow: var(--shadow);
+  border-color: var(--border-strong);
 }
 
-.item-card.status-ok      { border-left-color: #2e7d32; }
-.item-card.status-partial { border-left-color: #ed6c02; }
-.item-card.status-roadmap { border-left-color: #0277bd; }
+.item-card.status-ok      { border-left-color: var(--accent-mint); }
+.item-card.status-partial { border-left-color: var(--accent-partial); }
+.item-card.status-roadmap { border-left-color: var(--accent-cyan); }
 
 .item-head {
   display: flex;
@@ -766,14 +844,14 @@ body {
   font-weight: 600;
 }
 
-.status-badge.status-ok      { color: #2e7d32; }
-.status-badge.status-partial { color: #ed6c02; }
-.status-badge.status-roadmap { color: #0277bd; }
+.status-badge.status-ok      { color: var(--accent-mint); }
+.status-badge.status-partial { color: var(--accent-partial); }
+.status-badge.status-roadmap { color: var(--accent-cyan); }
 
 .item-id {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.72rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   margin-left: auto;
   opacity: 0.7;
 }
@@ -783,12 +861,13 @@ body {
   font-weight: 600;
   margin: 0 0 0.55rem;
   line-height: 1.4;
+  color: var(--text-main);
 }
 
 .item-evidence {
   margin: 0 0 1rem;
   font-size: 0.92rem;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
 }
 
 .item-modules {
@@ -798,26 +877,29 @@ body {
 }
 
 .module-badge {
-  background: var(--fiap-light);
-  color: var(--fiap-dark);
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
   font-size: 0.78rem;
   padding: 0.28rem 0.75rem;
   border-radius: 100px;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
   font-weight: 500;
 }
 
 a.module-badge:hover {
-  background: var(--fiap-red);
-  color: white;
+  background: var(--accent-cyan);
+  color: var(--bg-deep);
+  border-color: var(--accent-cyan);
 }
 
 .module-badge-none {
   background: transparent;
-  color: var(--fiap-gray);
+  color: var(--text-muted);
   font-style: italic;
   opacity: 0.7;
+  border: 1px dashed var(--border-soft);
 }
 
 /* ── Empty state ────────────────────────────────────────────────────────── */
@@ -825,8 +907,9 @@ a.module-badge:hover {
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
-  color: var(--fiap-gray);
-  background: var(--fiap-light);
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
 }
 
