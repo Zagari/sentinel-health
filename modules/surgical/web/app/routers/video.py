@@ -97,8 +97,16 @@ async def process_url(
     return {"job_id": job_id, "message": "Download iniciado"}
 
 
-async def download_and_process(job_id: str, url: str, file_path: str):
-    """Baixa o vídeo via yt-dlp e enfileira o processamento YOLO."""
+def download_and_process(job_id: str, url: str, file_path: str):
+    """Baixa o vídeo via yt-dlp e enfileira o processamento YOLO.
+
+    **NÃO use async def aqui.** subprocess.run (yt-dlp) e o pipeline YOLO
+    chamados abaixo são CPU-bound síncronos. Em async def eles bloqueiam o
+    event loop do FastAPI, congelando o endpoint /status — o que faz
+    Cloudflare cair em 524 e a UI quebrar com 'Unexpected token <'.
+    Como def sync, FastAPI BackgroundTasks roda em threadpool e o loop
+    fica livre para atender o polling.
+    """
     # Espelha o padrão do módulo Insight (modules/insight/.../video/youtube.py),
     # que comprovadamente funciona com URLs do YouTube. "worst[ext=mp4]" pega
     # um stream progressivo único (geralmente 240p mp4 com áudio+vídeo
@@ -130,9 +138,9 @@ async def download_and_process(job_id: str, url: str, file_path: str):
         jobs[job_id] = {"status": "failed", "error": "yt-dlp não instalado no container"}
         return
 
-    # Download ok → enfileira processamento YOLO (atualiza status="processing")
+    # Download ok → chama processamento YOLO direto (já estamos em threadpool)
     jobs[job_id] = {"status": "pending", "progress": 0}
-    await process_video(job_id, file_path)
+    process_video(job_id, file_path)
 
 
 @router.get("/status/{job_id}")
@@ -172,8 +180,13 @@ async def get_result_report(job_id: str):
     )
 
 
-async def process_video(job_id: str, video_path: str):
-    """Processa vídeo em background."""
+def process_video(job_id: str, video_path: str):
+    """Processa vídeo em background.
+
+    **NÃO use async def aqui.** det.process_video() é CPU-bound síncrono
+    (YOLO frame-a-frame). Em async def bloqueia o event loop. Como def
+    sync, FastAPI BackgroundTasks roda em threadpool.
+    """
     try:
         jobs[job_id]["status"] = "processing"
 
