@@ -80,43 +80,59 @@ async def process_url(
     background_tasks: BackgroundTasks,
     request: URLRequest
 ):
-    """Processar vídeo a partir de URL."""
+    """Processar vídeo a partir de URL.
+
+    Download + processamento rodam **inteiramente em background** para evitar
+    timeouts em reverse proxies upstream (Cloudflare = 100s, nginx default = 60s).
+    O endpoint retorna o job_id imediatamente; a UI faz polling de
+    /api/video/status/{job_id} e vê o status transitar: downloading →
+    processing → completed/failed.
+    """
     job_id = str(uuid.uuid4())
     file_path = UPLOAD_DIR / f"{job_id}_video.mp4"
 
     jobs[job_id] = {"status": "downloading", "progress": 0}
+    background_tasks.add_task(download_and_process, job_id, str(request.url), str(file_path))
 
+    return {"job_id": job_id, "message": "Download iniciado"}
+
+
+async def download_and_process(job_id: str, url: str, file_path: str):
+    """Baixa o vídeo via yt-dlp e enfileira o processamento YOLO."""
+    # Espelha o padrão do módulo Insight (modules/insight/.../video/youtube.py),
+    # que comprovadamente funciona com URLs do YouTube. "worst[ext=mp4]" pega
+    # um stream progressivo único (geralmente 240p mp4 com áudio+vídeo
+    # combinados) — não exige deobfuscação do signature do player JS nem merge
+    # via ffmpeg, evitando o caminho DASH que quebra a cada atualização do
+    # player. Para detecção de sangramento via YOLOv8m (treinado em GynSurg
+    # laparoscopia), 240p/360p é suficiente.
     try:
-        # Espelha o padrão do módulo Insight (modules/insight/.../video/youtube.py),
-        # que comprovadamente funciona com URLs do YouTube. A escolha de
-        # "worst[ext=mp4]" pega um stream progressivo único (geralmente 240p mp4
-        # com áudio+vídeo combinados) — não exige deobfuscação do signature do
-        # player JS nem merge via ffmpeg, evitando o caminho DASH que quebra a
-        # cada atualização do player do YouTube. Para detecção de sangramento
-        # via YOLOv8m (treinado em GynSurg laparoscopia), 240p/360p é suficiente.
         result = subprocess.run([
             "yt-dlp",
             "-f", "worst[ext=mp4]",
             "--no-playlist",
             "--no-check-certificates",
-            "-o", str(file_path),
-            str(request.url),
+            "-o", file_path,
+            url,
         ], capture_output=True, text=True, timeout=300)
 
         if result.returncode != 0:
-            raise HTTPException(400, f"Erro ao baixar vídeo: {result.stderr[:200]}")
+            jobs[job_id] = {
+                "status": "failed",
+                "error": f"yt-dlp falhou: {result.stderr.strip()[:300]}",
+            }
+            return
 
     except subprocess.TimeoutExpired:
-        jobs[job_id] = {"status": "failed", "error": "Timeout ao baixar vídeo"}
-        raise HTTPException(408, "Timeout ao baixar vídeo")
+        jobs[job_id] = {"status": "failed", "error": "Timeout ao baixar vídeo (>300s)"}
+        return
     except FileNotFoundError:
-        jobs[job_id] = {"status": "failed", "error": "yt-dlp não instalado"}
-        raise HTTPException(500, "yt-dlp não está instalado no servidor")
+        jobs[job_id] = {"status": "failed", "error": "yt-dlp não instalado no container"}
+        return
 
+    # Download ok → enfileira processamento YOLO (atualiza status="processing")
     jobs[job_id] = {"status": "pending", "progress": 0}
-    background_tasks.add_task(process_video, job_id, str(file_path))
-
-    return {"job_id": job_id, "message": "Download concluído, processamento iniciado"}
+    await process_video(job_id, file_path)
 
 
 @router.get("/status/{job_id}")
