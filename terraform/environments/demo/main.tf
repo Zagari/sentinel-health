@@ -2,19 +2,22 @@
 # Sentinel Health — Demo Environment
 # =============================================================================
 # Custo estimado: ~$0.04/h (EC2 t3.medium + EBS 30GB + EIP gratuito enquanto
-#                          associado). S3 dentro do free tier (5 GB/12 meses).
+#                          associado).
+#
+# Artefatos externos consumidos em runtime:
+#   - best.pt: baixado do Hugging Face Hub no boot do container Surgical
+#     (ver modules/surgical/web/entrypoint.sh).
+#   - Clips GynSurg: lidos do bucket S3 `surgical-detection-datasets-dev`
+#     (projeto surgical-video-ai), via IAM read-only cross-bucket.
 #
 # Workflow:
-#   1. (Uma vez) Subir best.pt para S3:
-#        terraform apply
-#        aws s3 cp /path/to/best.pt s3://$(terraform output -raw models_bucket)/best.pt
-#   2. (Uma vez) Setar OPENAI_API_KEY no SSM Parameter Store:
+#   1. (Uma vez) Setar OPENAI_API_KEY no SSM Parameter Store:
 #        aws ssm put-parameter \
 #          --name /sentinel-health/demo/openai-api-key \
 #          --type SecureString \
 #          --value sk-...
-#   3. Após Steps 1-2, o EC2 vai pegar tudo no bootstrap. Se subiu antes do
-#      best.pt/SSM, reinicie o compose dentro do EC2:
+#   2. terraform apply
+#   3. Se o SSM param foi setado depois do apply, reinicie o compose no EC2:
 #        aws ssm start-session --target <instance-id>
 #        cd ~/sentinel-health/deploy && sudo docker compose restart
 #   4. Quando terminar a demonstração:
@@ -72,29 +75,14 @@ variable "instance_type" {
 }
 
 # -----------------------------------------------------------------------------
-# Storage Module — S3 buckets
-# -----------------------------------------------------------------------------
-module "storage" {
-  source = "../../modules/storage"
-
-  project_name = var.project_name
-  environment  = var.environment
-}
-
-# -----------------------------------------------------------------------------
 # Runtime Module — EC2 + IAM + SG + EIP
 # -----------------------------------------------------------------------------
 module "runtime" {
   source = "../../modules/runtime"
 
-  project_name      = var.project_name
-  environment       = var.environment
-  instance_type     = var.instance_type
-  models_bucket_arn = module.storage.models_bucket_arn
-  models_bucket_name = module.storage.models_bucket_name
-  assets_bucket_arn = module.storage.assets_bucket_arn
-
-  depends_on = [module.storage]
+  project_name  = var.project_name
+  environment   = var.environment
+  instance_type = var.instance_type
 }
 
 # -----------------------------------------------------------------------------
@@ -123,16 +111,6 @@ output "instance_id" {
 output "ssm_session_command" {
   description = "Comando para acessar o shell via SSM (sem SSH)"
   value       = module.runtime.ssm_session_command
-}
-
-output "models_bucket" {
-  description = "Bucket S3 para upload do best.pt"
-  value       = module.storage.models_bucket_name
-}
-
-output "assets_bucket" {
-  description = "Bucket S3 para assets da landing"
-  value       = module.storage.assets_bucket_name
 }
 
 output "bootstrap_log_command" {

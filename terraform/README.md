@@ -13,15 +13,19 @@ Infraestrutura como código para subir a plataforma Sentinel Health (landing + S
    browser ──:80──┼──┤    sentinel-health-runtime-demo         │ │
                   │  │    nginx + landing + surgical + insight │ │
                   │  │    via docker-compose (3 containers)    │ │
-                  │  └────────────────┬─────────┬──────────────┘ │
-                  │     IAM Role        │         │                │
-                  │     ▼               ▼         ▼                │
-                  │  ┌─────────┐ ┌────────────┐ ┌──────────────┐  │
-                  │  │SSM Param│ │ S3: models │ │ S3: assets   │  │
-                  │  │OPENAI_..│ │  best.pt   │ │ landing logos│  │
-                  │  └─────────┘ └────────────┘ └──────────────┘  │
+                  │  └──────────┬────────────────┬─────────────┘ │
+                  │     IAM Role│                │                │
+                  │             ▼                ▼                │
+                  │      ┌────────────┐ ┌─────────────────────┐  │
+                  │      │ SSM Param  │ │ S3 (cross-bucket):  │  │
+                  │      │ OPENAI_KEY │ │  surgical-detection │  │
+                  │      │            │ │  -datasets-dev      │  │
+                  │      │            │ │  (gynsurg_sample/)  │  │
+                  │      └────────────┘ └─────────────────────┘  │
                   └──────────────────────────────────────────────┘
    admin ────────► SSM Session Manager (sem SSH público)
+
+   best.pt ──────► Hugging Face Hub (puxado no boot do container)
 ```
 
 ## Estrutura
@@ -29,16 +33,14 @@ Infraestrutura como código para subir a plataforma Sentinel Health (landing + S
 ```
 terraform/
 ├── modules/
-│   ├── storage/main.tf      # 2 S3 buckets (assets + models)
-│   │                        # versioning + AES256 + public access block
-│   │
 │   └── runtime/main.tf      # EC2 + SG + IAM/SSM + EIP + user_data
 │                            # bootstrap: docker + compose + clone repo
-│                            #            + fetch best.pt + fetch OPENAI key
+│                            #            + fetch OPENAI key do SSM
+│                            # (best.pt vem do Hugging Face Hub via container)
 │
 └── environments/
-    └── demo/main.tf         # compõe storage + runtime
-                             # outputs: URLs, SSM command, bucket names
+    └── demo/main.tf         # instancia o módulo runtime
+                             # outputs: URLs, instance_id, SSM command
 ```
 
 ## Pré-requisitos
@@ -47,9 +49,9 @@ terraform/
 |---|---|
 | `terraform` CLI ≥ 1.0 | `brew install terraform` |
 | `aws` CLI configurado | `aws configure` ou `~/.aws/credentials` válidos |
-| Conta AWS com permissões | EC2, S3, IAM, SSM, EBS, EIP |
-| Modelo `best.pt` | Para upload pós-apply (sem ele, Surgical UI funciona mas detecção falha) |
+| Conta AWS com permissões | EC2, IAM, SSM, EBS, EIP (S3 só leitura no bucket de clips externo) |
 | Chave OpenAI | Para o SSM Parameter Store (Insight não funciona sem ela) |
+| Bucket `surgical-detection-datasets-dev` | Pré-existente (do projeto surgical-video-ai) — fonte dos clips GynSurg do Surgical |
 
 ## Workflow completo
 
@@ -62,7 +64,7 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-Tempo de provisionamento: ~3-5 min (cria S3, IAM, EC2, EIP).
+Tempo de provisionamento: ~3-5 min (cria IAM, EC2, EIP).
 
 ### 2. Obter outputs
 
@@ -74,20 +76,13 @@ terraform output
 # surgical_url         = "http://54.123.45.67/surgical/"
 # insight_url          = "http://54.123.45.67/insight/"
 # instance_id          = "i-0abc123..."
-# models_bucket        = "sentinel-health-models-demo"
 # ssm_session_command  = "aws ssm start-session --target i-0abc123... --region us-east-1"
 ```
 
 ### 3. `best.pt` — não precisa fazer nada
 
 O container Surgical baixa automaticamente do [Hugging Face Hub](https://huggingface.co/zagari/sentinel-surgical-yolov8m-bleeding)
-no primeiro boot, via seu `entrypoint.sh`. O bucket `models` provisionado
-pelo Terraform fica disponível para artefatos derivados ou versões
-customizadas, mas **não é mais usado pelo fluxo padrão**.
-
-Se quiser pré-popular o bucket S3 (para air-gapped, etc.), faça o
-upload manual conforme prefira; só não é mais consumido pelo user_data
-do EC2.
+no primeiro boot, via seu `entrypoint.sh`.
 
 ### 4. Setar `OPENAI_API_KEY` no SSM Parameter Store
 
@@ -99,7 +94,7 @@ aws ssm put-parameter \
   --region us-east-1
 ```
 
-> **Importante:** se você fez o `apply` **antes** dos passos 3-4, o user_data do EC2 já rodou sem encontrar o modelo nem a key. Após colocá-los, reinicie a stack remotamente:
+> **Importante:** se você fez o `apply` **antes** do passo 4, o user_data do EC2 já rodou sem encontrar a key. Após colocá-la no SSM, reinicie o stack remotamente:
 >
 > ```bash
 > INSTANCE_ID=$(terraform output -raw instance_id)
@@ -108,8 +103,6 @@ aws ssm put-parameter \
 > sudo su -c "
 >   cd /home/ec2-user/sentinel-health
 >   git pull
->   # baixar best.pt + recriar .env (mesma lógica do user_data)
->   aws s3 cp s3://$(terraform output -raw models_bucket)/best.pt modules/surgical/web/models/best.pt
 >   OPENAI_KEY=\$(aws ssm get-parameter --name /sentinel-health/demo/openai-api-key --with-decryption --query Parameter.Value --output text --region us-east-1)
 >   echo OPENAI_API_KEY=\$OPENAI_KEY > modules/insight/emotion-recognizer/.env
 >   chmod 600 modules/insight/emotion-recognizer/.env
@@ -156,7 +149,7 @@ cd sentinel-health/terraform/environments/demo
 terraform destroy
 ```
 
-> **Cuidado:** isso apaga os S3 buckets também. Se quiser preservar o `best.pt`, baixe localmente antes ou mude o lifecycle. Os buckets usam versioning (recuperação dentro do retention) mas Terraform removerá tudo no destroy.
+> Remove EC2, EIP, SG, IAM role e instance profile. Não toca no SSM parameter (`/sentinel-health/demo/openai-api-key`) nem no bucket externo `surgical-detection-datasets-dev`.
 
 ## Custo estimado
 
@@ -165,7 +158,6 @@ terraform destroy
 | EC2 t3.medium (us-east-1) | $0.0416/h | $30/mês se sempre ligado |
 | EBS gp3 30 GB | $0.08/GB/mês × 30 | ~$2.40/mês; FREE pelos primeiros 12 meses (até 30 GB) |
 | Elastic IP | $0 quando associado, $0.005/h se não associado | mantemos associado |
-| S3 (assets + models) | ~$0.023/GB/mês | best.pt ~22 MB; assets ~10 MB; ~$0.001/mês. FREE 5 GB/12 meses |
 | Data transfer out | $0.09/GB após 1 GB free | ~$0 para demo de poucos minutos |
 | SSM Parameter Store (Standard) | grátis | até 10K parâmetros |
 | SSM Session Manager | grátis | sem custo de minuto |
@@ -206,7 +198,7 @@ Variáveis disponíveis no env `demo`:
 ## Segurança
 
 - **Sem SSH público.** Único acesso shell é via SSM Session Manager (IAM-controlled, auditado em CloudTrail).
-- **Buckets bloqueados.** `public_access_block` em ambos os S3 buckets.
+- **IAM least-privilege.** Role do EC2 tem apenas: SSM Session Manager + leitura do parâmetro `OPENAI_API_KEY` + read-only no bucket externo `surgical-detection-datasets-dev`.
 - **Secrets fora do código.** OPENAI_API_KEY no SSM Parameter Store (SecureString); não vai para o `.env` versionado.
 - **TLS.** Esta versão serve HTTP plano. Para HTTPS, adicionar ACM cert + ALB + Route 53 (não incluído no escopo demo).
 

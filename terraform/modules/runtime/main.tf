@@ -40,21 +40,6 @@ variable "repo_branch" {
   default     = "main"
 }
 
-variable "models_bucket_name" {
-  description = "Nome do bucket de modelos (sem 'arn:aws:s3:::')"
-  type        = string
-}
-
-variable "models_bucket_arn" {
-  description = "ARN do bucket de modelos"
-  type        = string
-}
-
-variable "assets_bucket_arn" {
-  description = "ARN do bucket de assets"
-  type        = string
-}
-
 variable "samples_bucket_name" {
   description = "Nome do bucket S3 com clips de amostra (gynsurg_sample/) e metadata.json — usado pelo Surgical via env var S3_BUCKET. Default é o bucket do projeto surgical-video-ai original."
   type        = string
@@ -141,7 +126,7 @@ resource "aws_security_group" "runtime" {
 # -----------------------------------------------------------------------------
 # IAM Role + Instance Profile
 #  - AmazonSSMManagedInstanceCore: habilita Session Manager
-#  - Policy custom: leitura nos 2 S3 buckets + leitura do parâmetro SSM
+#  - Policy custom: leitura no bucket de clips GynSurg + leitura do SSM param
 # -----------------------------------------------------------------------------
 resource "aws_iam_role" "runtime" {
   name = "${var.project_name}-runtime-role-${var.environment}"
@@ -169,7 +154,7 @@ resource "aws_iam_role_policy_attachment" "ssm" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
-# S3 read access para baixar best.pt + assets da landing + clips de amostra do Surgical
+# S3 read access para clips de amostra (GynSurg) consumidos pelo Surgical
 resource "aws_iam_role_policy" "s3_read" {
   name = "${var.project_name}-runtime-s3-read-${var.environment}"
   role = aws_iam_role.runtime.id
@@ -183,10 +168,6 @@ resource "aws_iam_role_policy" "s3_read" {
         "s3:ListBucket"
       ]
       Resource = [
-        var.models_bucket_arn,
-        "${var.models_bucket_arn}/*",
-        var.assets_bucket_arn,
-        "${var.assets_bucket_arn}/*",
         "arn:aws:s3:::${var.samples_bucket_name}",
         "arn:aws:s3:::${var.samples_bucket_name}/*"
       ]
