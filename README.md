@@ -126,10 +126,10 @@ Itens identificados como evolução futura (declarados na landing e no relatóri
 sentinel-health/
 ├── README.md                       # este arquivo
 ├── LICENSE                         # MIT + Academic Use Notice
+├── ACADEMIC_USE.md                 # disclaimer "não é dispositivo médico"
 ├── docs/                           # documentação consolidada
 │   ├── CHALLENGE_COVERAGE.md       # matriz item-a-item do desafio
-│   ├── ARCHITECTURE.md             # topologia, fluxos, decisões
-│   └── DEMO_SCRIPT.md              # roteiro do vídeo de 15 min
+│   └── ARCHITECTURE.md             # topologia, fluxos, decisões
 ├── landing/                        # site institucional + cobertura interativa
 │   ├── index.html
 │   ├── coverage.html
@@ -137,18 +137,21 @@ sentinel-health/
 │   │   ├── coverage-data.json      # FONTE CANÔNICA da matriz
 │   │   ├── css/style.css
 │   │   └── js/coverage.js
+│   ├── presentation/               # slides reveal.js (15 slides)
 │   └── Dockerfile
 ├── modules/
 │   ├── surgical/                   # Sentinel Surgical (YOLOv8m)
+│   │   ├── README.md               # visão geral + uso do módulo
 │   │   ├── web/                    # FastAPI + Dockerfile + entrypoint.sh
 │   │   ├── src/                    # CLI pipeline alternativa
 │   │   ├── scripts/                # treino, validação, ops AWS
 │   │   ├── terraform/              # IaC do projeto surgical original (legado)
-│   │   └── docs/CODEBASE_ANALYSIS.md
+│   │   ├── anotacoes-gynsurg/      # notas/labels do dataset GynSurg
+│   │   └── tests/
 │   └── insight/                    # Sentinel Insight (DeepFace + Whisper + GPT)
+│       ├── README.md               # visão geral + uso do módulo
 │       ├── emotion-recognizer/     # código Streamlit + análise multimodal
-│       ├── Dockerfile
-│       └── docs/CODEBASE_ANALYSIS.md
+│       └── Dockerfile
 ├── deploy/                         # hospedagem unificada
 │   ├── docker-compose.yml          # 4 containers (nginx + 3 módulos)
 │   ├── docker-compose.behind-proxy.yml  # override pra reverse proxy do host
@@ -156,26 +159,25 @@ sentinel-health/
 │   ├── nginx/host-snippet.conf     # snippet pro nginx do host
 │   └── README.md
 ├── terraform/                      # IaC AWS para Sentinel Health
-│   ├── modules/storage/            # S3 buckets (assets + models)
 │   ├── modules/runtime/            # EC2 t3.medium + IAM + SG + EIP
 │   ├── environments/demo/          # composição
 │   └── README.md
-└── relatorio/                      # relatório técnico LaTeX (Phase 8)
-    └── (em construção)
+└── relatorio/                      # relatório técnico final (Fase 4)
+    └── sentinel-health-relatorio-tecnico-fase4.pdf
 ```
 
 ## Documentação
 
 | Documento | Conteúdo |
 |---|---|
+| [`relatorio/sentinel-health-relatorio-tecnico-fase4.pdf`](./relatorio/sentinel-health-relatorio-tecnico-fase4.pdf) | Relatório técnico final entregue na Fase 4 |
 | [`docs/CHALLENGE_COVERAGE.md`](./docs/CHALLENGE_COVERAGE.md) | Matriz item-a-item da cobertura do desafio (sincronizada com [`landing/assets/coverage-data.json`](./landing/assets/coverage-data.json)) |
 | [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Topologia, fluxos de dados, decisões arquiteturais, integrações cloud |
-| [`docs/DEMO_SCRIPT.md`](./docs/DEMO_SCRIPT.md) | Roteiro completo do vídeo demo de 15 min |
 | [`landing/presentation/`](./landing/presentation/) | Apresentação reveal.js (15 slides) sincronizada com o roteiro do vídeo demo — acessível em `/presentation/` após `docker compose up -d` |
 | [`deploy/README.md`](./deploy/README.md) | Como subir local · variante atrás de reverse proxy · troubleshooting |
 | [`terraform/README.md`](./terraform/README.md) | Deploy AWS via Terraform · custos · workflow apply→demo→destroy |
-| [`modules/surgical/docs/CODEBASE_ANALYSIS.md`](./modules/surgical/docs/CODEBASE_ANALYSIS.md) | Análise técnica detalhada do código do Surgical |
-| [`modules/insight/docs/CODEBASE_ANALYSIS.md`](./modules/insight/docs/CODEBASE_ANALYSIS.md) | Análise técnica detalhada do código do Insight |
+| [`modules/surgical/README.md`](./modules/surgical/README.md) | Visão geral, uso e arquitetura do Sentinel Surgical (YOLOv8m) |
+| [`modules/insight/README.md`](./modules/insight/README.md) | Visão geral, uso e arquitetura do Sentinel Insight (DeepFace + Whisper + GPT) |
 
 ## Equipe — Grupo Sala 14
 

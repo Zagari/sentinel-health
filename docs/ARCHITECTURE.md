@@ -154,42 +154,6 @@ JSON response (50 bleeding + 54 non_bleeding clips disponíveis)
 | **AWS EC2 + Terraform** (deploy demo) | `terraform apply` | `aws-cli` + `gh` clone do repo no `user_data` | IAM Role na instância |
 | **AWS SSM Parameter Store** (deploy) | EC2 boot script | `aws ssm get-parameter` | IAM Role |
 
-## Decisões arquiteturais
-
-### Por que monorepo (não polyrepo)
-
-- **Avaliador acadêmico** abre 1 URL e tem tudo.
-- Histórico do `surgical-video-ai` e `emotion-detector` preservado via `git subtree`.
-- Versionamento conjunto da plataforma.
-- Trade-off: 2 stacks Python conviventes em pastas distintas — sem conflito real porque cada uma vive em seu container.
-
-### Por que modelo no Hugging Face Hub (não git LFS, não bake na imagem)
-
-- **Free unlimited bandwidth** para modelos públicos.
-- Model card profissional documenta v1→v2→v3, datasets, métricas, limitações.
-- Discoverability (indexado pelo HF).
-- Container baixa no 1º boot via `entrypoint.sh` — same code path para Mac local, servidor remoto, AWS EC2.
-- Volume RW persiste o download entre restarts.
-
-### Por que **near** real-time, não streaming síncrono
-
-- Custo de implementação alto (websocket bidirecional + GPU dedicada + backpressure handling) para o ganho marginal num demo acadêmico.
-- Latência fim-a-fim de upload → response em ~1 min satisfaz "tempo real" no contexto clínico de pós-procedimento.
-- Streaming síncrono (sub-segundo) está em **Sentinel Realtime** (roadmap).
-
-### Por que job tracker in-memory (não Redis/DB)
-
-- Plataforma de demonstração; tráfego concorrente é 1 usuário (avaliador).
-- Trade-off explícito: jobs em andamento se perdem em restart do container.
-- Pronto para evolução: o `jobs: Dict` em `video.py:50` é o único ponto a migrar.
-
-### Por que múltiplas nuvens (não 100% AWS)
-
-- AWS: bom para infraestrutura (S3, EC2, Terraform).
-- OpenAI API: GPT-5.4-nano + Whisper-1 estão **só** na OpenAI; Azure OpenAI seria caminho equivalente mas com setup extra (apiGPTeal Merck era assim e migramos).
-- Hugging Face Hub: **padrão da indústria de ML** pra distribuição pública de modelos.
-- A combinação demonstra ao avaliador competência multi-cloud sem amarrar a uma vendor única.
-
 ## Variantes de deploy
 
 | Variante | Como subir | Quando usar |
