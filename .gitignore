@@ -136,3 +136,6 @@ modules/*/reports/*.pdf
 modules/*/demo_output/
 modules/*/runs/
 modules/*/surgical_detection/
+
+# ── Notas/pesquisas locais (não versionadas) ─────────────────────────────────
+thoughts/
