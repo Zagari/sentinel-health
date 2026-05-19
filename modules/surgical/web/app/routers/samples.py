@@ -11,7 +11,8 @@ Estratégia de dados:
 
 Toda chamada tenta S3 primeiro. Se levantar qualquer exceção (NoCredentials,
 AccessDenied, conexão recusada, etc.), usa o filesystem local se disponível.
-Senão, falha com 500 detalhando o erro.
+Senão, falha com 503 detalhando o erro — o frontend distingue 503 (galeria
+indisponível, mensagem amigável) de 500 (falha real).
 
 Isso permite que o mesmo container funcione tanto numa máquina com creds AWS
 sem clips locais quanto num servidor com os clips no disco e sem AWS CLI.
@@ -217,7 +218,7 @@ async def get_metadata() -> SampleMetadata:
             _metadata_cache = _local_metadata()
             return SampleMetadata(**_metadata_cache)
         raise HTTPException(
-            500,
+            503,
             f"S3 inacessível ({s3_err}) e sem fallback local em {LOCAL_SAMPLES_PATH}.",
         )
 
@@ -232,7 +233,7 @@ async def list_samples(category: Optional[str] = None) -> List[SampleClip]:
             logger.warning("S3 list indisponível (%s) — usando local fallback.", s3_err)
             return _list_local(category)
         raise HTTPException(
-            500,
+            503,
             f"S3 inacessível ({s3_err}) e sem fallback local em {LOCAL_SAMPLES_PATH}.",
         )
 
@@ -270,7 +271,7 @@ async def stream_sample(category: str, filename: str):
         if "NoSuchKey" in str(type(s3_err).__name__):
             raise HTTPException(404, "Clip não encontrado")
         raise HTTPException(
-            500,
+            503,
             f"S3 inacessível ({s3_err}) e sem fallback local para {category}/{filename}.",
         )
 
@@ -302,7 +303,7 @@ async def process_sample(
         src = _local_clip_path(category, filename)
         if src is None:
             raise HTTPException(
-                500,
+                503,
                 f"S3 inacessível ({s3_err}) e clip não encontrado localmente em "
                 f"{LOCAL_SAMPLES_PATH}/{category}/{filename}.",
             )
@@ -342,6 +343,6 @@ async def get_sample_stats():
             logger.warning("S3 stats indisponível (%s) — usando local fallback.", s3_err)
             return _local_stats()
         raise HTTPException(
-            500,
+            503,
             f"S3 inacessível ({s3_err}) e sem fallback local em {LOCAL_SAMPLES_PATH}.",
         )

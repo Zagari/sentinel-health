@@ -141,6 +141,19 @@ urlForm.addEventListener('submit', async e => {
 // =====================
 // Sample Clips
 // =====================
+function renderGalleryUnavailable() {
+    return `
+        <div class="notice">
+            <div class="notice-icon">🔒</div>
+            <div class="notice-title">Galeria protegida</div>
+            <p class="notice-text">
+                Os clips de exemplo ficam num bucket S3 privado e não são
+                expostos em instâncias locais por razões de proteção de dados.
+            </p>
+        </div>
+    `;
+}
+
 async function loadSamples(category = '') {
     samplesList.innerHTML = '<p class="loading">Carregando clips de exemplo...</p>';
 
@@ -150,6 +163,17 @@ async function loadSamples(category = '') {
             : `${API_BASE}/samples/list`;
 
         const response = await fetch(url);
+
+        if (response.status === 503) {
+            samplesList.innerHTML = renderGalleryUnavailable();
+            return;
+        }
+
+        if (!response.ok) {
+            const err = await response.json().catch(() => ({}));
+            throw new Error(err.detail || `HTTP ${response.status}`);
+        }
+
         const samples = await response.json();
 
         if (samples.length === 0) {
@@ -192,6 +216,12 @@ async function processSample(category, filename) {
         const response = await fetch(`${API_BASE}/samples/process/${category}/${filename}`, {
             method: 'POST'
         });
+
+        if (response.status === 503) {
+            hideProgress();
+            samplesList.innerHTML = renderGalleryUnavailable();
+            return;
+        }
 
         if (!response.ok) {
             const error = await response.json();

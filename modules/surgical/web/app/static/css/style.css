@@ -464,6 +464,36 @@ footer a:hover {
     color: var(--text-secondary);
 }
 
+.notice {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    margin: 12px 0;
+}
+
+.notice-icon {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.notice-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.notice-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
